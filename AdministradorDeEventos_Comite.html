@@ -94,10 +94,61 @@
                     <a id="openModal" class="btn_agregarEvento" title="Nuevo Evento">Nuevo evento</a>                   
                 </div>
 
-    
                 <div class="main-tableEventos">
                    <br>
                     <h3 class="titulo_seccion">Eventos existentes </h3>
+                    <br>
+                    <br>
+
+                    <!--ESTRUCTURA DE TABLA DE EVENTOS-->
+                    <table id="table_eventos" class="tablaDeEventos">
+                        <thead>
+                            <tr>
+                                <th class="campoTabla">Imagen</th>
+                                <th class="campoTabla">Nombre evento</th>
+                                <th class="campoTabla">Descripción</th>
+                                <th class="campoTabla">Fecha inicio</th>
+                                <th class="campoTabla">Fecha fin</th>
+                                <th class="campoTabla">Acciones</th>
+                            </tr>
+                        </thead>
+
+                        <!--Aqui van los registros de la tabla de eventos-->
+                        <tr class="filasDeDatosTablaEventos">
+                            <td class="datoTabla"><img class="imagenDelEventoEnTabla"src="/assets/images/imgDesafioOEvento.jpg"></td>
+                            <td class="datoTabla">EVENTO DE PRUEBA 1</td>
+                            <td class="datoTabla">Evento creado para la construcción de la tabla</td>
+                            <td class="datoTabla"> 01/01/2021</td>
+                            <td class="datoTabla">31/12/2021</td>
+                            <td class="datoTabla"><div class="compEsp-edicion">
+                                <div class="col-botonesEdicion">
+                                    <a name="openModal2" href="" title="Editar"><img src="/assets/images/btn_editar.PNG"></a>
+                                </div>
+
+                                <div class="col-botonesEdicion">
+                                    <a name="openModal3" href="" title="Eliminar"><img src="/assets/images/btn_eliminar.PNG"></a>
+                                </div>
+                            </div></td>
+                        </tr>
+
+                        <tr class="filasDeDatosTablaEventos">
+                            <td class="datoTabla"><img class="imagenDelEventoEnTabla"src="/assets/images/imgDesafioOEvento.jpg"></td>
+                            <td class="datoTabla">EVENTO DE PRUEBA 2</td>
+                            <td class="datoTabla">Evento creado para la construcción de la tabla</td>
+                            <td class="datoTabla"> 01/01/2021</td>
+                            <td class="datoTabla">31/12/2021</td>
+                            <td class="datoTabla"><div class="compEsp-edicion">
+                                <div class="col-botonesEdicion">
+                                    <a name="openModal2" href="" title="Editar"><img src="/assets/images/btn_editar.PNG"></a>
+                                </div>
+
+                                <div class="col-botonesEdicion">
+                                    <a name="openModal3" href="" title="Eliminar"><img src="/assets/images/btn_eliminar.PNG"></a>
+                                </div>
+                            </div></td>
+                        </tr>
+                    </table>
+
 
 
                     <!--ESTRUCTURA DEL POPUP PARA EL REGISTRO DE EVENTOS-->
@@ -148,13 +199,74 @@
                                                     <option value="" selected>Seleccione</option>
                                                 </select>
                                             </td>
-                                            <td><a id="btn_openModal4" class="btn-fill pull-right btn btn-info" title="Evaluar competencias">Evaluar</a></td>
+                                            <td><a name="openModal4" class="btn-fill pull-right btn btn-info" title="Evaluar competencias">Evaluar</a></td>
                                         </tr>
                                     </table>                                   
                                     <br>
                                     <br>    
                                     <a id="btn_guardarEvento" class="btn_agregarEvento" title="Guardar">Guardar</a>
                                     <a id="btn_cancelar1" class="btn_agregarEvento" title="Cancelar">Cancelar</a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--ESTRUCTURA DEL POPUP PARA LA ACTUALIZACIÓN DE EVENTOS-->
+                    <div id="modal_container2" class="modal_container" name="modal_container">
+                        <div class="modal">
+                            <h3 class="titulo_seccion">Actualizar Evento</h3>
+                            <br>
+                            
+                            <div class="formulario-registroEvento">
+                                <form class="">
+
+                                    <label class="camposFormulario">Nombre del evento</label><br>
+                                    <input id="txt_nombreEvento" name="nombreEvento" placeholder="" type="text" class="form-control">
+                                    <br>
+
+                                    <label class="camposFormulario">Descripción</label>
+                                    <textarea id="txt_perfilProfesional" name="perfilProfesional" cols="80" placeholder="" rows="8" class="form-control"></textarea>
+                                    <br>
+
+                                    <label class="camposFormulario">Opcional* - Archivo PDF con info del evento</label><br>
+                                    <input  id="btn_cargaArchivoInfoDelEvento" name="btnCargaArchivoInfoDelEvento" accept=".pdf" type="file" class="form-control">
+                                    <br>
+
+                                    <!--Espacio para colocar campos tipo calendar-->
+                                    <table>
+                                        <tr>
+                                            <td><label class="camposFormulario">Fecha inicio</label>
+                                                <input type="date" id="date_fechaInicioEvento" name="dateFechaInicioEvento" class="form-control" min="2000-01-01" max="2040-12-31"></td>
+                                                
+                                                <td><label class="camposFormulario">Fecha fin</label><br>
+                                                <input type="date" id="date_fechaFinEvento" name="dateFechaFinEvento" class="form-control" min="2000-01-01" max="2040-12-31"></td>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <label class="camposFormulario">Profesor encargado</label>
+                                    <select class="form-control" id="cmb_profesoresResponsables" name="cmbProfesoresResponsables">
+                                        <option value="" selected>Seleccione</option>
+                                    </select>
+
+                                    <label class="camposFormulario">Cargue una imagen para el evento</label><br>
+                                    <input  id="btn_imgParaElEvento" name="imgParaElEvento" accept=".jpeg, .jpg, .png" type="file" class="form-control">
+
+                                    <table>
+                                        <tr>
+                                            <td><label class="camposFormulario">Comp. generales a las cuales contribuye el evento</label><br>
+                                                <select class="form-control" id="cmb_competenciasGenerales" name="cmbCompetenciasGeneraless">
+                                                    <option value="" selected>Seleccione</option>
+                                                </select>
+                                            </td>
+                                            <td><a name="openModal4" class="btn-fill pull-right btn btn-info" title="Evaluar competencias">Evaluar</a></td>
+                                        </tr>
+                                    </table>                                   
+                                    <br>
+                                    <br>    
+                                    <a id="btn_actualizarEvento" class="btn_agregarEvento" title="Actualizar">Actualizar</a>
+                                    <a id="btn_cancelar2" class="btn_agregarEvento" title="Cancelar">Cancelar</a>
                                 </form>
                             </div>
                         </div>
@@ -174,64 +286,7 @@
                         </div>
                     </div>
 
-                    <!--ESTRUCTURA DEL POPUP PARA LA ACTUALIZACION DE EVENTOS-->
-                    <div id="modal_container2" class="modal_container" name="modal_container">
-                        <div class="modal">
-                            <h3 class="titulo_seccion">Actualizar Evento</h3>
-                            <br>
-                            
-                            <div class="formulario-registroEvento">
-                                <form class="">
-
-                                    <label class="camposFormulario">Nombre del evento</label><br>
-                                    <input id="txt_nombreEvento" name="nombreEvento" placeholder="" type="text" class="form-control">
-                                    <br>
-
-                                    <label class="camposFormulario">Descripción</label><br>
-                                    <textarea id="txt_perfilProfesional" name="perfilProfesional" cols="80" placeholder="" rows="8" class="form-control"></textarea>
-                                    <br>
-
-                                    <label class="camposFormulario">Opcional* - Archivo PDF con info del evento</label><br>
-                                    <input  id="btn_cargaArchivoInfoDelEvento" name="btnCargaArchivoInfoDelEvento" accept=".pdf" type="file" class="form-control">
-                                    <br>
-
-                                    <input type="date" id="date_fechaInicioEvento" name="dateFechaInicioEvento" class="form-control" min="2000-01-01" max="2040-12-31"></td>
-
-                                    <!--Espacio para colocar campos tipo calendar-->
-                                    <table>
-                                        <tr>
-                                            <td><label class="camposFormulario">Fecha inicio</label>
-                                            <input type="date" id="date_fechaInicioEvento" name="dateFechaInicioEvento" class="form-control" min="2000-01-01" max="2040-12-31"></td>
-                                            
-                                            <td><label class="camposFormulario">Fecha fin</label><br>
-                                            <input type="date" id="date_fechaFinEvento" name="dateFechaFinEvento" class="form-control" min="2000-01-01" max="2040-12-31"></td>
-                                        </tr>
-                                    </table>
-
-                                    <label class="camposFormulario">Profesor encargado</label><br>
-                                    <select class="form-control" id="cmb_profesoresResponsables" name="cmbProfesoresResponsables">
-                                        <option value="" selected>Seleccione</option>
-                                    </select>
-
-                                    <label class="camposFormulario">Cargue una imagen para el evento</label><br>
-                                    <input  id="btn_imgParaElEvento" name="imgParaElEvento" accept=".jpeg, .jpg, .png" type="file" class="form-control">
-                                    <br>
-
-                                    <label class="camposFormulario">Seleccione las comp. generales a las cuales contribuye el evento</label><br>
-                                    <select class="form-control" id="cmb_competenciasGenerales" name="cmbCompetenciasGeneraless">
-                                        <option value="" selected>Seleccione</option>
-                                    </select>
-
-                                    <a id="openModal4" class="btn-fill pull-right btn btn-info" title="Evaluar competencias">Evaluar</a>
-                                    <br>
-                                    <br>
-    
-                                    <a id="btn_actualizarEvento" class="btn_agregarEvento" title="Guardar">Guardar</a>
-                                    <a id="btn_cancelar2" class="btn_agregarEvento" title="Cancelar">Cancelar</a>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+                   
 
                     <!--POPUP PARA LA EVALUACIÓN DE COMPETENCIAS QUE CONTRIBUYEN A UN EVENTO-->
                     <div id="modal_container4" class="modal_container" name="modal_container">
@@ -240,45 +295,57 @@
                             <br>
                             <p>Evalúe el nivel de competencia propuesto por el evento para las siguientes competencias específicas: </p>
                             <br>
-                            <br>
+
 
                             <div class="contenedor_compEspecificas">
 
                                 <form class="">
-                                    <!--Este es el código que contiene la competencia específica a evaluar-->
-                                    <div class="contenedorCompeEspecifAEvaluar">
+                                    <!--Este es el código que contiene las competencias específicas a evaluar-->
+                                    <div class="contenedorCompeEspeciasAEvaluar">
                                         <p id="lbl_enunciadoCompetenciaEspecíficaAEvaluar" name="enunciadoCompetenciaEspecíficaAEvaluar" class="enunciadoCompetenciaEspecíficaAEvaluar">1. Competencia específica 1.</p>
+                                        
+                                        <!--Tabla de radiobuttons para evaluar competencia específica-->
                                         <table>
                                             <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
+                                                <td><input type="radio" id="radio_contribucionBaja" name="contribucionBaja" value="">
+                                                <label for="Baja">Baja</label></td>
+                                                
+                                                <td class=columnaNivelContribucion><td><input type="radio" id="radio_contribucionMedia" name="contribucionMedia" value="">
+                                                <label for="Media">Media</label></td></td>
+                                                
+                                                <td class=columnaNivelContribucion><td><input type="radio" id="radio_contribucionAlta" name="contribucionAlta" value="">
+                                                <label for="Alta">Alta</label></td></td>
+                                            </tr>
+                                        </table>
+
+                                        <br>
+
+                                        <p id="lbl_enunciadoCompetenciaEspecíficaAEvaluar" name="enunciadoCompetenciaEspecíficaAEvaluar" class="enunciadoCompetenciaEspecíficaAEvaluar">2. Competencia específica 2.</p>
+
+                                        <!--Tabla de radiobuttons para evaluar competencia específica-->
+                                        <table>
+                                            <tr>
+                                                <td><input type="radio" id="radio_contribucionBaja" name="contribucionBaja" value="">
+                                                <label for="Baja">Baja</label></td>
+                                                
+                                                <td class=columnaNivelContribucion><td><input type="radio" id="radio_contribucionMedia" name="contribucionMedia" value="">
+                                                <label for="Media">Media</label></td></td>
+                                                
+                                                <td class=columnaNivelContribucion><td><input type="radio" id="radio_contribucionAlta" name="contribucionAlta" value="">
+                                                <label for="Alta">Alta</label></td></td>
                                             </tr>
                                         </table>
                                     </div>  
 
-
-
-
-
+                                    <br>
+                                    <br>
+                                    <a id="btn_guardarAnálisis" class="btn_agregarEvento" title="Guardar">Guardar</a>
+                                    <a id="btn_cancelar4" class="btn_agregarEvento" title="Cancelar">Cancelar</a>
 
                                 </form>
-                                
-                                
-                            </div>
-                            
-                            
-
-                            <a id="btn_guardarAnálisis" class="btn_agregarEvento" title="Guardar">Guardar</a>
-                            <a id="btn_cancelar4" class="btn_agregarEvento" title="Cancelar">Cancelar</a>
+                            </div>                            
                         </div>
                     </div>
-
-
-
-
-
-
                 </div>
             </main>
         </div>

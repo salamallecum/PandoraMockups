@@ -65,6 +65,28 @@ function eventoPopUpActualizacionDeEventos(){
 }
 
 
+//ASIGNACION DE EVENTO A BOTON "EVALUAR" PARA LA EVALUACION DE LAS COMPETENCIAS ESPECÍFICAS
+const listOpen4 = document.getElementsByName('openModal4');
+const modal_container4 = document.getElementById('modal_container4');
+const close4 = document.getElementById('btn_cancelar4');
+
+//Recorremos el arreglo de elementos con el name openModal2
+for(var i=0; i<listOpen4.length; i++){
+        
+    listOpen4[i].addEventListener('click', (e) => {
+        e.preventDefault();
+        modal_container4.classList.add('show');
+    },false);
+}
+
+close4.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal_container4.classList.remove('show');
+},false);
+
+
+
+
 //INVOCACION DE FUNCIONES
 eventoPopUpActualizacionDeEventos();
 eventoPopUpEliminacionDeEventos()
