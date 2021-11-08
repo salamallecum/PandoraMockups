@@ -1,0 +1,142 @@
+<!--IMPORTANTE-->
+<!--Los botones que tienen la palabra openModal, modal-container o btn_cancelar como nombre o id, son botones de navegación y por lo tanto no se deben tocar porque si función es interactiva-->
+<!-- Los botones o componentes que tienen el prefijo lbl_ , txt_, date_ o btn_ son los que tu programas porque requieren manejo de datos con el backend-->
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>Pandora</title>
+        <link rel="shortcut icon" href="assets/images/favicon.png">        
+        
+        <!--Links Scripts de estilos-->
+        <link rel="stylesheet" href="/assets/css/EstudianteStyles.css">
+        <link rel="stylesheet" href="https:/cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+
+        <!--Links scripts de eventos js-->
+        <script src="assets/js/dom/funcionesBasicasPopUpDesafiosOEventos.js" type="module"></script>
+        <script src="assets/js/jquery-3.6.0.js"></script>
+
+    </head>
+
+    <body>
+
+        <input type="checkbox" id="sidebar-toggle">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3 class="brand">
+                    <span> <img src="/assets/images/ico_pandMenuPrincEstudiante.PNG"></span>
+                    <span>PANDORA</span>
+                </h3>
+                <label for="sidebar-toggle" class="ti-menu-alt"></label>
+            </div>
+
+            <div class="sidebar-menu">
+                <ul>
+                    <li>
+                        <a class="link_menu-active" href="/DashBoard_Estudiante.html">
+                            <span><i class="ti-dashboard"></i></span>
+                            <span class="items_menu">DASHBOARD</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="link_menu" href="/PerfilDeUsuario_Estudiante.html">
+                            <span class="ti-user"></span>
+                            <span class="items_menu">PERFIL DE USUARIO</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="link_menu" href="/TrabajosDestacados_Estudiante.html">
+                            <span class="ti-clipboard"></span>
+                            <span class="items_menu">TRABAJOS DESTACADOS</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="link_menu" href="/E-portafolio_Estudiante.html">
+                            <span class="ti-archive"></span>
+                            <span class="items_menu">E-PORTAFOLIO</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="link_menu" href="DesafiosYEventos_Estudiante.html">
+                            <span class="ti-flag"></span>
+                            <span class="items_menu">DESAFIOS Y EVENTOS</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="link_menu" href="/Insignias_Estudiante.html">
+                            <span class="ti-medall"></span>
+                            <span class="items_menu">INSIGNIAS</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="link_menu" href="Notificaciones_Estudiante.html">
+                            <span class="ti-bell"></span>
+                            <span class="items_menu">NOTIFICACIONES</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-content">
+
+            <header>
+                
+                <div class="social-icons">
+                    <div class="titulo-dash">
+                        <span>Desafios y Eventos</span>&nbsp;
+                    </div>
+                    <div class="link-logout">
+                        <span><a href="/index.html">Log out</a></span>
+                    </div>
+                </div>
+                
+            </header>
+
+            <main>
+                <div class="dash-cards">
+                    <div class="card-desafioOEvento">
+                        <div class="card-desafioOEventobody">
+                            <span><img class="imgDesafioOEvento" src="assets/images/imgDesafioOEvento.jpg"></span>
+                            <div>
+                                <h4 class="tituloDesafioOEvento">DESAFIO DE PRUEBA</h4>
+                                <p class="descripcionDesafioOEvento">Entrega para proyecto de grado 1, presentar un trabajo destacado.</p>
+                                <br>
+                                <div class="contenedor_boton">
+                                    <a id="openModa3" class="btn_agregarTrabajo" title="Aplicar">Aplicar</a>    
+                                </div>                             
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--ESTRUCTURA DEL POPUP DE APLICACION A DESAFIOS O EVENTOS-->
+                    <div id="modal_container3" class="modal_container" name="modal_container">
+                        <div class="modal">
+                            <h3 class="titulo_seccion">Aplicación a un Desafío o Evento</h3>
+                            <br>
+                            <p>Seleccione el trabajo destacado con el cual desea aplicar.</p>
+                            <br>
+                            <form class="">
+                                <select id="cmb_trabajosDestacadosDisponiblesParaAplicación" name="trabDispParaAplicación" class="form-control" name="cmb_semestre">
+                                    <option value="" selected>Seleccione</option>
+                                </select>
+                            </form>
+                            <br>
+                            <a id="btn_aplicarTrabajo" class="btn_agregarTrabajo" title="Si">Aplicar</a>
+                            <a id="btn_cancelar3" class="btn_agregarTrabajo" title="No">Cancelar</a>
+                        </div>
+                    </div>
+                </div> 
+            </main>
+        </div>
+    </body>
+</html>

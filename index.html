@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>   
+        
+        <link rel="shortcut icon" href="assets/images/favicon.png">
+
+         <!--Links Scripts de estilos-->
+         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    
+         <link rel="stylesheet" href="assets/css/indexStyles.css">
+
+         <!--Links scripts de eventos js-->
+         <script src="assets/js/Index.js" type="module"></script>
+         <script src="assets/js/jquery-3.6.0.js"></script>
+
+        <title>Pandora</title>
+    </head>
+
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="/index.html" class="nav__logo"><img src="/assets/images/logo_pandora.PNG"/></a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">¿Cómo funciona?</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Badges</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Equipo</a></li>
+                        <li class="nav-btn">
+                            <a href="/Login.html" class="btn-link" >
+                                <button class="btn btn--outline btn--mobile darkyellow" title="Sign Up">Sign Up</button>
+                            </a>                       
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                
+                <div class="home__hero-section darkbg">
+                    <div class=home_container>
+                        <div class="row home__hero row">
+                            <div class="columna_texto">
+                                <div class="ajuste_columna">
+                                    
+                                    <div class="titulo_eportafolio">ePortafolio</div>                    
+                                    
+                                    <h1 class="home_descripcion">Organiza, almacena,<br>muestra y comparte<br>tus logros</h1>
+                                    <p class="introduccion">En este espacio, podrás demostrar tus habilidades<br>mientras que obtienes insignias que certifican tus<br>trabajos académicos.</p>
+                                    <br>
+                                    <a href="/Login.html" class="button_comienza" title="Comienza">Comienza</a>
+                                </div>
+                            </div>
+                            
+                            <div class="columna_imagen">
+                                <div class="home__imagenPrincipal">    
+                                    <img src="assets/images/img_home.PNG" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </section>
+
+            <!--===== COMO FUNCIONA =====-->
+            <section class="about section " id="about">
+                <h2 class="section-title">¿Cómo funciona?</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about_img">
+                        <img src="assets/images/esquema_general_pandora.PNG" alt="">
+                    </div>
+                    
+                    <div>
+                        <h1 class="comofunc_descripcion1">Lleva tus trabajos<br>academicos más alla<br>del aula</h1>
+                        <p class="comofunc_descripcion2">En este espacio, podrás demostrar tus habilidades<br>mientras que obtienes insignias que certifican tus<br>trabajos académicos.</p>           
+                        <br>
+                        <a href="/Login.html" class="button_comienza" title="Comienza">Comienza</a>
+                    </div>                                   
+                </div>
+            </section>
+
+            <!--===== BADGES =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">BADGES</h2>               
+            </section>
+
+            <!--===== Equipo de trabajo =====-->
+            <section class="work section" id="work">
+                <h2 class="section-title">Equipo de trabajo</h2>
+                <div class="project-wrapper">
+                    
+                    <section class="project-list">
+                        <div class="project-item">
+                            <img src="assets/images/team/alejo.jpeg" alt="">
+                            <a href="#">Alejandro Amaya</a>
+
+                            <div class="memberTeamInfo">
+                                <p class="infoMember">Estudiante de Ingeniería de Sistemas con conocimientos sólidos de programación en lenguaje Java, Python; Desarrollo web mediante JavaScript, HTML5, CSS; Gestión de Bases de datos mediante MySQL, PostgreSQL, SQLite y Desarrollo de apps móviles mediante Android Studio; Áreas de interés tales como Programación de Sistemas de Información e Inteligencia Artificial. Competencias de trabajo en equipo, autoaprendizaje de nuevas herramientas y tecnologías, orientado al alcance de objetivos, atención al detalle, empatía y compromiso con las funciones asignadas. </p>
+                            </div>
+
+                            <div class="memberSocialInfo">
+                                <ul>
+                                    <table>
+                                        <tr>
+                                            <td><a href="https://es-la.facebook.com/alejo.amayatorres" ><li><i class="fa fa-facebook" aria-hidden="true"></i></li></a></td>                                           
+                                            <td><table><tr><td></td></tr><tr><td></td></tr></table></td>
+                                            <td><a href="#"><li><i class="fa fa-linkedin" aria-hidden="true"></i></li></a></td>
+                                        </tr>
+                                    </table> 
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="project-item">
+                            <img src="assets/images/team/lorena.jpeg" alt="">
+                            <a href="#">Lorena Rodriguez</a>
+
+                            <div class="memberTeamInfo">
+                                <p class="infoMember">Estudiante de Ingenería de Sistemas con experiencia en
+                                    los procesos de gestión de tecnología, así como también con conocimientos en
+                                    SQL, Java, .Net,  virtualización, configuración de routers y switches Cisco, certificación en ITIL Foundation V4.</p>
+                            </div>
+
+                            <div class="memberSocialInfo">
+                                <ul>
+                                    <table>
+                                        <tr>
+                                            <td><a href="#" ><li><i class="fa fa-facebook" aria-hidden="true"></i></li></a></td>                                           
+                                            <td><table><tr><td></td></tr><tr><td></td></tr></table></td>
+                                            <td><a href="#"><li><i class="fa fa-linkedin" aria-hidden="true"></i></li></a></td>
+                                        </tr>
+                                    </table>                                 
+                                </ul>
+                            </div>
+                        </div>
+     
+                    </section>
+                </div>                    
+            </section> 
+            
+        </main>
+    </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>Pandora</title>
+        <link rel="shortcut icon" href="assets/images/favicon.png">        
+        
+        <!--Links Scripts de estilos-->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="assets/css/loginStyles.css"/>
+        <link rel="stylesheet" href="assets/css/indexStyles.css"/>
+
+
+        <!--Links scripts de eventos js-->
+        <script src="assets/js/jquery-3.6.0.js"></script>
+        <script src="assets/js/main.js" type="module"></script>
+        
+    </head>
+    <body>
+         <!--===== HEADER =====-->
+         <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="/index.html" class="nav__logo"><img src="assets/images/logo_pandora.PNG"/></a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="/index.html" class="nav__link">Home</a></li>
+                        <li class="nav__item"></li><a href="" class="button" title="Comienza">Sign Up</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <br>
+            <br>
+            <br>
+            <div class="contenedor__todo">
+                
+                <div class="caja__trasera">
+                   
+                    <div class="caja__trasera-login">
+                        <h3>¿Ya tienes una cuenta?</h3>
+                        <br>
+                        <br>
+                        <a id="btnLogin" class="btn__iniciar-sesion" title="Iniciar sesión">Iniciar sesión</a>
+                    </div>            
+                    <div class="caja__trasera-register">
+                        <h3>¿Aún no tienes una cuenta?</h3>
+                        <br>
+                        <br>
+                        <a id="btnRegistro" class="btn_registro" title="Registrarse">Regístrate</a>
+                    </div>   
+                </div>
+
+                <!--Formulario de login y registro-->
+                <div class="contenedor__login-register">
+                    
+                    <!--Formulario de login-->
+                    <form action="" class="formulario__login">
+                        <h2>Login</h2>
+                        <img src="assets/images/login.png"/>
+                        <input type="text" placeholder="Email">
+                        <input type="password" placeholder="Contraseña">
+                        <a href="/Dashboard_Estudiante.html" class="btn_login" title="Ingresar">Ingresar</a>
+                    </form>
+
+                    <!--Formulario de registro-->
+                    <form action="" class="formulario__register">
+                        <h2>Registro</h2>
+            
+                        <input type="text" placeholder="Usuario">
+                        <input type="text" placeholder="Email">                        
+                        <input type="password" placeholder="Contraseña">
+                        <a href="" class="btn_register" title="Registrarse">Regístrate</a>
+                    </form>
+                </div>
+            </div>
+       </main>        
+    </body>
+</html>
