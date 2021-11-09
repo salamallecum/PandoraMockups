@@ -9,6 +9,10 @@
         <!--Links Scripts de estilos-->
         <link rel="stylesheet" href="/assets/css/ProfesorStyles.css">
         <link rel="stylesheet" href="https:/cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+
+         <!--Links scripts de eventos js-->
+         <script src="assets/js/dom/funcionesBasicasPopUpDesafiosPersonalizados.js" type="module"></script>
+         <script src="assets/js/jquery-3.6.0.js"></script>
     </head>
 
     <body>
@@ -69,7 +73,7 @@
             <header>
                 <div class="social-icons">
                     <div class="titulo-dash">
-                        <span>Evaluar trabajos</span>&nbsp;
+                        <span>Administrador de desafios personalizados</span>&nbsp;
                     </div>
                     <div class="link-logout">
                         <span><a href="/index.html">Log out</a></span>
@@ -79,7 +83,247 @@
             </header>
 
             <main>
-                <p>Aquí aparecerán los solicitudes de desafios de los estudiantes...</p>
+                <div class="card-header">
+                    <a id="openModal5" class="btn_agregarDesafio" title="Nuevo Desafio Personalizado">Nuevo desafio personalizado</a>                   
+                </div>
+
+                <div class="main-tableDesafios">
+                   <br>
+                    <h3 class="titulo_seccion">Desafios personalizados existentes </h3>
+                    <br>
+                    <br>
+
+                    <!--ESTRUCTURA DE TABLA DE DESAFIOS PERSONALIZADOS-->
+                    <table id="table_desafosPersonalizados" class="tablaDeDesafios">
+                        <thead>
+                            <tr>
+                                <th class="campoTabla">Imagen</th>
+                                <th class="campoTabla">Nombre desafio</th>
+                                <th class="campoTabla">Descripción</th>
+                                <th class="campoTabla">Fecha inicio</th>
+                                <th class="campoTabla">Fecha fin</th>
+                                <th class="campoTabla">Acciones</th>
+                            </tr>
+                        </thead>
+
+                        <!--Aqui van los registros de la tabla de desafios personalizados-->
+                        <tr class="filasDeDatosTablaDesafios">
+                            <td class="datoTabla"><img class="imagenDelDesafioEnTabla"src="/assets/images/imgDesafioOEvento.jpg"></td>
+                            <td class="datoTabla">DESAFIO PERSONALIZADO DE PRUEBA 1</td>
+                            <td class="datoTabla">Desafio personalizado creado para la construcción de la tabla</td>
+                            <td class="datoTabla"> 01/01/2021</td>
+                            <td class="datoTabla">31/12/2021</td>
+                            <td class="datoTabla"><div class="compEsp-edicion">
+                                <div class="col-botonesEdicion">
+                                    <a name="openModal7" href="" title="Editar"><img src="/assets/images/btn_editar.PNG"></a>
+                                </div>
+
+                                <div class="col-botonesEdicion">
+                                    <a name="openModal6" href="" title="Eliminar"><img src="/assets/images/btn_eliminar.PNG"></a>
+                                </div>
+                            </div></td>
+                        </tr>
+
+                        <tr class="filasDeDatosTablaDesafios">
+                            <td class="datoTabla"><img class="imagenDelDesafioEnTabla"src="/assets/images/imgDesafioOEvento.jpg"></td>
+                            <td class="datoTabla">DESAFIO PERSONALIZADO DE PRUEBA 2</td>
+                            <td class="datoTabla">Desafio  personalizado creado para la construcción de la tabla</td>
+                            <td class="datoTabla"> 01/01/2021</td>
+                            <td class="datoTabla">31/12/2021</td>
+                            <td class="datoTabla"><div class="compEsp-edicion">
+                                <div class="col-botonesEdicion">
+                                    <a name="openModal7" href="" title="Editar"><img src="/assets/images/btn_editar.PNG"></a>
+                                </div>
+
+                                <div class="col-botonesEdicion">
+                                    <a name="openModal6" href="" title="Eliminar"><img src="/assets/images/btn_eliminar.PNG"></a>
+                                </div>
+                            </div></td>
+                        </tr>
+                    </table>
+
+
+
+                    <!--ESTRUCTURA DEL POPUP PARA EL REGISTRO DE DESAFIOS PERSONALIZADOS-->
+                    <div id="modal_container5" class="modal_container" name="modal_container">
+                        <div class="modal">
+                            <h3 class="titulo_seccion">Nuevo Desafio personalizado</h3>
+                            <br>
+                            
+                            <div class="formulario-registroDesafio">
+                                <form class="">
+
+                                    <label class="camposFormulario">Nombre del desafio</label><br>
+                                    <input id="txt_nombreDesafioPersonalizado" name="nombreDesafioPersona" placeholder="" type="text" class="form-control">
+                                    <br>
+
+                                    <label class="camposFormulario">Descripción</label>
+                                    <textarea id="txt_descripcionDesafioPersonalizado" name="descripcionDesafioPersona" cols="80" placeholder="" rows="8" class="form-control"></textarea>
+                                    <br>
+
+                                    <!--Espacio para colocar campos tipo calendar-->
+                                    <table>
+                                        <tr>
+                                            <td><label class="camposFormulario">Fecha inicio</label>
+                                                <input type="date" id="date_fechaInicioDesafioPersonalizado" name="dateFechaInicioDesafioPersona" class="form-control" min="2000-01-01" max="2040-12-31"></td>
+                                                
+                                                <td><label class="camposFormulario">Fecha fin</label><br>
+                                                <input type="date" id="date_fechaFinDesafioPersonalizado" name="dateFechaFinDesafioPersona" class="form-control" min="2000-01-01" max="2040-12-31"></td>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <br>
+
+                                    <label class="camposFormulario">Cargue una imagen para el desafio</label><br>
+                                    <input  id="btn_imgParaElDesafioPersonalizado" name="imgParaElDesafioPersona" accept=".jpeg, .jpg, .png" type="file" class="form-control">
+                                    <br>
+
+                                    <table>
+                                        <tr>
+                                            <td><label class="camposFormulario">Comp. generales a las cuales contribuye el desafio</label><br>
+                                                <select class="form-control" id="cmb_competenciasGenerales" name="cmbCompetenciasGenerales">
+                                                    <option value="" selected>Seleccione</option>
+                                                </select>
+                                            </td>
+                                            <td><a name="openModal4" class="btn-fill pull-right btn btn-info" title="Evaluar competencias">Evaluar</a></td>
+                                        </tr>
+                                    </table>                                   
+                                    <br>
+                                    <br>    
+                                    <a id="btn_guardarDesafioPersonalizado" class="btn_agregarDesafio" title="Guardar">Guardar</a>
+                                    <a id="btn_cancelar5" class="btn_agregarDesafio" title="Cancelar">Cancelar</a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--ESTRUCTURA DEL POPUP PARA LA ACTUALIZACIÓN DE DESAFIOS-->
+                    <div id="modal_container7" class="modal_container" name="modal_container">
+                        <div class="modal">
+                            <h3 class="titulo_seccion">Actualizar Desafio personalizado</h3>
+                            <br>
+                            
+                            <div class="formulario-registroDesafio">
+                                <form class="">
+
+                                    <label class="camposFormulario">Nombre del desafio</label><br>
+                                    <input id="txt_nombreDesafioPersonalizado" name="nombreDesafioPersona" placeholder="" type="text" class="form-control">
+                                    <br>
+
+                                    <label class="camposFormulario">Descripción</label>
+                                    <textarea id="txt_descripcionDesafioPersonalizado" name="descripcionDesafioPersona" cols="80" placeholder="" rows="8" class="form-control"></textarea>
+                                    <br>
+
+                                    <!--Espacio para colocar campos tipo calendar-->
+                                    <table>
+                                        <tr>
+                                            <td><label class="camposFormulario">Fecha inicio</label>
+                                                <input type="date" id="date_fechaInicioDesafioPersonalizado" name="dateFechaInicioDesafioPersona" class="form-control" min="2000-01-01" max="2040-12-31"></td>
+                                                
+                                                <td><label class="camposFormulario">Fecha fin</label><br>
+                                                <input type="date" id="date_fechaFinDesafioPersonalizado" name="dateFechaFinDesafioPersona" class="form-control" min="2000-01-01" max="2040-12-31"></td>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <br>
+
+                                    <label class="camposFormulario">Cargue una imagen para el desafio</label><br>
+                                    <input  id="btn_imgParaElDesafioPersonalizado" name="imgParaElDesafioPersona" accept=".jpeg, .jpg, .png" type="file" class="form-control">
+                                    <br>
+
+                                    <table>
+                                        <tr>
+                                            <td><label class="camposFormulario">Comp. generales a las cuales contribuye el desafio</label><br>
+                                                <select class="form-control" id="cmb_competenciasGenerales" name="cmbCompetenciasGenerales">
+                                                    <option value="" selected>Seleccione</option>
+                                                </select>
+                                            </td>
+                                            <td><a name="openModal4" class="btn-fill pull-right btn btn-info" title="Evaluar competencias">Evaluar</a></td>
+                                        </tr>
+                                    </table>                                   
+                                    <br>
+                                    <br>    
+                                    <a id="btn_actualizarDesafioPersonalizado" class="btn_agregarDesafio" title="Actualizar">Actualizar</a>
+                                    <a id="btn_cancelar7" class="btn_agregarDesafio" title="Cancelar">Cancelar</a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--ESTRUCTURA DEL POPUP DE ELIMINACIÓN DE DESAFIOS-->
+                    <div id="modal_container6" class="modal_container" name="modal_container">
+                        <div class="modal">
+                            <h3 class="titulo_seccion">Eliminar Desafio personalizado</h3>
+                            <br>
+                            <p>¿Está seguro de que desea eliminar?</p>
+                            <br>
+                            <br>
+                            <a id="btn_eliminarDesafioPersonalizado" class="btn_agregarDesafio" title="Si">Si</a>
+                            <a id="btn_cancelar6" class="btn_agregarDesafio" title="No">No</a>
+                        </div>
+                    </div>
+                   
+
+                    <!--POPUP PARA LA EVALUACIÓN DE COMPETENCIAS QUE CONTRIBUYEN A UN DESAFIO-->
+                    <div id="modal_container4" class="modal_container" name="modal_container">
+                        <div class="modal">
+                            <h3 class="titulo_seccion">Evaluación de competencias</h3>
+                            <br>
+                            <p>Evalúe el nivel de competencia propuesto por el desafio para las siguientes competencias específicas: </p>
+                            <br>
+
+
+                            <div class="contenedor_compEspecificas">
+
+                                <form class="">
+                                    <!--Este es el código que contiene las competencias específicas a evaluar-->
+                                    <div class="contenedorCompeEspeciasAEvaluar">
+                                        <p id="lbl_enunciadoCompetenciaEspecíficaAEvaluar" name="enunciadoCompetenciaEspecíficaAEvaluar" class="enunciadoCompetenciaEspecíficaAEvaluar">1. Competencia específica 1.</p>
+                                        
+                                        <!--Tabla de radiobuttons para evaluar competencia específica-->
+                                        <table>
+                                            <tr>
+                                                <td><input type="radio" id="radio_contribucionBaja" name="contribucionBaja" value="">
+                                                <label for="Baja">Baja</label></td>
+                                                
+                                                <td class=columnaNivelContribucion><td><input type="radio" id="radio_contribucionMedia" name="contribucionMedia" value="">
+                                                <label for="Media">Media</label></td></td>
+                                                
+                                                <td class=columnaNivelContribucion><td><input type="radio" id="radio_contribucionAlta" name="contribucionAlta" value="">
+                                                <label for="Alta">Alta</label></td></td>
+                                            </tr>
+                                        </table>
+
+                                        <br>
+
+                                        <p id="lbl_enunciadoCompetenciaEspecíficaAEvaluar" name="enunciadoCompetenciaEspecíficaAEvaluar" class="enunciadoCompetenciaEspecíficaAEvaluar">2. Competencia específica 2.</p>
+
+                                        <!--Tabla de radiobuttons para evaluar competencia específica-->
+                                        <table>
+                                            <tr>
+                                                <td><input type="radio" id="radio_contribucionBaja" name="contribucionBaja" value="">
+                                                <label for="Baja">Baja</label></td>
+                                                
+                                                <td class=columnaNivelContribucion><td><input type="radio" id="radio_contribucionMedia" name="contribucionMedia" value="">
+                                                <label for="Media">Media</label></td></td>
+                                                
+                                                <td class=columnaNivelContribucion><td><input type="radio" id="radio_contribucionAlta" name="contribucionAlta" value="">
+                                                <label for="Alta">Alta</label></td></td>
+                                            </tr>
+                                        </table>
+                                    </div>  
+
+                                    <br>
+                                    <br>
+                                    <a id="btn_guardarAnálisis" class="btn_agregarDesafio" title="Guardar">Guardar</a>
+                                    <a id="btn_cancelar4" class="btn_agregarDesafio" title="Cancelar">Cancelar</a>
+
+                                </form>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
             </main>
         </div>
     </body>

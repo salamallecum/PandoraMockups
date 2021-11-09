@@ -19,7 +19,7 @@ close1.addEventListener('click', (e) => {
 
 
 //ASIGNACION DE EVENTOS A BOTONES ELIMINAR PARA LA ELIMINACIÓN DE DESAFIOS
-function eventoPopUpEliminacionDeEventos(){
+function eventoPopUpEliminacionDeDesafios(){
 
     let listOpen3 = document.getElementsByName('openModal3');
     var modal_container3 = document.getElementById('modal_container3');
@@ -42,7 +42,7 @@ function eventoPopUpEliminacionDeEventos(){
 
 
 //ASIGNACION DE EVENTOS A BOTONES EDITAR PARA LA ACTUALIZACIÓN DE DESAFIOS
-function eventoPopUpActualizacionDeEventos(){
+function eventoPopUpActualizacionDeDesafios(){
 
     let listOpen2 = document.getElementsByName('openModal2');
     var modal_container2 = document.getElementById('modal_container2');
@@ -62,7 +62,6 @@ function eventoPopUpActualizacionDeEventos(){
         modal_container2.classList.remove('show');
     },false); 
 }
-
 
 //ASIGNACION DE EVENTO A BOTON "EVALUAR" PARA LA EVALUACION DE LAS COMPETENCIAS ESPECÍFICAS
 const listOpen4 = document.getElementsByName('openModal4');
@@ -85,5 +84,6 @@ close4.addEventListener('click', (e) => {
 
 
 //INVOCACION DE FUNCIONES
-eventoPopUpActualizacionDeEventos();
-eventoPopUpEliminacionDeEventos()
+eventoPopUpActualizacionDeDesafios();
+eventoPopUpEliminacionDeDesafios();
+
