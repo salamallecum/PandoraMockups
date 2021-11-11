@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="https:/cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
 
         <!--Links scripts de eventos js-->
-        <script src="assets/js/dom/funcionesBasicasPopUpEventos.js" type="module"></script>
+        <script src="assets/js/dom/funcionesBasicasPopUpConvocatorias.js" type="module"></script>
         <script src="assets/js/jquery-3.6.0.js"></script>
     </head>
 
@@ -98,7 +98,7 @@
             <!--Codigo de la ventana principal-->
             <main>
                 <div class="card-header">
-                    <a id="openModal" class="btn_agregarEvento" title="Nueva Convocatoria">Nueva convocatoria</a>                   
+                    <a id="openModal" class="btn_agregarConvocatoria" title="Nueva Convocatoria">Nueva convocatoria</a>                   
                 </div>
 
                 <div class="main-tableEventos">
@@ -108,11 +108,11 @@
                     <br>
 
                     <!--ESTRUCTURA DE TABLA DE EVENTOS-->
-                    <table id="table_eventos" class="tablaDeEventos">
+                    <table id="table_eventos" class="tablaDeConvocatorias">
                         <thead>
                             <tr>
                                 <th class="campoTabla">Imagen</th>
-                                <th class="campoTabla">Nombre evento</th>
+                                <th class="campoTabla">Nombre convocatoria</th>
                                 <th class="campoTabla">Descripción</th>
                                 <th class="campoTabla">Fecha inicio</th>
                                 <th class="campoTabla">Fecha fin</th>
@@ -120,11 +120,11 @@
                             </tr>
                         </thead>
 
-                        <!--Aqui van los registros de la tabla de eventos-->
-                        <tr class="filasDeDatosTablaEventos">
-                            <td class="datoTabla"><img class="imagenDelEventoEnTabla"src="/assets/images/imgDesafioOEvento.jpg"></td>
-                            <td class="datoTabla">EVENTO DE PRUEBA 1</td>
-                            <td class="datoTabla">Evento creado para la construcción de la tabla</td>
+                        <!--Aqui van los registros de la tabla de convocatorias-->
+                        <tr class="filasDeDatosTablaConvocatorias">
+                            <td class="datoTabla"><img class="imagenDeConvocatoriaEnTabla"src="/assets/images/imgDesafioOEvento.jpg"></td>
+                            <td class="datoTabla">CONVOCATORIA DE PRUEBA 1</td>
+                            <td class="datoTabla">Convocatoria creada para la construcción de la tabla</td>
                             <td class="datoTabla"> 01/01/2021</td>
                             <td class="datoTabla">31/12/2021</td>
                             <td class="datoTabla"><div class="compEsp-edicion">
@@ -138,10 +138,10 @@
                             </div></td>
                         </tr>
 
-                        <tr class="filasDeDatosTablaEventos">
-                            <td class="datoTabla"><img class="imagenDelEventoEnTabla"src="/assets/images/imgDesafioOEvento.jpg"></td>
-                            <td class="datoTabla">EVENTO DE PRUEBA 2</td>
-                            <td class="datoTabla">Evento creado para la construcción de la tabla</td>
+                        <tr class="filasDeDatosTablaConvocatorias">
+                            <td class="datoTabla"><img class="imagenDeConvocatoriaEnTabla"src="/assets/images/imgDesafioOEvento.jpg"></td>
+                            <td class="datoTabla">CONVOCATORIA DE PRUEBA 1</td>
+                            <td class="datoTabla">Convocatoria creada para la construcción de la tabla</td>
                             <td class="datoTabla"> 01/01/2021</td>
                             <td class="datoTabla">31/12/2021</td>
                             <td class="datoTabla"><div class="compEsp-edicion">
@@ -154,54 +154,58 @@
                                 </div>
                             </div></td>
                         </tr>
+
+                       
                     </table>
 
 
-
-                    <!--ESTRUCTURA DEL POPUP PARA EL REGISTRO DE EVENTOS-->
+                    <!--ESTRUCTURA DEL POPUP PARA EL REGISTRO DE CONVOCATORIAS-->
                     <div id="modal_container1" class="modal_container" name="modal_container">
                         <div class="modal">
-                            <h3 class="titulo_seccion">Nuevo Evento</h3>
+                            <h3 class="titulo_seccion">Nueva Convocatoria</h3>
                             <br>
                             
-                            <div class="formulario-registroEvento">
+                            <div class="formulario-registroConvocatoria">
                                 <form class="">
 
-                                    <label class="camposFormulario">Nombre del evento</label><br>
-                                    <input id="txt_nombreEvento" name="nombreEvento" placeholder="" type="text" class="form-control">
+                                    <label class="camposFormulario">Nombre de la convocatoria</label><br>
+                                    <input id="txt_nombreConvocatoria" name="nombreConvocatoria" placeholder="" type="text" class="form-control">
                                     <br>
 
                                     <label class="camposFormulario">Descripción</label>
-                                    <textarea id="txt_descripcionEvento" name="descripcionEvento" cols="80" placeholder="" rows="8" class="form-control"></textarea>
+                                    <textarea id="txt_descripcionEvento" name="descripcionConvocatoria" cols="80" placeholder="" rows="8" class="form-control"></textarea>
                                     <br>
 
-                                    <label class="camposFormulario">Opcional* - Archivo PDF con info del evento</label><br>
-                                    <input  id="btn_cargaArchivoInfoDelEvento" name="btnCargaArchivoInfoDelEvento" accept=".pdf" type="file" class="form-control">
+                                    <label class="camposFormulario">Opcional* - Archivo PDF con info de convocatoria</label><br>
+                                    <input  id="btn_cargaArchivoInfoDeConvocatoria" name="btnCargaArchivoInfoDeConvocatoria" accept=".pdf" type="file" class="form-control">
                                     <br>
 
                                     <!--Espacio para colocar campos tipo calendar-->
                                     <table>
                                         <tr>
                                             <td><label class="camposFormulario">Fecha inicio</label>
-                                                <input type="date" id="date_fechaInicioEvento" name="dateFechaInicioEvento" class="form-control" min="2000-01-01" max="2040-12-31"></td>
+                                                <input type="date" id="date_fechaInicioConvocatoria" name="dateFechaInicioConvocatoria" class="form-control" min="2000-01-01" max="2040-12-31"></td>
                                                 
                                                 <td><label class="camposFormulario">Fecha fin</label><br>
-                                                <input type="date" id="date_fechaFinEvento" name="dateFechaFinEvento" class="form-control" min="2000-01-01" max="2040-12-31"></td>
+                                                <input type="date" id="date_fechaFinConvocatoria" name="dateFechaFinConvocatoria" class="form-control" min="2000-01-01" max="2040-12-31"></td>
                                             </td>
                                         </tr>
                                     </table>
+                                    <br>
 
                                     <label class="camposFormulario">Profesor encargado</label>
                                     <select class="form-control" id="cmb_profesoresResponsables" name="cmbProfesoresResponsables">
                                         <option value="" selected>Seleccione</option>
                                     </select>
+                                    <br>
 
-                                    <label class="camposFormulario">Cargue una imagen para el evento</label><br>
-                                    <input  id="btn_imgParaElEvento" name="imgParaElEvento" accept=".jpeg, .jpg, .png" type="file" class="form-control">
+                                    <label class="camposFormulario">Cargue una imagen para la convocatoria</label><br>
+                                    <input  id="btn_imgParaConvocatoria" name="imgParaConvocatoria" accept=".jpeg, .jpg, .png" type="file" class="form-control">
+                                    <br>
 
                                     <table>
                                         <tr>
-                                            <td><label class="camposFormulario">Comp. generales a las cuales contribuye el evento</label><br>
+                                            <td><label class="camposFormulario">Comp. generales a las cuales contribuye la convocatoria</label><br>
                                                 <select class="form-control" id="cmb_competenciasGenerales" name="cmbCompetenciasGenerales">
                                                     <option value="" selected>Seleccione</option>
                                                 </select>
@@ -210,15 +214,10 @@
                                         </tr>
                                     </table>                                   
                                     
-                                    <label class="camposFormulario">Asignar a</label><br>
-                                    <select class="form-control" id="cmb_profesoresEncargados" name="cmbProfesoresEncargados">
-                                        <option value="" selected>Seleccione</option>
-                                    </select>
-
                                     <br>
                                     <br>    
-                                    <a id="btn_guardarEvento" class="btn_agregarEvento" title="Guardar">Guardar</a>
-                                    <a id="btn_cancelar1" class="btn_agregarEvento" title="Cancelar">Cancelar</a>
+                                    <a id="btn_guardarConvocatoria" class="btn_agregarConvocatoria" title="Guardar">Guardar</a>
+                                    <a id="btn_cancelar1" class="btn_agregarConvocatoria" title="Cancelar">Cancelar</a>
                                 </form>
                             </div>
                         </div>
@@ -228,80 +227,78 @@
                     <!--ESTRUCTURA DEL POPUP PARA LA ACTUALIZACIÓN DE EVENTOS-->
                     <div id="modal_container2" class="modal_container" name="modal_container">
                         <div class="modal">
-                            <h3 class="titulo_seccion">Actualizar Evento</h3>
+                            <h3 class="titulo_seccion">Actualizar Convocatoria</h3>
                             <br>
                             
-                            <div class="formulario-registroEvento">
+                            <div class="formulario-registroConvocatoria">
                                 <form class="">
 
-                                    <label class="camposFormulario">Nombre del evento</label><br>
-                                    <input id="txt_nombreEvento" name="nombreEvento" placeholder="" type="text" class="form-control">
+                                    <label class="camposFormulario">Nombre de la convocatoria</label><br>
+                                    <input id="txt_nombreConvocatoria" name="nombreConvocatoria" placeholder="" type="text" class="form-control">
                                     <br>
 
                                     <label class="camposFormulario">Descripción</label>
-                                    <textarea id="txt_perfilProfesional" name="perfilProfesional" cols="80" placeholder="" rows="8" class="form-control"></textarea>
+                                    <textarea id="txt_descripcionEvento" name="descripcionConvocatoria" cols="80" placeholder="" rows="8" class="form-control"></textarea>
                                     <br>
 
-                                    <label class="camposFormulario">Opcional* - Archivo PDF con info del evento</label><br>
-                                    <input  id="btn_cargaArchivoInfoDelEvento" name="btnCargaArchivoInfoDelEvento" accept=".pdf" type="file" class="form-control">
+                                    <label class="camposFormulario">Opcional* - Archivo PDF con info de convocatoria</label><br>
+                                    <input  id="btn_cargaArchivoInfoDeConvocatoria" name="btnCargaArchivoInfoDeConvocatoria" accept=".pdf" type="file" class="form-control">
                                     <br>
 
                                     <!--Espacio para colocar campos tipo calendar-->
                                     <table>
                                         <tr>
                                             <td><label class="camposFormulario">Fecha inicio</label>
-                                                <input type="date" id="date_fechaInicioEvento" name="dateFechaInicioEvento" class="form-control" min="2000-01-01" max="2040-12-31"></td>
+                                                <input type="date" id="date_fechaInicioConvocatoria" name="dateFechaInicioConvocatoria" class="form-control" min="2000-01-01" max="2040-12-31"></td>
                                                 
                                                 <td><label class="camposFormulario">Fecha fin</label><br>
-                                                <input type="date" id="date_fechaFinEvento" name="dateFechaFinEvento" class="form-control" min="2000-01-01" max="2040-12-31"></td>
+                                                <input type="date" id="date_fechaFinConvocatoria" name="dateFechaFinConvocatoria" class="form-control" min="2000-01-01" max="2040-12-31"></td>
                                             </td>
                                         </tr>
                                     </table>
+                                    <br>
 
                                     <label class="camposFormulario">Profesor encargado</label>
                                     <select class="form-control" id="cmb_profesoresResponsables" name="cmbProfesoresResponsables">
                                         <option value="" selected>Seleccione</option>
                                     </select>
+                                    <br>
 
-                                    <label class="camposFormulario">Cargue una imagen para el evento</label><br>
-                                    <input  id="btn_imgParaElEvento" name="imgParaElEvento" accept=".jpeg, .jpg, .png" type="file" class="form-control">
+                                    <label class="camposFormulario">Cargue una imagen para la convocatoria</label><br>
+                                    <input  id="btn_imgParaConvocatoria" name="imgParaConvocatoria" accept=".jpeg, .jpg, .png" type="file" class="form-control">
+                                    <br>
 
                                     <table>
                                         <tr>
-                                            <td><label class="camposFormulario">Comp. generales a las cuales contribuye el evento</label><br>
-                                                <select class="form-control" id="cmb_competenciasGenerales" name="cmbCompetenciasGeneraless">
+                                            <td><label class="camposFormulario">Comp. generales a las cuales contribuye la convocatoria</label><br>
+                                                <select class="form-control" id="cmb_competenciasGenerales" name="cmbCompetenciasGenerales">
                                                     <option value="" selected>Seleccione</option>
                                                 </select>
                                             </td>
                                             <td><a name="openModal4" class="btn-fill pull-right btn btn-info" title="Analizar competencias">Analizar</a></td>
                                         </tr>
-                                    </table>         
-                                                              
-                                    <label class="camposFormulario">Asignar a</label><br>
-                                    <select class="form-control" id="cmb_profesoresEncargados" name="cmbProfesoresEncargados">
-                                        <option value="" selected>Seleccione</option>
-                                    </select>
-
+                                    </table>                                   
+                                    
                                     <br>
-                                    <br>   
-                                    <a id="btn_actualizarEvento" class="btn_agregarEvento" title="Actualizar">Actualizar</a>
-                                    <a id="btn_cancelar2" class="btn_agregarEvento" title="Cancelar">Cancelar</a>
+                                    <br>    
+                                    <a id="btn_actualizarConvocatoria" class="btn_agregarConvocatoria" title="Guardar">Guardar</a>
+                                    <a id="btn_cancelar2" class="btn_agregarConvocatoria" title="Cancelar">Cancelar</a>
                                 </form>
                             </div>
                         </div>
                     </div>
 
 
-                    <!--ESTRUCTURA DEL POPUP DE ELIMINACIÓN DE EVENTOS-->
+                    <!--ESTRUCTURA DEL POPUP DE ELIMINACIÓN DE CONVOCATORIAS-->
                     <div id="modal_container3" class="modal_container" name="modal_container">
                         <div class="modal">
-                            <h3 class="titulo_seccion">Eliminar Evento</h3>
+                            <h3 class="titulo_seccion">Eliminar Convocatoria</h3>
                             <br>
                             <p>¿Está seguro de que desea eliminar?</p>
                             <br>
                             <br>
-                            <a id="btn_eliminarEvento" class="btn_agregarEvento" title="Si">Si</a>
-                            <a id="btn_cancelar3" class="btn_agregarEvento" title="No">No</a>
+                            <a id="btn_eliminarConvocatoria" class="btn_agregarConvocatoria" title="Si">Si</a>
+                            <a id="btn_cancelar3" class="btn_agregarConvocatoria" title="No">No</a>
                         </div>
                     </div>
 
@@ -312,7 +309,7 @@
                         <div class="modal">
                             <h3 class="titulo_seccion">Evaluación de competencias</h3>
                             <br>
-                            <p>Evalúe el nivel de competencia propuesto por el evento para las siguientes competencias específicas: </p>
+                            <p>Evalúe el nivel de competencia propuesto por la convocatoria para las siguientes competencias específicas: </p>
                             <br>
 
 
@@ -358,8 +355,8 @@
 
                                     <br>
                                     <br>
-                                    <a id="btn_guardarAnálisis" class="btn_agregarEvento" title="Guardar">Guardar</a>
-                                    <a id="btn_cancelar4" class="btn_agregarEvento" title="Cancelar">Cancelar</a>
+                                    <a id="btn_guardarAnálisis" class="btn_agregarConvocatoria" title="Guardar">Guardar</a>
+                                    <a id="btn_cancelar4" class="btn_agregarConvocatoria" title="Cancelar">Cancelar</a>
 
                                 </form>
                             </div>                            
