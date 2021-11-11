@@ -9,6 +9,10 @@
         <!--Links Scripts de estilos-->
         <link rel="stylesheet" href="/assets/css/ProfesorStyles.css">
         <link rel="stylesheet" href="https:/cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+
+        <!--Links scripts de eventos js-->
+        <script src="assets/js/dom/funcionesBasicasPopUpEvaluacionDeDesafioOEvento.js" type="module"></script>
+        <script src="assets/js/jquery-3.6.0.js"></script>
     </head>
 
     <body>
@@ -79,7 +83,276 @@
             </header>
 
             <main>
-                <p>Aquí van los paneles de evaluación de los trabajos</p>
+                
+                <div class="main-tableDesafios">
+                    
+                    <label class="comboDeDesafiosAEvaluar">Seleccione el tipo de actividad que desea evaluar</label>
+                    <table>
+                        <tr>
+                            <td><select class="form-control" id="cmb_tipoDeActividadAEvaluar" name="cmbTipoDeActividadAEvaluar">
+                                    <option value="" selected>Seleccione</option>
+                                    <option value="">Desafio</option>
+                                    <option value="">Desafio personalizado</option>
+                                    <option value="">Evento</option>
+                                </select></td>
+
+                            <td> <a id="btn_filtrarActividades" class="btn_agregarDesafio" title="Filtrar">Filtrar</a></td>
+                        </tr>
+                    </table>
+                    <br>
+
+
+                    <div class="contenedorTabla">
+
+                        <h3 class="titulo_seccion">Tabla de actividades</h3>
+                        <br>
+                        
+
+                        <!--ESTRUCTURA DE TABLA DE DESAFIOS Y EVENTOS-->
+                        <table id="table_desafiosAEvaluar" class="tablaDeActividadesAEvaluar">
+                        <thead>
+                            <tr>
+                                <th class="campoTabla">Imagen</th>
+                                <th class="campoTabla">Nombre</th>
+                                <th class="campoTabla">Acciones</th>
+                            </tr>
+                        </thead>
+
+                            <!--Aqui van los registros de la tabla de desafios-->
+                            <tr class="filasDeDatosTablaDesafios">
+                                <td class="datoTabla"><img class="imagenDelDesafioEnTabla"src="/assets/images/imgDesafioOEvento.jpg"></td>
+                                <td class="datoTabla">DESAFIO DE PRUEBA 1</td>
+                                <td class="datoTabla"><div class="compEsp-edicion">
+
+                                    <div class="col-botonesEdicion">
+                                    <a name="openModal" class="iconosAccionesEvaluacion" title="Detalles"><img src="/assets/images/verDetallesActividad.png"></a> 
+                                    </div>
+
+                                    <div class="col-botonesEdicion">
+                                    <a name="btn_listarTrabajos" class="iconosAccionesEvaluacion" title="Ver trabajos"><img src="/assets/images/folder_trabajosPresentados.png"></a> 
+                                    </div>
+
+                                    <div class="col-botonesEdicion">
+                                    <a name="openModal4" class="iconosAccionesEvaluacion" title="Cerrar actividad"><img src="/assets/images/btn_cerrarActividad.png"></a> 
+                                    </div>
+
+                                    <div class="col-botonesEdicion">
+                                        <a name="openModal5" class="iconosAccionesEvaluacion" title="Abrir actividad"><img src="/assets/images/btn_abrirActividad.png"></a> 
+                                </div></td>
+                            </tr>
+                        </table>
+                    </div>
+
+
+ 
+                    <div class="contenedorTabla">   
+                        
+                        <h3 class="titulo_seccion">Tabla de trabajos </h3>
+                        <br>
+
+                        <!--ESTRUCTURA DE TABLA DE TRABAJOS PRESENTADOS-->
+                        <table id="table_desafiosAEvaluar" class="tablaDeDesafiosAEvaluar">
+                            <thead>
+                                <tr>
+                                    <th class="campoTabla">Imagen</th>
+                                    <th class="campoTabla">Nombre Trabajo</th>
+                                    <th class="campoTabla">Nombres</th>
+                                    <th class="campoTabla">Apellidos</th>
+                                    <th class="campoTabla">Acciones</th>
+                                </tr>
+                            </thead>
+
+                            <!--Aqui van los registros de la tabla de desafios-->
+                            <tr class="filasDeDatosTablaDesafios">
+                                <td class="datoTabla"><img class="imagenDelDesafioEnTabla"src="/assets/images/imgDesafioOEvento.jpg"></td>
+                                <td class="datoTabla">TRABAJO DE PRUEBA 1</td>
+                                <td class="datoTabla"> PEPITO </td>
+                                <td class="datoTabla"> PEREZ</td>
+                                <td class="datoTabla"><div class="col-botonesEdicion">
+                                        <a name="openModal2" class="iconosAccionesEvaluacion" title="Detalles"><img src="/assets/images/verDetallesActividad.png"></a> 
+                                    </div>
+                                </td>
+                            </tr>
+                        </table> 
+                    </div>
+
+
+                    <!--ESTRUCTURA DEL POPUP PARA EL DETALLE DE LOS DESAFIOS Y EVENTOS-->
+                    <div id="modal_container1" class="modal_container" name="modal_container">
+                        <div class="modal">
+                            
+                            <div class="imagenDelDesafioOEvento">
+                                <img id=img_imagenDelDesafioOEvento" class="imgEncabezadoInfoActividad" src="/assets/images/imgDesafioOEvento.jpg" alt="">
+                            </div>
+                            <br>
+
+                            <div class="modalBody">
+                                <h3 id="lbl_NombreDelDesafioOEvento" class="titulo_seccion">DESAFIO DE PRUEBA 1</h3>
+                                <br>
+                                
+                                <div class="informacionDelDesafioOEvento">
+            
+                                    <label class="subtitulosInfo">Descripción</label>
+                                    <p id="lbl_descripcionDelDesafioOEvento" class="enunciadoDesafioOEvento">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore ullam dicta id ea quibusdam. Mollitia, ipsa, voluptatum possimus sed delectus adipisci ut distinctio eligendi illum, et atque saepe explicabo eum? orem ipsum dolor sit amet consectetur, adipisicing elit. Labore ullam dicta id ea quibusdam. Mollitia, ipsa, voluptatum possimus sed delectus adipisci ut distinctio eligendi illum, et atque saepe explicabo eum?</p>
+                                    <br>
+
+                                    <table>
+                                        <tr>
+                                            <td class="columnaInfoEnunciado"><label class="subtitulosInfo">Enunciado:</label></td>
+                                            <td class="columnaInfoEnunciado"><a id="btn_descargarEnunciado" class="btn-fill pull-right btn btn-info" title="Descargar enunciado">Descargar</a></td>
+                                        </tr>
+                                    </table>
+                                    <br>
+                                    <table>
+                                        <tr>
+                                            <td class="columnaInfoEnunciado"><label class="subtitulosInfo">Fecha inicio:</label>
+                                                <label id="lbl_fechaInicioActividad">01/01/2021</label>
+                                                
+                                            <td class="columnaInfoEnunciado"><label class="subtitulosInfo">Fecha fin:</label>
+                                                <label id="lbl_fechaInicioActividad">01/01/2021</label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <br>
+
+                                    <label class="subtitulosInfo">Estado de la actividad:</label> <label id="lbl_estadoActividad">Activo</label>                             
+                                    <br>
+                                    <br>    
+                                    <a id="btn_cancelar1" class="btn_agregarDesafio" title="Cancelar">Atras</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+                    <!--ESTRUCTURA DEL POPUP PARA EL DETALLE DE LOS TRABAJOS DESTACADOS-->
+                    <div id="modal_container2" class="modal_container" name="modal_container">
+                        <div class="modal">
+                            
+                            <div class="imagenDelTrabajo">
+                                <img id=img_imagenDelTrabajo" class="imgEncabezadoInfoTrabajo" src="/assets/images/imgDesafioOEvento.jpg" alt="">
+                            </div>
+                            <br>
+
+                            <div class="modalBody">
+                                <h3 id="lbl_NombreDelTrabajo" class="titulo_seccion">TRABAJO DE PRUEBA 1</h3>
+                                <br>
+                                
+                                <div class="informacionDelTrabajo">
+            
+                                    <label class="subtitulosInfo">Descripción</label>
+                                    <p id="lbl_descripcionDelTrabajo" class="descripcionDelTrabajo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore ullam dicta id ea quibusdam. Mollitia, ipsa, voluptatum possimus sed delectus adipisci ut distinctio eligendi illum, et atque saepe explicabo eum? orem ipsum dolor sit amet consectetur, adipisicing elit. Labore ullam dicta id ea quibusdam. Mollitia, ipsa, voluptatum possimus sed delectus adipisci ut distinctio eligendi illum, et atque saepe explicabo eum?</p>
+                                    <br>
+
+                                    <!-- Tabla con las evidencias del trabajo-->
+                                    <table>
+                                        <tr>
+                                            <td class="columnaInfoEnunciado"><label class="subtitulosInfo">Evidencias:</label></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><a id="link_evidenciaDocumento" href="" target="_blank"><img src="/assets/images/btn_evidenc_documento.PNG"></a></td>
+                                            <td class="columnaInfoEnunciado"><a id="link_evidenciaVideo" href="" target="_blank"><img src="/assets/images/btn_evidenc_video.png"></a></td>
+                                            <td class="columnaInfoEnunciado"><a id="link_evidenciaRepoCodigo" href="" target="_blank"><img src="/assets/images/btn_evidenc_repocodigo.png"></a></td>
+                                            <td class="columnaInfoEnunciado"><a id="link_evidenciaPresentacion" href="" target="_blank"><img src="/assets/images/btn_evidenc_presentacion.png"></a></td>                           
+                                            <td><label class="explicacionEvidencias">Haga click sobre cada uno de los iconos...</label></td>
+                                        </tr>
+                                    </table>
+                                                        
+                                    <br>
+                                    <br>   
+                                    <a name="openModal3" class="btn_agregarDesafio" title="Evaluar trabajo">Evaluar</a> 
+                                    <a id="btn_cancelar2" class="btn_agregarDesafio" title="Cancelar">Cancelar</a>
+                                </div>
+                            </div>
+
+                    <!--POPUP PARA LA EVALUACIÓN DE COMPETENCIAS EN UN TRABAJO-->
+                    <div id="modal_container3" class="modal_container" name="modal_container">
+                        <div class="modal">
+                            <h3 class="titulo_seccion">Evaluación de competencias</h3>
+                            <br>
+                            <p>Evalúe el nivel de competencia alcanzado por el trabajo presentado para las siguientes competencias específicas: </p>
+                            <br>
+
+
+                            <div class="contenedor_compEspecificas">
+
+                                <form class="">
+                                    <!--Este es el código que contiene las competencias específicas a evaluar-->
+                                    <div class="contenedorCompeEspeciasAEvaluar">
+                                        <p id="lbl_enunciadoCompetenciaEspecíficaAEvaluar" name="enunciadoCompetenciaEspecíficaAEvaluar" class="enunciadoCompetenciaEspecíficaAEvaluar">1. Competencia específica 1.</p>
+                                        
+                                        <!--Tabla de radiobuttons para evaluar competencia específica-->
+                                        <table>
+                                            <tr>
+                                                <td><input type="radio" id="radio_contribucionBaja" name="contribucionBaja" value="">
+                                                <label for="Baja">Baja</label></td>
+                                                
+                                                <td class=columnaNivelContribucion><td><input type="radio" id="radio_contribucionMedia" name="contribucionMedia" value="">
+                                                <label for="Media">Media</label></td></td>
+                                                
+                                                <td class=columnaNivelContribucion><td><input type="radio" id="radio_contribucionAlta" name="contribucionAlta" value="">
+                                                <label for="Alta">Alta</label></td></td>
+                                            </tr>
+                                        </table>
+
+                                        <br>
+
+                                        <p id="lbl_enunciadoCompetenciaEspecíficaAEvaluar" name="enunciadoCompetenciaEspecíficaAEvaluar" class="enunciadoCompetenciaEspecíficaAEvaluar">2. Competencia específica 2.</p>
+
+                                        <!--Tabla de radiobuttons para evaluar competencia específica-->
+                                        <table>
+                                            <tr>
+                                                <td><input type="radio" id="radio_contribucionBaja" name="contribucionBaja" value="">
+                                                <label for="Baja">Baja</label></td>
+                                                
+                                                <td class=columnaNivelContribucion><td><input type="radio" id="radio_contribucionMedia" name="contribucionMedia" value="">
+                                                <label for="Media">Media</label></td></td>
+                                                
+                                                <td class=columnaNivelContribucion><td><input type="radio" id="radio_contribucionAlta" name="contribucionAlta" value="">
+                                                <label for="Alta">Alta</label></td></td>
+                                            </tr>
+                                        </table>
+                                    </div>  
+
+                                    <br>
+                                    <br>
+                                    <a id="btn_guardarEvaluacion" class="btn_agregarDesafio" title="Guardar">Guardar</a>
+                                    <a id="btn_cancelar3" class="btn_agregarDesafio" title="Cancelar">Cancelar</a>
+
+                                </form>
+                            </div>                            
+                        </div>
+                    </div>  
+
+                    <!--ESTRUCTURA DEL POPUP PARA EL CIERRE DE ACTIVIDADES-->
+                    <div id="modal_container4" class="modal_container" name="modal_container">
+                        <div class="modal">
+                            <h3 class="titulo_seccion">Cerrar Actividad</h3>
+                            <br>
+                            <p>Una vez cerrada la actividad, los estudiantes no podrán aplicar sus trabajos ¿Desea continuar?</p>
+                            <br>
+                            <br>
+                            <a id="btn_cerrarActividad" class="btn_agregarDesafio" title="Si">Si</a>
+                            <a id="btn_cancelar4" class="btn_agregarDesafio" title="No">No</a>
+                        </div>
+                    </div>
+
+                    <!--ESTRUCTURA DEL POPUP PARA LA APERTURA DE ACTIVIDADES-->
+                    <div id="modal_container5" class="modal_container" name="modal_container">
+                        <div class="modal">
+                            <h3 class="titulo_seccion">Abrir Actividad</h3>
+                            <br>
+                            <p>Una vez abierta la actividad, los estudiantes podrán aplicar sus trabajos ¿Desea continuar?</p>
+                            <br>
+                            <br>
+                            <a id="btn_abrirActividad" class="btn_agregarDesafio" title="Si">Si</a>
+                            <a id="btn_cancelar5" class="btn_agregarDesafio" title="No">No</a>
+                        </div>
+                    </div>
+                </div>
             </main>
         </div>
     </body>

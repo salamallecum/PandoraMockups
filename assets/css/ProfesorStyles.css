@@ -526,7 +526,7 @@ form-control[type=file]:not(:disabled):not([readonly]) {
     width: 100%;
 }
 
-.imgEncabezadoInfoEstudiante {
+.imgEncabezadoInfoProfesor {
     border: 0;
     max-width: 100%;
     vertical-align: middle;
@@ -667,8 +667,68 @@ img {
     }
 }
 
+/*--------------------------ADMINISTRADOR DE EVALUACION DE TRABAJOS*--------------------------*/
+.contenedorTabla{
+    display: inline-block;
+    padding-top: 10px;
+    padding-right: 60px;
+}
 
-/*--------------------------ADMINISTRADOR DE DESAFIOS*--------------------------*/
+/*  TABLA DE MUESTREO DE DESAFIOS EXISTENTES */
+.tablaDeActividadesAEvaluar{
+    margin-left: 30px;
+    margin-top: 10px;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.iconosAccionesEvaluacion{
+    cursor: pointer;
+}
+
+.tablaDeDesafiosAEvaluar{
+    margin-left: 50px;
+    margin-top: 10px;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+/*POPUPS*/
+.imgEncabezadoInfoActividad{
+    border: 0;
+    width: 900px;
+    height: 200px;
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.imgEncabezadoInfoTrabajo{
+    border: 0;
+    width: 900px;
+    height: 200px;
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;   
+}
+
+.explicacionEvidencias{
+    font-size: 12px;
+}
+
+.columnaInfoEnunciado{
+    padding-right: 5px;
+}
+
+.subtitulosInfo{
+    font-weight: bold;
+}
+
+/*--------------------------ADMINISTRADOR DE DESAFIOS Y DESAFIOS PERSONALIZADOS*--------------------------*/
 .btn_agregarDesafio{
     color: #fff;
     background-color: #005e6e;
@@ -761,14 +821,6 @@ thead{
     font-size: 14px;
     text-align: left;
 }
-
-
-
-
-
-
-
-
 
 /*TABLA POPUP EVALUACION DE CONTRIBUCION DE COMPETENCIAS A DESAFIOS*/
 .columnaNivelContribucion{
