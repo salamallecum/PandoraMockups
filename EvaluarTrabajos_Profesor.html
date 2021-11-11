@@ -125,19 +125,12 @@
                                 <td class="datoTabla"><div class="compEsp-edicion">
 
                                     <div class="col-botonesEdicion">
-                                    <a name="openModal" class="iconosAccionesEvaluacion" title="Detalles"><img src="/assets/images/verDetallesActividad.png"></a> 
+                                        <a name="openModal" class="iconosAccionesEvaluacion" title="Detalles"><img src="/assets/images/verDetallesActividad.png"></a> 
                                     </div>
 
                                     <div class="col-botonesEdicion">
-                                    <a name="btn_listarTrabajos" class="iconosAccionesEvaluacion" title="Ver trabajos"><img src="/assets/images/folder_trabajosPresentados.png"></a> 
+                                        <a name="btn_listarTrabajos" class="iconosAccionesEvaluacion" title="Ver trabajos"><img src="/assets/images/folder_trabajosPresentados.png"></a> 
                                     </div>
-
-                                    <div class="col-botonesEdicion">
-                                    <a name="openModal4" class="iconosAccionesEvaluacion" title="Cerrar actividad"><img src="/assets/images/btn_cerrarActividad.png"></a> 
-                                    </div>
-
-                                    <div class="col-botonesEdicion">
-                                        <a name="openModal5" class="iconosAccionesEvaluacion" title="Abrir actividad"><img src="/assets/images/btn_abrirActividad.png"></a> 
                                 </div></td>
                             </tr>
                         </table>
@@ -189,7 +182,7 @@
                             <div class="modalBody">
                                 <h3 id="lbl_NombreDelDesafioOEvento" class="titulo_seccion">DESAFIO DE PRUEBA 1</h3>
                                 <br>
-                                
+                             
                                 <div class="informacionDelDesafioOEvento">
             
                                     <label class="subtitulosInfo">Descripción</label>
@@ -215,11 +208,20 @@
                                     </table>
                                     <br>
 
-                                    <label class="subtitulosInfo">Estado de la actividad:</label> <label id="lbl_estadoActividad">Activo</label>                             
+                                    <table>
+                                        <tr>
+                                            <td><label class="subtitulosInfo">Estado de la actividad:</label>  </td>
+                                            <td class="columnaInfoEnunciado"><div class="contenedor-switch">
+                                                <input type="checkbox" id="check_estadoActividad" name="openModal4">
+                                            </div></td>
+                                            <td class="columnaInfoEnunciado"><label id="lbl_estadoActividad">Activo</label></td>
+                                        </tr>
+
+                                    </table>
+                                                                
                                     <br>
                                     <br>    
-                                    <a id="btn_cancelar1" class="btn_agregarDesafio" title="Cancelar">Atras</a>
-
+                                    <a id="btn_cancelar1" class="btn_agregarDesafio" title="Cancelar">Atrás</a>
                                 </div>
                             </div>
                         </div>
@@ -263,10 +265,12 @@
                                                         
                                     <br>
                                     <br>   
-                                    <a name="openModal3" class="btn_agregarDesafio" title="Evaluar trabajo">Evaluar</a> 
+                                    <a id="openModal3" class="btn_agregarDesafio" title="Evaluar trabajo">Evaluar</a> 
                                     <a id="btn_cancelar2" class="btn_agregarDesafio" title="Cancelar">Cancelar</a>
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
                     <!--POPUP PARA LA EVALUACIÓN DE COMPETENCIAS EN UN TRABAJO-->
                     <div id="modal_container3" class="modal_container" name="modal_container">
@@ -326,32 +330,6 @@
                             </div>                            
                         </div>
                     </div>  
-
-                    <!--ESTRUCTURA DEL POPUP PARA EL CIERRE DE ACTIVIDADES-->
-                    <div id="modal_container4" class="modal_container" name="modal_container">
-                        <div class="modal">
-                            <h3 class="titulo_seccion">Cerrar Actividad</h3>
-                            <br>
-                            <p>Una vez cerrada la actividad, los estudiantes no podrán aplicar sus trabajos ¿Desea continuar?</p>
-                            <br>
-                            <br>
-                            <a id="btn_cerrarActividad" class="btn_agregarDesafio" title="Si">Si</a>
-                            <a id="btn_cancelar4" class="btn_agregarDesafio" title="No">No</a>
-                        </div>
-                    </div>
-
-                    <!--ESTRUCTURA DEL POPUP PARA LA APERTURA DE ACTIVIDADES-->
-                    <div id="modal_container5" class="modal_container" name="modal_container">
-                        <div class="modal">
-                            <h3 class="titulo_seccion">Abrir Actividad</h3>
-                            <br>
-                            <p>Una vez abierta la actividad, los estudiantes podrán aplicar sus trabajos ¿Desea continuar?</p>
-                            <br>
-                            <br>
-                            <a id="btn_abrirActividad" class="btn_agregarDesafio" title="Si">Si</a>
-                            <a id="btn_cancelar5" class="btn_agregarDesafio" title="No">No</a>
-                        </div>
-                    </div>
                 </div>
             </main>
         </div>
