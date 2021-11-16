@@ -9,6 +9,10 @@
         <!--Links Scripts de estilos-->
         <link rel="stylesheet" href="/assets/css/EstudianteStyles.css">
         <link rel="stylesheet" href="https:/cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+
+        <!--Links scripts de eventos js-->
+        <script src="assets/js/dom/funcionesBasicasPopUpPublicacionDeEportafolio.js" type="module"></script>
+        <script src="assets/js/jquery-3.6.0.js"></script>
     </head>
 
     <body>
@@ -94,7 +98,13 @@
             </header>
 
             <main>
+                                
                 <div class="perfil-card">
+                    
+                    <div class="card-header">
+                        <a id="openModal" class="btn_publicarEportafolio" title="Publicar E-portafolio">Publicar e-portafolio</a>                   
+                    </div>
+
                     <div class="card-user card">
                         <div class="card-image">
                             <img class="imgEncabezadoInfoEstudiante" src="/assets/images/uebAerea.jpg" alt="">
@@ -120,6 +130,20 @@
                 <br>
                 <br>
                 <label class="lbl-titulosEportafolio">Mis insignias</label>
+
+
+                 <!--ESTRUCTURA DEL POPUP DE PUBLICACION DE E-PORTAFOLIO-->
+                 <div id="modal_container1" class="modal_container" name="modal_container">
+                    <div class="modal">
+                        <h3 class="titulo_seccion">Publicar e-portafolio</h3>
+                        <br>
+                        <p>¿Desea publicar su E-portafolio?</p>
+                        <br>
+                        <br>
+                        <a id="btn_publicarEportafolio" class="btn_publicarEportafolio" title="Si">Si</a>
+                        <a id="btn_cancelar1" class="btn_publicarEportafolio" title="No">No</a>
+                    </div>
+                </div>
 
             </main>
         </div>

@@ -888,6 +888,17 @@ h6 {
 
 
 /*--------------------------E-PORTAFOLIO*--------------------------*/
+.btn_publicarEportafolio{
+    color: #fff;
+    background-color: #005e6e;
+    cursor: pointer;
+    padding: 8px 20px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .perfil-card{
     height: 300px;
 }
