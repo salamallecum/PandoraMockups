@@ -584,10 +584,13 @@ thead{
     display: inline-block;
 }
 
+/*GRAFICO DE PERFILAMIENTO*/
+.perfPandora{
+    display: inline-flex;
+}
+
 #grafPerfPandora{
-    display: block;
-    height: 300px;
-    width: 700px;
+    width: 650px;
 }
 
 .img_perfRol{
@@ -595,9 +598,4 @@ thead{
     height: 350px;
 }
 
-.perfPandora{
-    display: inline-block;
-    padding-right: none;
-    padding-left: none;
-    width: 500px;
-}
+
