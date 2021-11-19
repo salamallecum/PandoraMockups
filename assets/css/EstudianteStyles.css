@@ -208,6 +208,19 @@ main{
     margin-top: 20px;
 }
 
+/*GRAFICO DE PERFILAMIENTO*/
+.perfPandora{
+    display: inline-flex;
+}
+
+#grafPerfPandora{
+    width: 800px;
+}
+
+
+
+
+
 /*RESPONSIVE DESIGN*/
 @media only screen and (max-width: 1200px){
     
