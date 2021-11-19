@@ -7,7 +7,7 @@ function eventoPopUpDetalleDeDesafioOEvento(){
     var modal_container1 = document.getElementById('modal_container1');
     var close1 = document.getElementById('btn_cancelar1');
 
-    //Recorremos el arreglo de elementos con el name openModal3
+    //Recorremos el arreglo de elementos con el name openModal
     for(var i=0; i<listOpen1.length; i++){
         
         listOpen1[i].addEventListener('click', (e) => {

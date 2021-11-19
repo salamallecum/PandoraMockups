@@ -470,3 +470,134 @@ thead{
     color: #fff;
     /*background-color: #005e6e;*/
 }
+
+
+/*--------------------------ADMINISTRADOR DE EPORTAFOLIOS*--------------------------*/
+.tablaDeEportafolios{
+    margin-left: 50px;
+    margin-top: 10px;
+    width: 70%;
+    text-align: left;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.filasDeDatosTablaEportafolios:nth-child(even){
+    background-color: #ddd;
+}
+
+.modalEportafolio{
+    background: #fff;
+    width: 1100px;
+    height: 600px;
+    max-width: 100%;
+    padding: 30px 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow-y: scroll;   
+}
+
+.contenedorInfoPersonal{
+    display: flex;
+    padding-left: 200px;
+}
+
+.datosPersonales{
+    padding-left: 10px;
+    text-align: left;
+}
+
+.encab_tablaTrabajos tr th{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #005e6e;
+}
+
+.modal p{
+    opacity: 0.7;
+    font-size: 14px;
+    text-align: left;
+}
+
+.infoEstudiante{
+    display: flex;
+}
+
+.infoPersonal{
+    display: flex;
+}
+
+.fotoDelEstudiante{
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+}
+
+.btn_atrasEportafolio{
+    color: #fff;
+    background-color: #005e6e;
+    cursor: pointer;
+    padding: 8px 20px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.subtitulosInfo{
+    font-weight: bold;
+}
+
+.descripcionCampos{
+    padding-left: 10px;
+}
+
+.pnlTabla-trabajos{
+    height: 200px;
+    width: 690px;
+    overflow-y: scroll;
+    margin-left: 150px;
+}
+
+.tablaDeTrabajos{
+    align-content: center;
+    margin-top: 10px;
+    width: 70%;
+    text-align: left;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.imagenDeTrabajoEnTabla{
+    width: 60px;
+    height: 60px;
+}
+
+.panel-graficoPerf{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.col-insigniaObtenida{
+    display: inline-block;
+}
+
+#grafPerfPandora{
+    display: block;
+    height: 300px;
+    width: 700px;
+}
+
+.img_perfRol{
+    width: 300px;
+    height: 350px;
+}
+
+.perfPandora{
+    display: inline-block;
+    padding-right: none;
+    padding-left: none;
+    width: 500px;
+}
