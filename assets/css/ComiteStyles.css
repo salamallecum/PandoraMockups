@@ -209,6 +209,70 @@ main{
     margin-top: 20px;
 }
 
+
+/*GRAFICOS*/
+.etiqueta{
+    text-align: center;
+    font-size: 14px;
+}
+
+.tituloGrafico{
+    text-align: le;
+    font-size: 16px;
+}
+
+.grafCompYEstudiantes{
+    display: inline-block;
+    width: 600px;
+    height: 200px;
+}
+
+#graficaCompGeneralVsEstudiantes{
+    width: 600px;
+    height: 200px;
+}
+
+
+#graficaCompEspecificaVsEstudiantes{
+    width: 600px;
+    height: 200px;
+    margin-left: 50px;
+}
+
+.grafContribucionCompetencias{
+    display: inline-block;
+    width: 600px;
+    height: 200px;
+}
+
+#graficaContribucionCompetenciaGeneral{
+    width: 600px;
+    height: 200px;
+}
+
+#graficaContribucionCompetenciaEspecificas{
+    width: 600px;
+    height: 200px;
+    margin-left: 50px;
+}
+
+.grafCompYActividades{
+    display: inline-block;
+    width: 600px;
+    height: 200px;
+}
+
+#graficaCompGeneralVsActividades{
+    width: 600px;
+    height: 200px;
+}
+
+#graficaCompEspecificaVsActividades{
+    width: 600px;
+    height: 200px;
+    margin-left: 50px;
+}
+
 /*RESPONSIVE DESIGN*/
 @media only screen and (max-width: 1200px){
     

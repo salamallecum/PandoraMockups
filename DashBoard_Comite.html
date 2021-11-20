@@ -9,6 +9,10 @@
         <!--Links Scripts de estilos-->
         <link rel="stylesheet" href="/assets/css/ComiteStyles.css">
         <link rel="stylesheet" href="https:/cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+
+         <!--Links scripts de eventos js-->
+         <script src="assets/js/dom/dashboard_comite.js" type="module"></script>
+         <script src="assets/js/jquery-3.6.0.js"></script>
     </head>
 
     <body>
@@ -90,9 +94,9 @@
                 <div class="dash-cards">
                     <div class="card-single">
                         <div class="card-body">
-                            <span><img src="assets/images/ico_trabajosDestacados.PNG"></span>
+                            <span><img src="assets/images/ico_evento.png"></span>
                             <div>
-                                <h5>Trabajos Destacados</h5>
+                                <h5>Eventos</h5>
                                 <h4>4</h4>
                             </div>
                         </div>
@@ -104,10 +108,10 @@
 
                     <div class="card-single">
                         <div class="card-body">
-                            <span><img src="assets/images/ico_insignias.PNG"></span>
+                            <span><img src="assets/images/ico_convocatoria.png"></span>
                             <div>
-                                <h5>Insignias</h5>
-                                <h4>0</h4>
+                                <h5>Convocatorias</h5>
+                                <h4>2</h4>
                             </div>
                         </div>
                         <div class="card-footer">
@@ -118,10 +122,10 @@
 
                     <div class="card-single">
                         <div class="card-body">
-                            <span><img src="assets/images/ico_eportafolios.PNG" alt=""></span>
+                            <span><img src="assets/images/ico_insignias.PNG" alt=""></span>
                             <div>
-                                <h5>E-portafolios</h5>
-                                <h4>0</h4>
+                                <h5>Insignias otorgadas</h5>
+                                <h4>5</h4>
                             </div>
                         </div>
                         <div class="card-footer">
@@ -140,6 +144,72 @@
                         </div>
                     </div>
                     <br>
+
+                    <div class="pnl_graficas">
+
+                        <div class="graficasEstudiantes">
+
+                            <div class="grafCompYEstudiantes">
+                                <br>
+                                <p class="tituloGrafico">Balance general de estudiantes</p>
+                                <br>
+                                <canvas id="graficaCompGeneralVsEstudiantes"></canvas>
+                                <p class="etiqueta">Competencias generales (CG)</p>
+                            </div>
+
+                            <div class="grafCompYEstudiantes">
+                                <br>
+                                <br>
+                                <canvas id="graficaCompEspecificaVsEstudiantes"></canvas>
+                                <p class="etiqueta">Competencias específicas (CE)</p>
+                            </div>
+
+                        </div>
+
+                        <br>
+                        <br>
+
+                        <div class="graficasContribucionCompetencias">
+
+                            <div class="grafContribucionCompetencias">
+                                <br>
+                                <p class="tituloGrafico">Niveles de contribución - competencia general seleccionada(CG)</p>
+                                <br>
+                                <canvas id="graficaContribucionCompetenciaGeneral"></canvas>
+                                <br>
+                                
+                            </div>
+
+                            <div class="grafContribucionCompetencias">
+                                <br>
+                                <p class="tituloGrafico">Niveles de contribución - competencia específica seleccionada(CE)</p>
+                                <br>
+                                <canvas id="graficaContribucionCompetenciaEspecifica"></canvas>
+                                <br>
+                            </div>
+
+                        </div>
+                 
+                        
+                        <div class="graficasActividades">
+
+                            <div class="grafCompYActividades">                               
+                                <br>
+                                <p class="tituloGrafico">Balance general de actividades</p>
+                                <br>
+                                <canvas id="graficaCompGeneralVsActividades"></canvas> 
+                                <p class="etiqueta">Competencias generales (CG)</p>                               
+                            </div>
+
+                            <div class="grafCompYActividades">    
+                                <br>
+                                <br>                           
+                                <canvas id="graficaCompEspecificaVsActividades"></canvas> 
+                                <p class="etiqueta">Competencias específicas (CE)</p>                               
+                            </div>
+                        
+                        </div>
+                    </div>
                 </div>   
             </main>
         </div>

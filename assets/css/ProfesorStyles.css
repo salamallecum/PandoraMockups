@@ -231,6 +231,11 @@ main{
     font-size: 12px;
 }
 
+.tituloGrafico{
+    text-align: le;
+    font-size: 16px;
+}
+
 .grafCompYEstudiantes{
     display: inline-block;
     width: 600px;
