@@ -661,6 +661,10 @@ img {
 
 }
 
+/*POPUP CAMBIO DE CONTRASEÑA*/
+.formulario-cambioDeContraseña{
+    text-align: left;
+}
 
 /*RESPONSIVE DESIGN*/
 @media (min-width: 992px){

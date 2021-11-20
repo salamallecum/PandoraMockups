@@ -10,6 +10,9 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="/assets/css/ProfesorStyles.css">
         <link rel="stylesheet" href="https:/cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+
+        <!--Links scripts de eventos js-->
+        <script src="assets/js/dom/funcionesBasicasPopUpPerfilDeUsuario.js" type="module"></script>
     </head>
 
     <body>
@@ -218,6 +221,27 @@
                             </div>                            
                         </div>
                     </div>
+
+                    <!--ESTRUCTURA DEL POPUP DE CAMBIO DE CONTRASEÑA-->
+                    <div id="modal_container" class="modal_container" name="modal_container">
+                        <div class="modal">
+                            <h3 class="titulo_seccion">Cambiar contraseña</h3>
+                            <br>
+
+                            <div class="formulario-cambioDeContraseña">
+                                <form class="">
+                                    <label class="labelsPassword">Contraseña actual</label>
+                                    <input id="txt_contraseñaActual" name="txtContraseñaActual" placeholder="" type="text" class="form-control">
+                                    <br>
+                                    <label class="labelsPassword">Contraseña nueva</label>
+                                    <input id="txt_contraseñaNueva" name="txtContraseñaNueva" placeholder="" type="text" class="form-control">
+                                    <br>
+                                </form>
+                            </div>
+                        
+                            <a id="btn_guardarContraseña" class="btn_agregarDesafio" title="Guardar">Guardar</a>
+                            <a id="btn_cancelar" class="btn_agregarDesafio" title="Cancelar">Cancelar</a>
+                        </div>
                     </div>
                 </div>
             </main>
