@@ -95,21 +95,21 @@
                                             <div class="pr-1 col-md-5">
                                                 <div>
                                                     <label>Programa (disabled)</label>
-                                                    <input id="txt_programa" name="programa" disabled placeholder="Ingeniería de Sistemas" type="text" class="form-control" value="Ingeniería de Sistemas">
+                                                    <input id="txt_programa" name="programa" placeholder="" type="text" class="form-control">
                                                 </div>
                                             </div>
 
                                             <div class="px-1 col-md-3">
                                                 <div>
                                                     <label>Usuario</label>
-                                                    <input id="txt_usuario" placeholder="Username" name="username" type="text" class="form-control" value="lamayat">
+                                                    <input id="txt_usuario" name="usuario" placeholder="" type="text" class="form-control">
                                                 </div>
                                             </div>
 
                                             <div class="pl-1 col-md-4">
                                                 <div>
                                                     <label for="exampleInputEmail1">Correo Electrónico</label>
-                                                    <input id="txt_email" placeholder="Email" disabled name="email"  type="email" class="form-control" value="lamayat@unbosque.edu.co">
+                                                    <input id="txt_email" name="email" placeholder="" type="email" class="form-control">
                                                 </div>
                                             </div>                                 
                                         </div>
@@ -118,14 +118,14 @@
                                             <div class="pr-1 col-md-6">
                                                 <div>
                                                     <label>Nombres</label>
-                                                    <input disabled placeholder="Nombres" name="nombres" type="text" class="form-control" value="Luis Alejandro">
+                                                    <input id="txt_nombres" name="nombres" placeholder="" type="text" class="form-control">
                                                 </div>
                                             </div>
 
                                             <div class="pl-1 col-md-6">
                                                 <div>
                                                     <label>Apellidos</label>
-                                                    <input disabled placeholder="Apellido" name="apellidos" type="text" class="form-control" value="Amaya Torres">
+                                                    <input id="txt_apellidos" name="apellidos" placeholder="" type="text" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
@@ -134,7 +134,7 @@
                                             <div class="col-md-12">
                                                 <div>
                                                     <label>Dirección</label>
-                                                    <input placeholder="Dirección" name="direccion" type="text" class="form-control" value="Cra 7c # 182-27">
+                                                    <input id="txt_apellidos" name="apellidos" placeholder="" type="text" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
@@ -143,21 +143,21 @@
                                             <div class="pr-1 col-md-4">
                                                 <div>
                                                     <label>Ciudad</label>
-                                                    <input disabled placeholder="Ciudad" name="ciudad" type="text" class="form-control" value="Bogotá">
+                                                    <input id="txt_ciudad" name="ciudad" placeholder="" type="text" class="form-control">
                                                 </div>
                                             </div>
 
                                             <div class="px-1 col-md-4">
                                                 <div>
                                                     <label>País</label>
-                                                    <input placeholder="País" name="pais" disabled type="text" class="form-control" value="Colombia">
+                                                    <input  id="txt_pais" name="pais" placeholder="" type="text" class="form-control">
                                                 </div>
                                             </div>
 
                                             <div class="px-1 col-md-4">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="foto">Seleccione una foto de perfil</label>
-                                                    <input name="foto" accept=".jpeg, .jpg, .png" type="file" id="foto" class="form-control">
+                                                    <input  id="btn_fotoDePerfil" name="fotoDePerfil" accept=".jpeg, .jpg, .png" type="file" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
@@ -166,7 +166,7 @@
                                             <div class="col-md-12">
                                                 <div>
                                                     <label>Perfil profesional</label>
-                                                    <textarea cols="80" placeholder="Agregue información sobre usted" rows="8" name="perfilProfesional" class="form-control">Ejemplo de profesor del programa académico.</textarea>
+                                                    <textarea id="txt_perfilProfesional" name="perfilProfesional" cols="80" placeholder="Agregue información sobre usted" rows="8" class="form-control"></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -174,11 +174,11 @@
 
                                         <div class="justify-content-md-center row">
                                             <div class="col">
-                                                <button type="button" class="btn-fill pull-right btn btn-info">Actualizar Perfil</button>
+                                                <a id="btn_actualizarPerfil" class="btn-fill pull-right btn btn-info" title="Actualizar perfil">Actualizar Perfil</a>
                                             </div>
 
                                             <div class="col">
-                                                <button type="button" class="btn-fill pull-right btn btn-info">Cambiar Contraseña</button>
+                                                <a id="openModal" class="btn-fill pull-right btn btn-info" title="Cambiar contraseña">Cambiar Contraseña</a>
                                             </div>
                                         </div>
                                     </form>
@@ -195,13 +195,13 @@
                                     
                                     <div class="author">
                                         <a href="">
-                                            <img alt="..." class="avatar border-gray" src="/assets/images/team/alejo.jpeg">
-                                            <h5 class="nombreDelEstudiante">Luis Alejandro Amaya Torres</h5>
+                                            <img id="lbl_fotoDePerfil" alt="..." class="avatar border-gray" src="/assets/images/imgDesafioOEvento.jpg">
+                                            <h5 id=lbl_nombreDelEstudiante name="lblnombreEstudiante" class="nombreDelEstudiante"></h5>
                                             <br>
                                         </a>
                                         <p class="description">Perfil profesional</p>
                                     </div>
-                                    <p class="description text-center">Ejemplo de profesor del programa académico.</p>
+                                    <p id="lbl_perfilProfesional" class="description text-center"></p>
                                 </div>
                                 
                                 <hr>
@@ -217,6 +217,7 @@
                                 </div>                          
                             </div>                            
                         </div>
+                    </div>
                     </div>
                 </div>
             </main>
