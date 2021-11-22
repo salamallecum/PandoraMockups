@@ -19,6 +19,10 @@
     display: none;
 }
 
+.ti-menu-alt{
+    cursor: pointer;
+}
+
 .sidebar{
     height: 100%;
     width: 230px;
@@ -206,6 +210,51 @@ main{
 .grafico_perf{
     justify-content: center;
     margin-top: 20px;
+}
+
+/*GRAFICOS*/
+.etiqueta{
+    text-align: center;
+    font-size: 14px;
+}
+
+.tituloGrafico{
+    text-align: left;
+    font-size: 16px;
+}
+
+.grafCompYActividades{
+    display: inline-block;
+    width: 600px;
+    height: 200px;
+}
+
+#graficaCompGeneralVsActividades{
+    width: 600px;
+    height: 200px;
+}
+
+#graficaCompEspecificaVsActividades{
+    width: 600px;
+    height: 200px;
+    margin-left: 50px;
+}
+
+.grafBalanceConsolidado{
+    display: inline-block;
+    width: 600px;
+    height: 200px;
+}
+
+#graficaPorcentajeRolesPandora{
+    width: 600px;
+    height: 200px;
+}
+
+#graficaBalanceDeEportafolios{
+    width: 600px;
+    height: 200px;
+    margin-left: 50px;
 }
 
 /*RESPONSIVE DESIGN*/

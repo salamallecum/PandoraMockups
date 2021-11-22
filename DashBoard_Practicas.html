@@ -9,6 +9,10 @@
         <!--Links Scripts de estilos-->
         <link rel="stylesheet" href="/assets/css/PracticasStyles.css">
         <link rel="stylesheet" href="https:/cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+
+        <!--Links scripts de eventos js-->
+        <script src="assets/js/dom/dashboard_practicas.js" type="module"></script>
+        <script src="assets/js/jquery-3.6.0.js"></script>
     </head>
 
     <body>
@@ -120,10 +124,49 @@
                         </div>
                     </div>
                     <br>
-                    <div class="img_rol">
-                        <img src="assets/images/graficoPerf_Rol.PNG" alt="">
+                    
+                    <!--AQUI PARA ABAJO ESTÁN LAS GRAFICAS-->
+                    <div class="graficasActividades">
+
+                        <div class="grafCompYActividades">                               
+                            <br>
+                            <p class="tituloGrafico">Balance general de actividades</p>
+                            <br>
+                            <canvas id="graficaCompGeneralVsActividades"></canvas> 
+                            <p class="etiqueta">Competencias generales (CG)</p>                               
+                        </div>
+
+                        <div class="grafCompYActividades">    
+                            <br>
+                            <br>                           
+                            <canvas id="graficaCompEspecificaVsActividades"></canvas> 
+                            <p class="etiqueta">Competencias específicas (CE)</p>                               
+                        </div>
+                    
                     </div>
-                
+
+                    <br>
+                    <br>
+
+                    <div class="graficasContribucionRoles">
+
+                        <div class="grafBalanceConsolidado">
+                            <br>
+                            <p class="tituloGrafico">Consolidado - Roles Pandora</p>
+                            <br>
+                            <canvas id="graficaPorcentajeRolesPandora"></canvas>
+                            <br>
+                            
+                        </div>
+
+                        <div class="grafBalanceConsolidado">
+                            <br>
+                            <p class="tituloGrafico">Balance general de e-portafolios</p>
+                            <br>
+                            <canvas id="graficaBalanceDeEportafolios"></canvas>      
+                        </div>
+
+                    </div>
                 </div>   
             </main>
         </div>
