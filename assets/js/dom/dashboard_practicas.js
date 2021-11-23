@@ -99,7 +99,7 @@ function compEspecificasVsActividades(){
 function rolesPandora(){
 
     const $graficaContribucionCompgenerales = document.getElementById("graficaPorcentajeRolesPandora");
-    const etiquetas = ["Noble lider", "Virtuoso tecnológico", "Maestro de los procesos", "Explorador"]
+    const etiquetas = ["Noble lider", "Virt. tecnológico", "Maestro de procesos", "Explorador"]
     const datosEstudiantes = {
         label: "Promedio de estudiantes",
         data: [500, 340, 103, 73],
@@ -137,7 +137,7 @@ function balanceDeEportafolios(){
     //Obtenemos la referencia del canvas
     const $ctx = document.getElementById("graficaBalanceDeEportafolios");
     //Etiquetas del eje X
-    const etiquetas = ["02/01/2021", "13/02/2021", "18/03/2021", "30/04/2021", "08/05/2021", "04/06/2021", "20/07/2021", "18/08/2021", "15/09/2021", "12/04/2021", "05/11/2021"]
+    const etiquetas = ["0", "13/02/2021", "18/03/2021", "30/04/2021", "08/05/2021", "04/06/2021", "20/07/2021", "18/08/2021", "15/09/2021", "12/10/2021", "05/11/2021"]
     //Podemos tener varios conjuntos de datos
     
     const datosEportafolios = {
