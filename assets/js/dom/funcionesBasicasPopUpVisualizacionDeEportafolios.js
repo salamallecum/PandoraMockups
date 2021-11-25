@@ -2,8 +2,8 @@
 import "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js";
 
 
-//ASIGNACION DE EVENTOS A BOTONES DE DETALLES PARA LA INFORMACIÓN DE DESAFIOS O EVENTOS
-function eventoPopUpDetalleDeDesafioOEvento(){
+//ASIGNACION DE EVENTOS A BOTONES DE DETALLES PARA LA INFORMACIONDE EPORTAFOLIO
+function eventoPopUpInfoEportafolio(){
 
     let listOpen1 = document.getElementsByName('openModal');
     var modal_container1 = document.getElementById('modal_container1');
@@ -45,9 +45,26 @@ function dibujarGraficoPerfilamientoPandora(){
     });
 }
 
+//ASIGNACION DE EVENTOS AL POPUP PARA COMPARTIR UN E-PORTAFOLIO
+const open2 = document.getElementById('openModal2');
+const modal_container2 = document.getElementById('modal_container2');
+const close2 = document.getElementById('btn_cancelar2');
+
+
+open2.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal_container2.classList.add('show');
+},false);
+
+
+close2.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal_container2.classList.remove('show');
+},false);
+
 
 
 
 //INVOCACION DE FUNCIONES
-eventoPopUpDetalleDeDesafioOEvento();
+eventoPopUpInfoEportafolio();
 dibujarGraficoPerfilamientoPandora();

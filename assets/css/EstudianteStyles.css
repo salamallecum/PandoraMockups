@@ -401,7 +401,7 @@ form {
     margin-bottom: 0;
 }
 
-btn_guardarContraseña{
+.btn_guardarContraseña{
     color: #fff;
     background-color: #005e6e;
     cursor: pointer;

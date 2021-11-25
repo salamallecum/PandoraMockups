@@ -1,6 +1,6 @@
 /*ESTILOS COMUNES*/
 :root{
-    --main-color: #005e6e;
+    --main-color: #0a9fba;
     --color-dark: #1D2231;
     --text-grey: #8390A2;
 }
@@ -192,7 +192,7 @@ main{
 }
 
 .card-body h4{
-    color: var(--main-color);
+    color: #005e6e;
     font-size: 1.1rem;
     margin-top: .2rem;
 }
@@ -631,6 +631,14 @@ thead{
 
 .col-insigniaObtenida{
     display: inline-block;
+}
+
+.camposFormulario{
+    font-size: 12px;
+    font-weight: 400;
+    color: #9a9a9a;
+    margin-bottom: 2px;
+    text-transform: uppercase;
 }
 
 /*GRAFICO DE PERFILAMIENTO*/
