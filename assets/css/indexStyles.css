@@ -497,6 +497,112 @@ img{
   }
 }
 
+/*ESTILOS CARRUSEL*/
+.descripcionDeBadges{
+  text-align: center;
+}
+
+.descripcionBadge{
+  text-align: center;
+  font-weight: 10px;
+}
+
+.contenedorDescripcion{
+  width: 200px;
+  background-color: #d6d64d;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: auto;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0,0,0,.7)
+}
+
+.slick-list{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: 400px;
+  padding: 10px 0px;
+  margin: 0px auto;
+  max-width: 90vw;
+  overflow: hidden;
+}
+.slick-track{
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  transition: .5s ease-in-out;
+}
+
+.slick{
+  position: relative;
+  width: 270px;
+  padding: 0 18px;
+  float: left;
+  box-sizing: border-box;
+  display: block;
+  height: 400px;
+}
+
+.img_badge{
+  display: block;
+  height: 200px;
+  width: 200px;
+  transition: .3s ease-in-out;
+}
+
+.img_badge:hover{
+  opacity: .85;
+}
+
+.contenedorImg{
+  height: 230px;
+  background-color: rgba(199, 201, 193, 0.955);
+  width: 200px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0,0,0,.7)
+}
+
+/* buttons */
+
+.slick-arrow{
+  border-radius: 30px;
+  background-color: #fff;
+  position: absolute;
+  z-index: 4;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+  border: 0;
+  cursor: pointer;
+}
+.slick-arrow:focus{
+  outline: 0;
+}
+.slick-arrow svg{
+  width: 12px;
+  height: 100%;
+  color: rgba(0,0,0,.7);
+}
+.slick-prev{
+  left: 0px;
+}
+.slick-next{
+  right: 0px;
+}
+
 /*SECCION EQUIPO DE TRABAJO*/
 .work__container{
   row-gap: 2rem;
