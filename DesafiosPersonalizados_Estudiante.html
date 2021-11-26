@@ -84,7 +84,7 @@
                 
                 <div class="social-icons">
                     <div class="titulo-dash">
-                        <span>Insignias</span>&nbsp;
+                        <span>Administrador de desafios personalizados</span>&nbsp;
                     </div>
                     <div class="link-logout">
                         <span><a href="/index.html">Log out</a></span>
@@ -94,7 +94,68 @@
             </header>
 
             <main>
-                <p>Aqui van las insignias que ha ganado el estudiante</p>
+                
+                <div class="card-header">
+                    <a id="openModal5" class="btn_agregarDesafio" title="Nuevo Desafio Personalizado">Nuevo desafio personalizado</a>                   
+                </div>
+
+                <div class="main-tableDesafios">
+                   <br>
+                    <h3 class="titulo_seccion">Mis Desafios personalizados</h3>
+                    <br>
+                    <br>
+
+                    <!--ESTRUCTURA DE TABLA DE DESAFIOS PERSONALIZADOS PROPUESTOS POR EL ESTUDIANTE-->
+                    <table id="table_desafosPersonalizados" class="tablaDeDesafios">
+                        <thead>
+                            <tr>
+                                <th class="campoTabla">Imagen</th>
+                                <th class="campoTabla">Nombre desafio</th>
+                                <th class="campoTabla">Descripción</th>
+                                <th class="campoTabla">Fecha inicio</th>
+                                <th class="campoTabla">Fecha fin</th>
+                                <th class="campoTabla">Acciones</th>
+                            </tr>
+                        </thead>
+
+                        <!--Aqui van los registros de la tabla de desafios personalizados-->
+                        <tr class="filasDeDatosTablaDesafios">
+                            <td class="datoTabla"><img class="imagenDelDesafioEnTabla"src="/assets/images/imgDesafioOEvento.jpg"></td>
+                            <td class="datoTabla">DESAFIO PERSONALIZADO DE PRUEBA 1</td>
+                            <td class="datoTabla">Desafio personalizado creado para la construcción de la tabla</td>
+                            <td class="datoTabla"> 01/01/2021</td>
+                            <td class="datoTabla">31/12/2021</td>
+                            <td class="datoTabla"><div class="compEsp-edicion">
+                                <div class="col-botonesEdicion">
+                                    <a name="openModal7" href="" title="Editar"><img src="/assets/images/btn_editar.PNG"></a>
+                                </div>
+
+                                <div class="col-botonesEdicion">
+                                    <a name="openModal6" href="" title="Eliminar"><img src="/assets/images/btn_eliminar.PNG"></a>
+                                </div>
+                            </div></td>
+                        </tr>
+
+                        <tr class="filasDeDatosTablaDesafios">
+                            <td class="datoTabla"><img class="imagenDelDesafioEnTabla"src="/assets/images/imgDesafioOEvento.jpg"></td>
+                            <td class="datoTabla">DESAFIO PERSONALIZADO DE PRUEBA 2</td>
+                            <td class="datoTabla">Desafio  personalizado creado para la construcción de la tabla</td>
+                            <td class="datoTabla"> 01/01/2021</td>
+                            <td class="datoTabla">31/12/2021</td>
+                            <td class="datoTabla"><div class="compEsp-edicion">
+                                <div class="col-botonesEdicion">
+                                    <a name="openModal7" href="" title="Editar"><img src="/assets/images/btn_editar.PNG"></a>
+                                </div>
+
+                                <div class="col-botonesEdicion">
+                                    <a name="openModal6" href="" title="Eliminar"><img src="/assets/images/btn_eliminar.PNG"></a>
+                                </div>
+                            </div></td>
+                        </tr>
+                    </table>
+
+
+
             </main>
         </div>
     </body>

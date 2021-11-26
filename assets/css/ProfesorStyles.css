@@ -837,15 +837,41 @@ input:checked[type="checkbox"]:before{
     text-transform: uppercase;
 }
 
+.pnlTabla-desPersonalizados{
+    height: 500px;
+    width: 1400px;
+    overflow-y: scroll;
+}
 
-/*  TABLA DE MUESTREO DE DESAFIOS EXISTENTES */
+.pnlTabla-desPersPorAprobacion{
+    height: 500px;
+    width: 1400px;
+    overflow-y: scroll;
+}
+
+
+/*  ESTILOS DE LAS TABLAS */
 .tablaDeDesafios{
     margin-left: 50px;
     margin-top: 10px;
-    width: 70%;
+    width: 1300px;
     text-align: left;
     border-collapse: collapse;
     background-color: white;
+}
+
+.encab_tablaDesafiosPers tr th{
+    position: static;
+    top: 0;
+    z-index: 10;
+    background-color: #005e6e;
+}
+
+.encab_tablaPropuestas tr th{
+    position: static;
+    top: 0;
+    z-index: 10;
+    background-color: #005e6e;
 }
 
 .campoTabla, .datoTabla{
