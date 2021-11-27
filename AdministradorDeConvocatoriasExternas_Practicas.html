@@ -94,8 +94,6 @@
                                 <th class="campoTabla">Imagen</th>
                                 <th class="campoTabla">Nombre convocatoria</th>
                                 <th class="campoTabla">Descripción</th>
-                                <th class="campoTabla">Fecha inicio</th>
-                                <th class="campoTabla">Fecha fin</th>
                                 <th class="campoTabla">Acciones</th>
                             </tr>
                         </thead>
@@ -105,8 +103,6 @@
                             <td class="datoTabla"><img class="imagenDeConvocatoriaEnTabla"src="/assets/images/imgDesafioOEvento.jpg"></td>
                             <td class="datoTabla">CONVOCATORIA DE PRUEBA 1</td>
                             <td class="datoTabla">Convocatoria creada para la construcción de la tabla</td>
-                            <td class="datoTabla"> 01/01/2021</td>
-                            <td class="datoTabla">31/12/2021</td>
                             <td class="datoTabla"><div class="compEsp-edicion">
                                 <div class="col-botonesEdicion">
                                     <a name="openModal2" href="" title="Editar"><img src="/assets/images/btn_editar.PNG"></a>
@@ -122,8 +118,6 @@
                             <td class="datoTabla"><img class="imagenDeConvocatoriaEnTabla"src="/assets/images/imgDesafioOEvento.jpg"></td>
                             <td class="datoTabla">CONVOCATORIA DE PRUEBA 1</td>
                             <td class="datoTabla">Convocatoria creada para la construcción de la tabla</td>
-                            <td class="datoTabla"> 01/01/2021</td>
-                            <td class="datoTabla">31/12/2021</td>
                             <td class="datoTabla"><div class="compEsp-edicion">
                                 <div class="col-botonesEdicion">
                                     <a name="openModal2" href="" title="Editar"><img src="/assets/images/btn_editar.PNG"></a>
@@ -133,9 +127,7 @@
                                     <a name="openModal3" href="" title="Eliminar"><img src="/assets/images/btn_eliminar.PNG"></a>
                                 </div>
                             </div></td>
-                        </tr>
-
-                       
+                        </tr>                      
                     </table>
 
 
@@ -153,46 +145,20 @@
                                     <br>
 
                                     <label class="camposFormulario">Descripción</label>
-                                    <textarea id="txt_descripcionEvento" name="descripcionConvocatoria" cols="80" placeholder="" rows="8" class="form-control"></textarea>
+                                    <textarea id="txt_descripcionConvocatoria" name="descripcionConvocatoria" cols="80" placeholder="" rows="8" class="form-control"></textarea>
                                     <br>
 
                                     <label class="camposFormulario">Opcional* - Archivo PDF con info de convocatoria</label><br>
                                     <input  id="btn_cargaArchivoInfoDeConvocatoria" name="btnCargaArchivoInfoDeConvocatoria" accept=".pdf" type="file" class="form-control">
                                     <br>
 
-                                    <!--Espacio para colocar campos tipo calendar-->
-                                    <table>
-                                        <tr>
-                                            <td><label class="camposFormulario">Fecha inicio</label>
-                                                <input type="date" id="date_fechaInicioConvocatoria" name="dateFechaInicioConvocatoria" class="form-control" min="2000-01-01" max="2040-12-31"></td>
-                                                
-                                                <td><label class="camposFormulario">Fecha fin</label><br>
-                                                <input type="date" id="date_fechaFinConvocatoria" name="dateFechaFinConvocatoria" class="form-control" min="2000-01-01" max="2040-12-31"></td>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                    <br>
-
-                                    <label class="camposFormulario">Profesor encargado</label>
-                                    <select class="form-control" id="cmb_profesoresResponsables" name="cmbProfesoresResponsables">
-                                        <option value="" selected>Seleccione</option>
-                                    </select>
-                                    <br>
-
                                     <label class="camposFormulario">Cargue una imagen para la convocatoria</label><br>
                                     <input  id="btn_imgParaConvocatoria" name="imgParaConvocatoria" accept=".jpeg, .jpg, .png" type="file" class="form-control">
+                                    <br>   
+                                    
+                                    <label class="camposFormulario">Correo de contacto</label><br>
+                                    <input id="txt_nombreConvocatoria" name="nombreConvocatoria" placeholder="" type="text" class="form-control">
                                     <br>
-
-                                    <table>
-                                        <tr>
-                                            <td><label class="camposFormulario">Comp. generales a las cuales contribuye la convocatoria</label><br>
-                                                <select class="form-control" id="cmb_competenciasGenerales" name="cmbCompetenciasGenerales">
-                                                    <option value="" selected>Seleccione</option>
-                                                </select>
-                                            </td>
-                                            <td><a name="openModal4" class="btn-fill pull-right btn btn-info" title="Analizar competencias">Analizar</a></td>
-                                        </tr>
-                                    </table>                                   
                                     
                                     <br>
                                     <br>    
@@ -204,7 +170,7 @@
                     </div>
 
 
-                    <!--ESTRUCTURA DEL POPUP PARA LA ACTUALIZACIÓN DE EVENTOS-->
+                    <!--ESTRUCTURA DEL POPUP PARA LA ACTUALIZACIÓN DE CONVOCATORIAS-->
                     <div id="modal_container2" class="modal_container" name="modal_container">
                         <div class="modal">
                             <h3 class="titulo_seccion">Actualizar Convocatoria</h3>
@@ -218,50 +184,24 @@
                                     <br>
 
                                     <label class="camposFormulario">Descripción</label>
-                                    <textarea id="txt_descripcionEvento" name="descripcionConvocatoria" cols="80" placeholder="" rows="8" class="form-control"></textarea>
+                                    <textarea id="txt_descripcionConvocatoria" name="descripcionConvocatoria" cols="80" placeholder="" rows="8" class="form-control"></textarea>
                                     <br>
 
                                     <label class="camposFormulario">Opcional* - Archivo PDF con info de convocatoria</label><br>
                                     <input  id="btn_cargaArchivoInfoDeConvocatoria" name="btnCargaArchivoInfoDeConvocatoria" accept=".pdf" type="file" class="form-control">
                                     <br>
 
-                                    <!--Espacio para colocar campos tipo calendar-->
-                                    <table>
-                                        <tr>
-                                            <td><label class="camposFormulario">Fecha inicio</label>
-                                                <input type="date" id="date_fechaInicioConvocatoria" name="dateFechaInicioConvocatoria" class="form-control" min="2000-01-01" max="2040-12-31"></td>
-                                                
-                                                <td><label class="camposFormulario">Fecha fin</label><br>
-                                                <input type="date" id="date_fechaFinConvocatoria" name="dateFechaFinConvocatoria" class="form-control" min="2000-01-01" max="2040-12-31"></td>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                    <br>
-
-                                    <label class="camposFormulario">Profesor encargado</label>
-                                    <select class="form-control" id="cmb_profesoresResponsables" name="cmbProfesoresResponsables">
-                                        <option value="" selected>Seleccione</option>
-                                    </select>
-                                    <br>
-
                                     <label class="camposFormulario">Cargue una imagen para la convocatoria</label><br>
                                     <input  id="btn_imgParaConvocatoria" name="imgParaConvocatoria" accept=".jpeg, .jpg, .png" type="file" class="form-control">
+                                    <br>   
+                                    
+                                    <label class="camposFormulario">Correo de contacto</label><br>
+                                    <input id="txt_nombreConvocatoria" name="nombreConvocatoria" placeholder="" type="text" class="form-control">
                                     <br>
-
-                                    <table>
-                                        <tr>
-                                            <td><label class="camposFormulario">Comp. generales a las cuales contribuye la convocatoria</label><br>
-                                                <select class="form-control" id="cmb_competenciasGenerales" name="cmbCompetenciasGenerales">
-                                                    <option value="" selected>Seleccione</option>
-                                                </select>
-                                            </td>
-                                            <td><a name="openModal4" class="btn-fill pull-right btn btn-info" title="Analizar competencias">Analizar</a></td>
-                                        </tr>
-                                    </table>                                   
                                     
                                     <br>
                                     <br>    
-                                    <a id="btn_actualizarConvocatoria" class="btn_agregarConvocatoria" title="Guardar">Guardar</a>
+                                    <a id="btn_actualizarConvocatoria" class="btn_agregarConvocatoria" title="Actualizar">Actualizar</a>
                                     <a id="btn_cancelar2" class="btn_agregarConvocatoria" title="Cancelar">Cancelar</a>
                                 </form>
                             </div>
@@ -282,66 +222,6 @@
                         </div>
                     </div>
 
-                   
-
-                    <!--POPUP PARA LA EVALUACIÓN DE COMPETENCIAS QUE CONTRIBUYEN A UN EVENTO-->
-                    <div id="modal_container4" class="modal_container" name="modal_container">
-                        <div class="modal">
-                            <h3 class="titulo_seccion">Evaluación de competencias</h3>
-                            <br>
-                            <p>Evalúe el nivel de competencia propuesto por la convocatoria para las siguientes competencias específicas: </p>
-                            <br>
-
-
-                            <div class="contenedor_compEspecificas">
-
-                                <form class="">
-                                    <!--Este es el código que contiene las competencias específicas a evaluar-->
-                                    <div class="contenedorCompeEspeciasAEvaluar">
-                                        <p id="lbl_enunciadoCompetenciaEspecíficaAEvaluar" name="enunciadoCompetenciaEspecíficaAEvaluar" class="enunciadoCompetenciaEspecíficaAEvaluar">1. Competencia específica 1.</p>
-                                        
-                                        <!--Tabla de radiobuttons para evaluar competencia específica-->
-                                        <table>
-                                            <tr>
-                                                <td><input type="radio" id="radio_contribucionBaja" name="contribucionBaja" value="">
-                                                <label for="Baja">Baja</label></td>
-                                                
-                                                <td class=columnaNivelContribucion><td><input type="radio" id="radio_contribucionMedia" name="contribucionMedia" value="">
-                                                <label for="Media">Media</label></td></td>
-                                                
-                                                <td class=columnaNivelContribucion><td><input type="radio" id="radio_contribucionAlta" name="contribucionAlta" value="">
-                                                <label for="Alta">Alta</label></td></td>
-                                            </tr>
-                                        </table>
-
-                                        <br>
-
-                                        <p id="lbl_enunciadoCompetenciaEspecíficaAEvaluar" name="enunciadoCompetenciaEspecíficaAEvaluar" class="enunciadoCompetenciaEspecíficaAEvaluar">2. Competencia específica 2.</p>
-
-                                        <!--Tabla de radiobuttons para evaluar competencia específica-->
-                                        <table>
-                                            <tr>
-                                                <td><input type="radio" id="radio_contribucionBaja" name="contribucionBaja" value="">
-                                                <label for="Baja">Baja</label></td>
-                                                
-                                                <td class=columnaNivelContribucion><td><input type="radio" id="radio_contribucionMedia" name="contribucionMedia" value="">
-                                                <label for="Media">Media</label></td></td>
-                                                
-                                                <td class=columnaNivelContribucion><td><input type="radio" id="radio_contribucionAlta" name="contribucionAlta" value="">
-                                                <label for="Alta">Alta</label></td></td>
-                                            </tr>
-                                        </table>
-                                    </div>  
-
-                                    <br>
-                                    <br>
-                                    <a id="btn_guardarAnálisis" class="btn_agregarConvocatoria" title="Guardar">Guardar</a>
-                                    <a id="btn_cancelar4" class="btn_agregarConvocatoria" title="Cancelar">Cancelar</a>
-
-                                </form>
-                            </div>                            
-                        </div>
-                    </div>
                 </div>
             </main>
         </div>

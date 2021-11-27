@@ -1,7 +1,7 @@
 
 //Archivo que define las operaciones basicas de los popup en la app Pandora (Abrir y cerrar)
 
-//EVENTOS POPUP REGISTRO DE EVENTOS
+//EVENTOS POPUP REGISTRO DE CONVOCATORIAS
 const open1 = document.getElementById('openModal');
 const modal_container1 = document.getElementById('modal_container1');
 const close1 = document.getElementById('btn_cancelar1');
@@ -19,7 +19,7 @@ close1.addEventListener('click', (e) => {
 },false);
 
 
-//ASIGNACION DE EVENTOS A BOTONES ELIMINAR PARA LA ELIMINACIÓN DE EVENTOS
+//ASIGNACION DE EVENTOS A BOTONES ELIMINAR PARA LA ELIMINACIÓN DE CONVOCATORIAS
 function eventoPopUpEliminacionDeConvocatorias(){
 
     let listOpen3 = document.getElementsByName('openModal3');
@@ -42,7 +42,7 @@ function eventoPopUpEliminacionDeConvocatorias(){
 }
 
 
-//ASIGNACION DE EVENTOS A BOTONES EDITAR PARA LA ACTUALIZACIÓN DE EVENTOS
+//ASIGNACION DE EVENTOS A BOTONES EDITAR PARA LA ACTUALIZACIÓN DE CONVOCATORIAS
 function eventoPopUpActualizacionDeConvocatorias(){
 
     let listOpen2 = document.getElementsByName('openModal2');
@@ -63,27 +63,6 @@ function eventoPopUpActualizacionDeConvocatorias(){
         modal_container2.classList.remove('show');
     },false); 
 }
-
-
-//ASIGNACION DE EVENTO A BOTON "EVALUAR" PARA LA EVALUACION DE LAS COMPETENCIAS ESPECÍFICAS
-const listOpen4 = document.getElementsByName('openModal4');
-const modal_container4 = document.getElementById('modal_container4');
-const close4 = document.getElementById('btn_cancelar4');
-
-//Recorremos el arreglo de elementos con el name openModal2
-for(var i=0; i<listOpen4.length; i++){
-        
-    listOpen4[i].addEventListener('click', (e) => {
-        e.preventDefault();
-        modal_container4.classList.add('show');
-    },false);
-}
-
-close4.addEventListener('click', (e) => {
-    e.preventDefault();
-    modal_container4.classList.remove('show');
-},false);
-
 
 //INVOCACION DE FUNCIONES
 eventoPopUpActualizacionDeConvocatorias();

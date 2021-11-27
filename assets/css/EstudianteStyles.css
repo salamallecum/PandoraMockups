@@ -957,6 +957,10 @@ h6 {
     position: relative;
 }
 
+.imgContent{
+    height: 315px;
+}
+
 .imgDesafioOEvento{
     border: 0;
     max-width: 100%;
@@ -964,6 +968,7 @@ h6 {
     height: 300px;
     vertical-align: middle;
     display: inline-block;
+    background-size: auto;
 }
 
 .card-desafioOEventobody h4 {
@@ -973,14 +978,20 @@ h6 {
     text-align: center;
 }
 
-.card-desafioOEventobody .descripcionDesafioOEvento{
+.card-desafioOEventobody {
     text-align: center;
     justify-content: center;
 }
 
+.descripcionDesafioOEvento{
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
 .contenedor_boton{
     align-content: center;
-    padding-left: 110px;
+    padding-left: 10px;
+    padding-right: 10px;
     padding-bottom: 20px;
 }
 
@@ -1111,4 +1122,10 @@ thead{
     opacity: 0.7;
     font-size: 14px;
     text-align: left;
+}
+
+/*--------------------------CONVOCATORIAS*--------------------------*/
+.descripcionConvocatoria{
+    padding-right: 10px;
+    padding-left: 10px;
 }
