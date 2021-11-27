@@ -930,6 +930,10 @@ h6 {
     padding-right: 5px;
 }
 
+.subtitulosE-portafolio{
+    font-style: oblique;
+    margin-left: 40px;
+}
 
 /*RESPONSIVE DESIGN*/
 @media (min-width: 768px){
