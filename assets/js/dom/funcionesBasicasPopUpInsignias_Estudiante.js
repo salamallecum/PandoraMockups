@@ -1,13 +1,14 @@
 
 //Archivo que define las operaciones basicas de los popup en la app Pandora (Abrir y cerrar)
 
-function detallesDeUnaConvocatoriaComite(){
+//EVENTOS POPUP INFORMACION DE MEGAINSIGNIA
+function eventoPopUpInfoMegaInsignia(){
 
     let listOpen1 = document.getElementsByName('openModal');
     var modal_container1 = document.getElementById('modal_container1');
     var close1 = document.getElementById('btn_cancelar1');
 
-    //Recorremos el arreglo de elementos con el name openModal
+    //Recorremos el arreglo de elementos con el name openModal1
     for(var i=0; i<listOpen1.length; i++){
         
         listOpen1[i].addEventListener('click', (e) => {
@@ -20,10 +21,11 @@ function detallesDeUnaConvocatoriaComite(){
         e.preventDefault();
         modal_container1.classList.remove('show');
     },false); 
-
 }
 
-function detallesDeUnaConvocatoriaPracticas(){
+/*
+//EVENTOS POPUP INFORMACION DE INSIGNIA
+function eventoPopUpInfoInsignia(){
 
     let listOpen2 = document.getElementsByName('openModal2');
     var modal_container2 = document.getElementById('modal_container2');
@@ -43,43 +45,8 @@ function detallesDeUnaConvocatoriaPracticas(){
         modal_container2.classList.remove('show');
     },false); 
 }
-
-
-//ASIGNACION DE EVENTO A BOTON PARA LA APLICACION DE CONVOCATORIAS DE TIPO COMITE
-const open3 = document.getElementById('openModal3');
-const modal_container3 = document.getElementById('modal_container3');
-const close3 = document.getElementById('btn_cancelar3');
-
-
-open3.addEventListener('click', (e) => {
-    e.preventDefault();
-    modal_container3.classList.add('show');
-},false);
-
-
-close3.addEventListener('click', (e) => {
-    e.preventDefault();
-    modal_container3.classList.remove('show');
-},false);  
-
-
-//ASIGNACION DE EVENTO A BOTON PARA LA APLICACION DE CONVOCATORIAS DE TIPO PRACTICAS
-const open4 = document.getElementById('openModal4');
-const modal_container4 = document.getElementById('modal_container4');
-const close4 = document.getElementById('btn_cancelar4');
-
-
-open4.addEventListener('click', (e) => {
-    e.preventDefault();
-    modal_container4.classList.add('show');
-},false);
-
-
-close4.addEventListener('click', (e) => {
-    e.preventDefault();
-    modal_container4.classList.remove('show');
-},false);
+*/
 
 //INVOCACION DE FUNCIONES
-detallesDeUnaConvocatoriaComite();
-detallesDeUnaConvocatoriaPracticas();
+eventoPopUpInfoMegaInsignia();
+//eventoPopUpInfoInsignia();

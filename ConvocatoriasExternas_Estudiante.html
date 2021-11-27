@@ -111,37 +111,144 @@
 
             <main>
                 <div class="dash-cards">
-                    <div class="card-desafioOEvento">
-                        <div class="card-desafioOEventobody">
-                            <span class="imgContent"><img class="imgDesafioOEvento" src="assets/images/imgDesafioOEvento.jpg"></span>
-                            <div>
-                                <h4 class="tituloDesafioOEvento">CONVOCATORIA DE PRUEBA</h4>
-                                <p class="descripcionConvocatoria">La empresa Bavaria solicita la construcción de un sistema de nomina para sus empleados, el cual utilice el servicio de API REST y tenga una arquitectura sostenible.</p>
-                                <br>
-                                <div class="contenedor_boton">
-                                    <a name="openModal4" class="btn_agregarTrabajo" title="Aplicar">Aplicar</a>    
-                                </div>                             
-                            </div>
-                        </div>
-                    </div>
-
+                    
+                    <!--DISEÑO DE TARGETA DE CONVOCATORIA CREADA POR EL COMITE-->
                     <div class="card-desafioOEvento">
                         <div class="card-desafioOEventobody">
                             <span class="imgContent"><img class="imgDesafioOEvento" src="assets/images/imgDesafioOEvento.jpg"></span>
                             <div>
                                 <h4 class="tituloDesafioOEvento">CONVOCATORIA DE PRUEBA 1</h4>
-                                <p class="descripcionConvocatoria">NESTLE S.A requiere de un Ing junior profesional en ing de sistemas o carreras afines, Salario a convenir.</p>
                                 <br>
                                 <div class="contenedor_boton">
-                                    <a name="openModal5" class="btn_agregarTrabajo" title="Aplicar">Aplicar</a>    
+                                    <a name="openModal" class="btn_agregarTrabajo" title="Ver detalles">Detalles</a>    
                                 </div>                             
                             </div>
                         </div>
                     </div>
 
+                    <!--DISEÑO DE TARGETA DE CONVOCATORIA CREADA POR LA COORDINACIÓN DE PRÁCTICAS-->
+                    <div class="card-desafioOEvento">
+                        <div class="card-desafioOEventobody">
+                            <span class="imgContent"><img class="imgDesafioOEvento" src="assets/images/imgDesafioOEvento.jpg"></span>
+                            <div>
+                                <h4 class="tituloDesafioOEvento">CONVOCATORIA DE PRUEBA 2</h4>
+                                <br>
+                                <div class="contenedor_boton">
+                                    <a name="openModal2" class="btn_agregarTrabajo" title="Ver detalles">Detalles</a>    
+                                </div>                             
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--ESTRUCTURA DEL POPUP PARA LA INFORMACION DE CONVOCATORIAS CREADAS POR EL COMITE-->
+                    <div id="modal_container1" class="modal_container" name="modal_container">
+                        <div class="modal">
+                            
+                            <div class="imagenDelDesafioOEvento">
+                                <img id=img_imagenDelDesafioOEvento" class="imgEncabezadoInfoActividad" src="/assets/images/imgDesafioOEvento.jpg" alt="">
+                            </div>
+                            <br>
+
+                            <div class="modalBody">
+                                <h3 id="lbl_NombreDelDesafioOEvento" class="titulo_seccion">CONVOCATORIA DE PRUEBA 1</h3>
+                             
+                                <div class="informacionDelDesafioOEvento">
+
+                                    <table>
+                                        <tr>
+                                            <td class="columnaInfoEnunciado"><label class="subtitulosInfo">Profesor:</label></td>
+                                            <td class="columnaInfoEnunciado"><p id="lbl_nombreDelEstudiante" class="enunciadoDesafioOEvento">PEPITO PEREZ</p></td>
+                                        </tr>
+
+                                        <br>
+
+                                        <tr>
+                                            <td class="columnaInfoEnunciado"><label class="subtitulosInfo">Correo:</label></td>
+                                            <td class="columnaInfoEnunciado"><p id="lbl_nombreDelEstudiante" class="enunciadoDesafioOEvento">pperez@unbosque.edu.co</p></td>
+                                        </tr>
+
+                                    </table>
+                                    <br>
+            
+                                    <label class="subtitulosInfo">Descripción</label>
+                                    <p id="lbl_descripcionDelDesafioOEvento" class="enunciadoDesafioOEvento">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore ullam dicta id ea quibusdam. Mollitia, ipsa, voluptatum possimus sed delectus adipisci ut distinctio eligendi illum, et atque saepe explicabo eum? orem ipsum dolor sit amet consectetur, adipisicing elit. Labore ullam dicta id ea quibusdam. Mollitia, ipsa, voluptatum possimus sed delectus adipisci ut distinctio eligendi illum, et atque saepe explicabo eum?</p>
+                                    <br>
+
+                                    <table>
+                                        <tr>
+                                            <td class="columnaInfoEnunciado"><label class="subtitulosInfo">Enunciado:</label></td>
+                                            <td class="columnaInfoEnunciado"><a id="btn_descargarEnunciado" class="btn-fill pull-right btn btn-info" title="Descargar enunciado">Descargar</a></td>
+                                        </tr>
+                                    </table>
+                                    <br>
+                                    <table>
+                                        <tr>
+                                            <td class="columnaInfoEnunciado"><label class="subtitulosInfo">Fecha inicio:</label>
+                                                <label id="lbl_fechaInicioActividad">01/01/2021</label>
+                                                
+                                            <td class="columnaInfoEnunciado"><label class="subtitulosInfo">Fecha fin:</label>
+                                                <label id="lbl_fechaInicioActividad">01/01/2021</label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <br>
+
+                                    <table>
+                                        <tr>
+                                            <td><label class="subtitulosInfo">Estado de la actividad:</label>  </td>
+                                            <td class="columnaInfoEnunciado"><label id="lbl_estadoActividad">Activo</label></td>
+                                        </tr>
+
+                                    </table>
+                                                                
+                                    <br>
+                                    <br>    
+                                    <a id="btn_cancelar1" class="btn_agregarTrabajo" title="Atrás">Atrás</a>
+                                    <a id="openModal3" class="btn_agregarTrabajo" title="Aplicar">Aplicar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>     
+                    
+                    <!--ESTRUCTURA DEL POPUP PARA LA INFORMACION DE CONVOCATORIAS CREADAS POR LA COORDINACIÓN DE PRACTICAS-->
+                    <div id="modal_container2" class="modal_container" name="modal_container">
+                        <div class="modal">
+                            
+                            <div class="imagenDelDesafioOEvento">
+                                <img id=img_imagenDelDesafioOEvento" class="imgEncabezadoInfoActividad" src="/assets/images/imgDesafioOEvento.jpg" alt="">
+                            </div>
+                            <br>
+
+                            <div class="modalBody">
+                                <h3 id="lbl_NombreDelDesafioOEvento" class="titulo_seccion">CONVOCATORIA DE PRUEBA 2</h3>
+                                <br>
+                             
+                                <div class="informacionDelDesafioOEvento">
+          
+                                    <label class="subtitulosInfo">Descripción</label>
+                                    <p id="lbl_descripcionDelDesafioOEvento" class="enunciadoDesafioOEvento">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore ullam dicta id ea quibusdam. Mollitia, ipsa, voluptatum possimus sed delectus adipisci ut distinctio eligendi illum, et atque saepe explicabo eum? orem ipsum dolor sit amet consectetur, adipisicing elit. Labore ullam dicta id ea quibusdam. Mollitia, ipsa, voluptatum possimus sed delectus adipisci ut distinctio eligendi illum, et atque saepe explicabo eum?</p>
+                                    <br>
+
+                                    <table>
+                                        <tr>
+                                            <td class="columnaInfoEnunciado"><label class="subtitulosInfo">Enunciado:</label></td>
+                                            <td class="columnaInfoEnunciado"><a id="btn_descargarEnunciado" class="btn-fill pull-right btn btn-info" title="Descargar enunciado">Descargar</a></td>
+                                        </tr>
+                                    </table>
+                                    <br>
+                                                                                                
+                                    <br>
+                                    <br>    
+                                    <a id="btn_cancelar2" class="btn_agregarTrabajo" title="Atrás">Atrás</a>
+                                    <a id="openModal4" class="btn_agregarTrabajo" title="Aplicar">Aplicar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+
                                         
                     <!--ESTRUCTURA DEL POPUP DE APLICACION A UNA CONVOCATORIA ACADÉMICA (Generada por el comite)-->
-                    <div id="modal_container4" class="modal_container" name="modal_container">
+                    <div id="modal_container3" class="modal_container" name="modal_container">
                         <div class="modal">
                             <h3 class="titulo_seccion">Aplicación a una convocatoria</h3>
                             <br>
@@ -154,12 +261,12 @@
                             </form>
                             <br>
                             <a id="btn_aplicarTrabajo" class="btn_agregarTrabajo" title="Aplicar trabajo">Aplicar</a>
-                            <a id="btn_cancelar4" class="btn_agregarTrabajo" title="Cancelar">Cancelar</a>
+                            <a id="btn_cancelar3" class="btn_agregarTrabajo" title="Cancelar">Cancelar</a>
                         </div>
                     </div>
 
                     <!--ESTRUCTURA DEL POPUP DE APLICACION A UNA CONVOCATORIA ACADÉMICA (Generada por la coordinacion de practicas)-->
-                    <div id="modal_container5" class="modal_container" name="modal_container">
+                    <div id="modal_container4" class="modal_container" name="modal_container">
                         <div class="modal">
                             <h3 class="titulo_seccion">Convocatoria - compartir e-portafolio</h3>
                             <br>
@@ -168,7 +275,7 @@
                             
                             <br>
                             <a id="btn_aplicarTrabajo" class="btn_agregarTrabajo" title="Si">Si</a>
-                            <a id="btn_cancelar5" class="btn_agregarTrabajo" title="No">No</a>
+                            <a id="btn_cancelar4" class="btn_agregarTrabajo" title="No">No</a>
                         </div>
                     </div>
                 </div> 

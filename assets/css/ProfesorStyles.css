@@ -1,4 +1,4 @@
-/*ESTILOS COMUNES*/
+f/*ESTILOS COMUNES*/
 :root{
     --main-color: #87cb16;
     --color-dark: #1D2231;
@@ -814,8 +814,6 @@ input[type="checkbox"]:before{
 input:checked[type="checkbox"]:before{
     left: 20px;
 }
-
-
 
 /*--------------------------ADMINISTRADOR DE DESAFIOS Y DESAFIOS PERSONALIZADOS*--------------------------*/
 .btn_agregarDesafio{
