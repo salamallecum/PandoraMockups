@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="https:/cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
 
         <!--Links scripts de eventos js-->
-        <script src="assets/js/dom/funcionesBasicasPopUpEvaluacionDeDesafioOEvento.js" type="module"></script>
+        <script src="assets/js/dom/funcionesBasicasPopUpEvaluacionDeDesafioOEventoOConvocatoria.js" type="module"></script>
         <script src="assets/js/jquery-3.6.0.js"></script>
     </head>
 
@@ -100,44 +100,44 @@
                             <td> <a id="btn_filtrarActividades" class="btn_agregarDesafio" title="Filtrar">Filtrar</a></td>
                         </tr>
                     </table>
-                    <br>
-
+                    <br>                   
 
                     <div class="contenedorTabla">
 
                         <h3 class="titulo_seccion">Tabla de actividades</h3>
-                        <br>
-                        
+                        <br> 
 
-                        <!--ESTRUCTURA DE TABLA DE DESAFIOS Y EVENTOS-->
-                        <table id="table_desafiosAEvaluar" class="tablaDeActividadesAEvaluar">
-                        <thead>
-                            <tr>
-                                <th class="campoTabla">Imagen</th>
-                                <th class="campoTabla">Nombre</th>
-                                <th class="campoTabla">Acciones</th>
-                            </tr>
-                        </thead>
-
-                            <!--Aqui van los registros de la tabla de desafios-->
-                            <tr class="filasDeDatosTablaDesafios">
-                                <td class="datoTabla"><img class="imagenDelDesafioEnTabla"src="/assets/images/imgDesafioOEvento.jpg"></td>
-                                <td class="datoTabla">DESAFIO DE PRUEBA 1</td>
-                                <td class="datoTabla"><div class="compEsp-edicion">
-
-                                    <div class="col-botonesEdicion">
-                                        <a name="openModal" class="iconosAccionesEvaluacion" title="Detalles"><img src="/assets/images/verDetallesActividad.png"></a> 
-                                    </div>
-
-                                    <div class="col-botonesEdicion">
-                                        <a name="btn_listarTrabajos" class="iconosAccionesEvaluacion" title="Ver trabajos"><img src="/assets/images/folder_trabajosPresentados.png"></a> 
-                                    </div>
-                                </div></td>
-                            </tr>
-                        </table>
+                        <!--ESTRUCTURA DE TABLA DE DESAFIOS EVENTOS Y CONVOCATORIAS-->
+                        <div class="pnl_TablaDeDesafiosEventosYConvocatorias">
+                            <table id="table_desafiosAEvaluar" class="tablaDeDesafiosAEvaluar">
+                                <thead>
+                                    <tr>
+                                        <th class="campoTabla">Imagen</th>
+                                        <th class="campoTabla">Nombre</th>
+                                        <th class="campoTabla">N° trabajos</th>
+                                        <th class="campoTabla">Acciones</th>
+                                    </tr>
+                                </thead>
+        
+                                <!--Aqui van los registros de la tabla de desafios eventos y convocatorias-->
+                                <tr class="filasDeDatosTablaDesafios">
+                                    <td class="datoTabla"><img class="imagenDelDesafioEnTabla"src="/assets/images/imgDesafioOEvento.jpg"></td>
+                                    <td class="datoTabla">DESAFIO DE PRUEBA 1</td>
+                                    <td class="datoTabla">1</td>
+                                    <td class="datoTabla"><div class="compEsp-edicion">
+    
+                                        <div class="col-botonesEdicion">
+                                            <a name="openModal" class="iconosAccionesEvaluacion" title="Detalles"><img src="/assets/images/verDetallesActividad.png"></a> 
+                                        </div>
+    
+                                        <div class="col-botonesEdicion">
+                                            <a name="btn_listarTrabajos" class="iconosAccionesEvaluacion" title="Ver trabajos"><img src="/assets/images/folder_trabajosPresentados.png"></a> 
+                                        </div>
+                                    </div></td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
-
-
  
                     <div class="contenedorTabla">   
                         
@@ -145,29 +145,31 @@
                         <br>
 
                         <!--ESTRUCTURA DE TABLA DE TRABAJOS PRESENTADOS-->
-                        <table id="table_desafiosAEvaluar" class="tablaDeDesafiosAEvaluar">
-                            <thead>
-                                <tr>
-                                    <th class="campoTabla">Imagen</th>
-                                    <th class="campoTabla">Nombre Trabajo</th>
-                                    <th class="campoTabla">Nombres</th>
-                                    <th class="campoTabla">Apellidos</th>
-                                    <th class="campoTabla">Acciones</th>
+                        <div class="pnl-TablaDeTrabajos">
+                            <table id="table_desafiosAEvaluar" class="tablaDeActividadesAEvaluar">
+                                <thead>
+                                    <tr>
+                                        <th class="campoTabla">Imagen</th>
+                                        <th class="campoTabla">Nombre Trabajo</th>
+                                        <th class="campoTabla">Nombres</th>
+                                        <th class="campoTabla">Apellidos</th>
+                                        <th class="campoTabla">Acciones</th>
+                                    </tr>
+                                </thead>
+    
+                                <!--Aqui van los registros de la tabla de trabajos presentados-->
+                                <tr class="filasDeDatosTablaDesafios">
+                                    <td class="datoTabla"><img class="imagenDelDesafioEnTabla"src="/assets/images/imgDesafioOEvento.jpg"></td>
+                                    <td class="datoTabla">TRABAJO DE PRUEBA 1</td>
+                                    <td class="datoTabla"> PEPITO </td>
+                                    <td class="datoTabla"> PEREZ</td>
+                                    <td class="datoTabla"><div class="col-botonesEdicion">
+                                            <a name="openModal2" class="iconosAccionesEvaluacion" title="Detalles"><img src="/assets/images/verDetallesActividad.png"></a> 
+                                        </div>
+                                    </td>
                                 </tr>
-                            </thead>
-
-                            <!--Aqui van los registros de la tabla de desafios-->
-                            <tr class="filasDeDatosTablaDesafios">
-                                <td class="datoTabla"><img class="imagenDelDesafioEnTabla"src="/assets/images/imgDesafioOEvento.jpg"></td>
-                                <td class="datoTabla">TRABAJO DE PRUEBA 1</td>
-                                <td class="datoTabla"> PEPITO </td>
-                                <td class="datoTabla"> PEREZ</td>
-                                <td class="datoTabla"><div class="col-botonesEdicion">
-                                        <a name="openModal2" class="iconosAccionesEvaluacion" title="Detalles"><img src="/assets/images/verDetallesActividad.png"></a> 
-                                    </div>
-                                </td>
-                            </tr>
-                        </table> 
+                            </table> 
+                        </div>
                     </div>
 
 
@@ -228,7 +230,6 @@
                         </div>
                     </div>
 
-
                     
                     <!--ESTRUCTURA DEL POPUP PARA EL DETALLE DE LOS TRABAJOS DESTACADOS-->
                     <div id="modal_container2" class="modal_container" name="modal_container">
@@ -260,7 +261,7 @@
                                             <td class="columnaInfoEnunciado"><a id="link_evidenciaVideo" href="" target="_blank"><img src="/assets/images/btn_evidenc_video.png"></a></td>
                                             <td class="columnaInfoEnunciado"><a id="link_evidenciaRepoCodigo" href="" target="_blank"><img src="/assets/images/btn_evidenc_repocodigo.png"></a></td>
                                             <td class="columnaInfoEnunciado"><a id="link_evidenciaPresentacion" href="" target="_blank"><img src="/assets/images/btn_evidenc_presentacion.png"></a></td>                           
-                                            <td><label class="explicacionEvidencias">Haga click sobre cada uno de los iconos...</label></td>
+                                            <td><label class="explicacionEvidencias">Haga click sobre todos los iconos antes de iniciar la evaluación...</label></td>
                                         </tr>
                                     </table>
                                                         
@@ -300,6 +301,7 @@
                                                 
                                                 <td class=columnaNivelContribucion><td><input type="radio" id="radio_contribucionAlta" name="contribucionAlta" value="">
                                                 <label for="Alta">Alta</label></td></td>
+                                               
                                             </tr>
                                         </table>
 
@@ -329,6 +331,63 @@
 
                                 </form>
                             </div>                            
+                        </div>
+                    </div>  
+
+                    
+                    <!--POPUP PARA EL OTORGAMIENTO DE INSIGNIAS A UN TRABAJO QUE ES DESTACADO-->
+                    <div id="modal_container4" class="modal_container" name="modal_container">
+                        <div class="modal">
+                            <h3 class="titulo_seccion">Resultado de la evaluación:</h3>
+                            <br>
+                            <p>Insignias otorgadas al trabajo calificado: </p>
+                            <br>
+
+                            <!--En esta sección se muestran las Megainsignias que se obtuvo en la evaluación -->
+                            <p class="subtitulo_certificacion">MegaInsignias:</p>
+                            <div class="seccionMegaInsignia">
+
+                                <div class="megaInsigOtorgada">
+                                    <img class="imgMegaInsigniaOtorgada" src="/assets/images/badge_prueba muestreo.png" alt="">
+                                </div>
+            
+                            </div>
+
+                            <br>
+
+                            <!--En esta sección se muestran las Insignias que se obtuvo en la evaluación -->
+                            <p class="subtitulo_certificacion">Insignias:</p>
+                            <div class="seccionInsignias">
+
+                                <div class="insigOtorgada">
+                                    <img class="imgInsigniaOtorgada" src="/assets/images/badge_prueba muestreo.png" alt="">
+                                </div>
+            
+                                <div class="insigOtorgada">
+                                    <img class="imgInsigniaOtorgada" src="/assets/images/badge_prueba muestreo.png" alt="">
+                                </div>
+
+                                <div class="insigOtorgada">
+                                    <img class="imgInsigniaOtorgada" src="/assets/images/badge_prueba muestreo.png" alt="">
+                                </div>
+
+                                <div class="insigOtorgada">
+                                    <img class="imgInsigniaOtorgada" src="/assets/images/badge_prueba muestreo.png" alt="">
+                                </div>
+
+                                <div class="insigOtorgada">
+                                    <img class="imgInsigniaOtorgada" src="/assets/images/badge_prueba muestreo.png" alt="">
+                                </div>
+
+                            </div> 
+                            <br>  
+                            <br>                       
+
+                            <form id="formularioDeOtrogamientoInsignias"class="">
+                                <a id="btn_finalizarEvaluacion" class="btn_agregarDesafio" title="Finalizar evaluación">Finalizar</a>
+                                <a id="btn_cancelar4" class="btn_agregarDesafio" title="Atrás">Atrás</a>
+                            </form>
+                                                    
                         </div>
                     </div>  
                 </div>

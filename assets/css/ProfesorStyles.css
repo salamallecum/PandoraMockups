@@ -30,7 +30,7 @@ f/*ESTILOS COMUNES*/
     left: 0;
     top: 0;
     z-index: 100;
-    background: var(--main-color);
+    background: #87cb16;
     color: #fff;
     overflow-y: auto;
     transition: width 500ms;
@@ -253,9 +253,6 @@ main{
     height: 200px;
     margin-left: 50px;
 }
-
-
-
 
 /*RESPONSIVE DESIGN*/
 @media only screen and (max-width: 1200px){
@@ -728,8 +725,23 @@ img {
 }
 
 /*  TABLA DE MUESTREO DE DESAFIOS EXISTENTES */
-.tablaDeActividadesAEvaluar{
+.pnl_TablaDeDesafiosEventosYConvocatorias{
+    height: 600px;
+    width: 730px;
+    overflow-y: scroll;
     margin-left: 30px;
+    display: inline-block;
+}
+
+.pnl-TablaDeTrabajos{
+    height: 600px;
+    width: 600px;
+    overflow-y: scroll;
+    margin-left: 30px;
+    display: inline-block;
+}
+
+.tablaDeActividadesAEvaluar{
     margin-top: 10px;
     width: 100%;
     text-align: left;
@@ -742,7 +754,6 @@ img {
 }
 
 .tablaDeDesafiosAEvaluar{
-    margin-left: 50px;
     margin-top: 10px;
     width: 100%;
     text-align: left;
@@ -813,6 +824,72 @@ input[type="checkbox"]:before{
 
 input:checked[type="checkbox"]:before{
     left: 20px;
+}
+
+.subtitulo_certificacion{
+    font-style: oblique;
+    font-weight: bold;
+    color: black;
+}
+
+.seccionMegaInsignia{
+    height: 200px;
+    width: 500px;
+    margin-top: 5px;
+    margin-left: 5px;
+    background: brown;
+    border-color: black;
+    box-shadow: 0px 4px 4px rgba(0,0,0,.7);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;    
+}
+
+.megaInsigOtorgada{
+    width: 100px;
+    height: 100px;
+    padding-left: 5px;
+    margin-left: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.megaInsigOtorgada{
+    width: 100px;
+    height: 90px;
+}
+
+.seccionInsignias{
+    height: 200px;
+    width: 500px;
+    margin-top: 5px;
+    margin-left: 5px;
+    background: green;
+    border-color: black;
+    box-shadow: 0px 4px 4px rgba(0,0,0,.7);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;    
+}
+
+.insigOtorgada{
+    width: 100px;
+    height: 100px;
+    padding-left: 5px;
+    margin-left: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.insigOtorgada{
+    width: 70px;
+    height: 50px;
 }
 
 /*--------------------------ADMINISTRADOR DE DESAFIOS Y DESAFIOS PERSONALIZADOS*--------------------------*/
@@ -929,5 +1006,7 @@ thead{
     font-size: 14px;
     text-align: left;
 }
+
+
 
 

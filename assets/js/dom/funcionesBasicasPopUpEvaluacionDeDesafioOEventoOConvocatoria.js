@@ -1,7 +1,7 @@
 //Archivo que define las operaciones basicas de los popup en la app Pandora (Abrir y cerrar)
 
-//ASIGNACION DE EVENTOS A BOTONES DE DETALLES PARA LA INFORMACIÓN DE DESAFIOS O EVENTOS
-function eventoPopUpDetalleDeDesafioOEvento(){
+//ASIGNACION DE EVENTOS A BOTONES DE DETALLES PARA LA INFORMACIÓN DE DESAFIOS O EVENTOS O CONVOCATORIAS
+function eventoPopUpDetalleDeDesafioOEventoOConvocatoria(){
 
     let listOpen1 = document.getElementsByName('openModal');
     var modal_container1 = document.getElementById('modal_container1');
@@ -60,7 +60,31 @@ close3.addEventListener('click', (e) => {
     modal_container3.classList.remove('show');
 },false);
 
+//ASIGNACION DE EVENTO A BOTON "GUARDAR" PARA EL OTORGAMIENTO DE INSIGNIAS AL TRABAJO DESTACADO
+var open4 = document.getElementById('btn_guardarEvaluacion');
+var modal_container4 = document.getElementById('modal_container4');
+var close4 = document.getElementById('btn_cancelar4');
+var final4 = document.getElementById('btn_finalizarEvaluacion');
+
+open4.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal_container4.classList.add('show');
+},false);
+
+
+close4.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal_container4.classList.remove('show');
+},false);
+
+final4.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal_container4.classList.remove('show');
+    modal_container3.classList.remove('show');
+    modal_container2.classList.remove('show');
+},false);
+
 
 //INVOCACION DE FUNCIONES
-eventoPopUpDetalleDeDesafioOEvento();
+eventoPopUpDetalleDeDesafioOEventoOConvocatoria();
 eventoPopUpDetalleTrabajo();
