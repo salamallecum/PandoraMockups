@@ -837,19 +837,6 @@ input:checked[type="checkbox"]:before{
     text-transform: uppercase;
 }
 
-.pnlTabla-desPersonalizados{
-    height: 500px;
-    width: 1400px;
-    overflow-y: scroll;
-}
-
-.pnlTabla-desPersPorAprobacion{
-    height: 500px;
-    width: 1400px;
-    overflow-y: scroll;
-}
-
-
 /*  ESTILOS DE LAS TABLAS */
 .tablaDeDesafios{
     margin-left: 50px;
@@ -945,7 +932,4 @@ thead{
     text-align: left;
 }
 
-/*TABLA POPUP EVALUACION DE CONTRIBUCION DE COMPETENCIAS A DESAFIOS*/
-.columnaNivelContribucion{
-    padding-left: 20px;
-}
+
