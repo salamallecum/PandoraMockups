@@ -87,7 +87,7 @@
                     <br>
                     <br>
 
-                    <!--ESTRUCTURA DE TABLA DE EVENTOS-->
+                    <!--ESTRUCTURA DE TABLA DE CONVOCATORIAS-->
                     <table id="table_eventos" class="tablaDeConvocatorias">
                         <thead>
                             <tr>
@@ -100,10 +100,15 @@
 
                         <!--Aqui van los registros de la tabla de convocatorias-->
                         <tr class="filasDeDatosTablaConvocatorias">
-                            <td class="datoTabla"><img class="imagenDeConvocatoriaEnTabla"src="/assets/images/imgDesafioOEvento.jpg"></td>
+                            <td class="datoTabla"><img class="imagenDeConvocatoriaEnTabla"src="/assets/images/imgPorDefecto.jpg"></td>
                             <td class="datoTabla">CONVOCATORIA DE PRUEBA 1</td>
                             <td class="datoTabla">Convocatoria creada para la construcción de la tabla</td>
                             <td class="datoTabla"><div class="compEsp-edicion">
+
+                                <div class="col-botonesEdicion">
+                                    <a name="openModal4" href="" title="Detalles"><img src="/assets/images/verDetallesActividad.png"></a>
+                                </div>
+
                                 <div class="col-botonesEdicion">
                                     <a name="openModal2" href="" title="Editar"><img src="/assets/images/btn_editar.PNG"></a>
                                 </div>
@@ -113,21 +118,7 @@
                                 </div>
                             </div></td>
                         </tr>
-
-                        <tr class="filasDeDatosTablaConvocatorias">
-                            <td class="datoTabla"><img class="imagenDeConvocatoriaEnTabla"src="/assets/images/imgDesafioOEvento.jpg"></td>
-                            <td class="datoTabla">CONVOCATORIA DE PRUEBA 1</td>
-                            <td class="datoTabla">Convocatoria creada para la construcción de la tabla</td>
-                            <td class="datoTabla"><div class="compEsp-edicion">
-                                <div class="col-botonesEdicion">
-                                    <a name="openModal2" href="" title="Editar"><img src="/assets/images/btn_editar.PNG"></a>
-                                </div>
-
-                                <div class="col-botonesEdicion">
-                                    <a name="openModal3" href="" title="Eliminar"><img src="/assets/images/btn_eliminar.PNG"></a>
-                                </div>
-                            </div></td>
-                        </tr>                      
+                      
                     </table>
 
 
@@ -152,19 +143,76 @@
                                     <input  id="btn_cargaArchivoInfoDeConvocatoria" name="btnCargaArchivoInfoDeConvocatoria" accept=".pdf" type="file" class="form-control">
                                     <br>
 
-                                    <label class="camposFormulario">Cargue una imagen para la convocatoria</label><br>
+                                    <label class="camposFormulario">Opcional* - Cargue una imagen para la convocatoria</label><br>
                                     <input  id="btn_imgParaConvocatoria" name="imgParaConvocatoria" accept=".jpeg, .jpg, .png" type="file" class="form-control">
                                     <br>   
-                                    
-                                    <label class="camposFormulario">Correo de contacto</label><br>
-                                    <input id="txt_nombreConvocatoria" name="nombreConvocatoria" placeholder="" type="text" class="form-control">
-                                    <br>
-                                    
+                                                                      
                                     <br>
                                     <br>    
                                     <a id="btn_guardarConvocatoria" class="btn_agregarConvocatoria" title="Guardar">Guardar</a>
                                     <a id="btn_cancelar1" class="btn_agregarConvocatoria" title="Cancelar">Cancelar</a>
                                 </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--ESTRUCTURA DEL POPUP PARA EL DETALLE DE LA CONVOCATORIA-->
+                    <div id="modal_container4" class="modal_container" name="modal_container">
+                        <div class="modalConvocatoria">
+                            <div class="modalBody">
+                                <h3 id="lbl_tituloDeConvocatoria" class="titulo_seccion">TITULO DE CONVOCATORIA</h3>
+                                <br>  
+
+                                <div class="pnl-imgConvocatoria">
+                                    <img class="imgConvocatoriaDetalle" src="/assets/images/imgPorDefecto.jpg" alt="">
+                                </div>
+                                <br>
+                                                                
+                                <div class="perfilprof">
+                                    <label class="subtitulosInfo">Descripción</label><br>
+                                    <p id="lbl_descripcionDeConvocatoria" class="descripcionDelTrabajo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore ullam dicta id ea quibusdam. Mollitia, ipsa, voluptatum possimus sed delectus adipisci ut distinctio eligendi illum, et atque saepe explicabo eum? orem ipsum dolor sit amet consectetur, adipisicing elit. Labore ullam dicta id ea quibusdam. Mollitia, ipsa, voluptatum possimus sed delectus adipisci ut distinctio eligendi illum, et atque saepe explicabo eum?</p>
+                                    <br>
+                                </div>
+
+                                <div class="panel-trabDesacadosEInsignias">
+                                    
+                                    <label class="subtitulosInfo">E-portafolios postulados</label><br>
+                                    
+                                    <div class="pnlTabla-eportafolios">
+
+                                        <!--ESTRUCTURA DE TABLA DE EPORTAFOLIOS-->
+                                        <table id="table_eportafoliosPostuladosConv" class="tablaDeEportafoliosPostuladosConv">
+                                            <thead>
+                                                <tr>
+                                                    <th class="campoTabla">Foto</th>
+                                                    <th class="campoTabla">Nombres</th>
+                                                    <th class="campoTabla">Apellidos</th>
+                                                    <th class="campoTabla">Acciones</th>
+                                                </tr>
+                                            </thead>
+
+                                            <!--Aqui van los registros de la tabla de EPORTAFOLIOS-->
+                                            <tr class="filasDeDatosTablaEportafolios">
+                                                <td class="datoTabla"><img class="imagenDeConvocatoriaEnTabla"src="/assets/images/team/alejo.jpeg"></td>
+                                                <td class="datoTabla">LUIS ALEJANDRO</td>
+                                                <td class="datoTabla">AMAYA TORRES</td>
+                                                <td class="datoTabla"><div class="compEsp-edicion">
+                                                    <div class="col-botonesEdicion">
+                                                        <a name="" href="" target="_blank" title="Ver E-portafolio"><img src="/assets/images/verDetallesActividad.png"></a>
+                                                    </div>
+
+                                                    <div class="col-botonesEdicion">
+                                                        <a name="openModal5" href="" title="Compartir E-portafolio"><img src="/assets/images/compartirEportafolio.png"></a>
+                                                    </div>
+
+                                                </div></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <br>              
+                                <a id="btn_cancelar4" class="btn_atrasEportafolio" title="Atrás">Atrás</a>
                             </div>
                         </div>
                     </div>
@@ -191,14 +239,10 @@
                                     <input  id="btn_cargaArchivoInfoDeConvocatoria" name="btnCargaArchivoInfoDeConvocatoria" accept=".pdf" type="file" class="form-control">
                                     <br>
 
-                                    <label class="camposFormulario">Cargue una imagen para la convocatoria</label><br>
+                                    <label class="camposFormulario">Opcional* - Cargue una imagen para la convocatoria</label><br>
                                     <input  id="btn_imgParaConvocatoria" name="imgParaConvocatoria" accept=".jpeg, .jpg, .png" type="file" class="form-control">
                                     <br>   
-                                    
-                                    <label class="camposFormulario">Correo de contacto</label><br>
-                                    <input id="txt_nombreConvocatoria" name="nombreConvocatoria" placeholder="" type="text" class="form-control">
-                                    <br>
-                                    
+                                                                        
                                     <br>
                                     <br>    
                                     <a id="btn_actualizarConvocatoria" class="btn_agregarConvocatoria" title="Actualizar">Actualizar</a>
@@ -219,6 +263,28 @@
                             <br>
                             <a id="btn_eliminarConvocatoria" class="btn_agregarConvocatoria" title="Si">Si</a>
                             <a id="btn_cancelar3" class="btn_agregarConvocatoria" title="No">No</a>
+                        </div>
+                    </div>
+
+                     <!--ESTRUCTURA DEL POPUP PARA COMPARTIR UN E-PORTAFOLIO-->
+                    <div id="modal_container5" class="modal_container" name="modal_container">
+                        <div class="modal">
+                            <h3 class="titulo_seccion">Compartir E-portafolio</h3>
+                            <br>
+                            <p>Ingrese el correo electrónico del usuario con el que desea compartir este e-portafolio.</p>
+                            <br>
+
+                            <div class="formulario-comparitEportafolio">
+                                <form class="">
+                                    <label class="camposFormulario">Correo electrónico</label>
+                                    <input id="txt_correo" name="txtCorreo" placeholder="" type="text" class="form-control">
+                                    <br>
+                                </form>
+                            </div>
+                            <br>
+                        
+                            <a id="btn_guardarContraseña" class="btn_atrasEportafolio" title="Enviar E-portafolio">Enviar</a>
+                            <a id="btn_cancelar5" class="btn_atrasEportafolio" title="Cancelar">Cancelar</a>
                         </div>
                     </div>
 
