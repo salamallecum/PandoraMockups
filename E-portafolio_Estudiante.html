@@ -110,7 +110,8 @@
                 <div class="perfil-card">
                     
                     <div class="card-header">
-                        <a id="openModal" class="btn_publicarEportafolio" title="Publicar E-portafolio">Publicar e-portafolio</a>                   
+                        <button id="openModal" class="btn_publicarEportafolio" disabled title="Publicar E-portafolio">Publicar e-portafolio</button>
+                        <button id="openModal3" class="btn_publicarEportafolio" title="Ocultar E-portafolio">Ocultar e-portafolio</button>                   
                     </div>
                     
                     <div class="card-user card">
@@ -197,7 +198,7 @@
                 
 
                     <!--Este texto aparece cuando no hay ninguna insignia en el contenedor-->
-                   <p id=lbl_contenedorMegaInsigniasVacio" class="contenedorVacio">Aún no tiene ninguna MegaInsignia para mostrar...</p>
+                   <p id="lbl_contenedorMegaInsigniasVacio" class="contenedorVacio">Aún no tiene ninguna MegaInsignia para mostrar...</p>
                 </div>
 
                 <br>
@@ -236,13 +237,26 @@
                     </div>
                 </div>
 
+                <!--ESTRUCTURA DEL POPUP DE OCULTAR E-PORTAFOLIO-->
+                <div id="modal_container3" class="modal_container" name="modal_container">
+                    <div class="modal">
+                        <h3 class="titulo_seccion">Ocultar e-portafolio</h3>
+                        <br>
+                        <p>¿Desea ocultar su E-portafolio?</p>
+                        <br>
+                        <br>
+                        <a id="btn_ocultarEportafolio" class="btn_publicarEportafolio" title="Si">Si</a>
+                        <a id="btn_cancelar3" class="btn_publicarEportafolio" title="No">No</a>
+                    </div>
+                </div>
+
                 <!--ESTRUCTURA DEL POPUP PARA VER INFORMACION DEL TRABAJO CON EL QUE SE OBTUVO ESA MEGAINSIGNIA O INSIGNIA-->
                 <!--En esta ventana aparecerá la informacion del trabajo destacado que respalda la obtención de la insignia o Megainsignia-->
                 <div id="modal_container2" class="modal_container" name="modal_container">
                     <div class="modal">
                         
                         <div class="imagenDelTrabajo">
-                            <img id=img_imagenDelTrabajo" class="imgEncabezadoInfoTrabajo" src="/assets/images/imgDesafioOEvento.jpg" alt="">
+                            <img id=img_imagenDelTrabajo" class="imgEncabezadoInfoTrabajo" src="/assets/images/imgPorDefecto.jpg" alt="">
                         </div>
                         <br>
 

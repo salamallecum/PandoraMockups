@@ -5,6 +5,7 @@
 const open1 = document.getElementById('openModal');
 const modal_container1 = document.getElementById('modal_container1');
 const close1 = document.getElementById('btn_cancelar1');
+const publicEport = document.getElementById('btn_publicarEportafolio');
 
 
 open1.addEventListener('click', (e) => {
@@ -12,6 +13,13 @@ open1.addEventListener('click', (e) => {
     modal_container1.classList.add('show');
 },false);
 
+publicEport.addEventListener('click', (e) =>{
+    open1.disabled = true;
+    open1.style.backgroundColor="gray";
+    open3.disabled = false;
+    open3.style.backgroundColor = "#005e6e";
+    modal_container1.classList.remove('show');
+}, false);
 
 close1.addEventListener('click', (e) => {
     e.preventDefault();
@@ -40,6 +48,30 @@ function eventoPopUpInfoInsignia(){
         modal_container2.classList.remove('show');
     },false); 
 }
+
+//EVENTOS POPUP OCULTAR E-PORTAFOLIO
+const open3 = document.getElementById('openModal3');
+const modal_container3 = document.getElementById('modal_container3');
+const close3 = document.getElementById('btn_cancelar3')
+const ocEport = document.getElementById('btn_ocultarEportafolio');
+
+open3.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal_container3.classList.add('show');
+},false);
+
+ocEport.addEventListener('click', (e) =>{
+    open3.disabled = true;
+    open3.style.backgroundColor="gray";
+    open1.disabled = false;
+    open1.style.backgroundColor = "#005e6e";
+    modal_container3.classList.remove('show');
+}, false);
+
+close3.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal_container3.classList.remove('show');
+},false);
 
 
 //INVOCACION DE FUNCIONES
