@@ -66,28 +66,6 @@ function eventoPopUpActualizacionDeConvocatorias(){
     },false); 
 }
 
-//ASIGNACION DE EVENTOS A BOTONES EDITAR PARA LA VISUALIZACIÓN DE CONVOCATORIAS
-let listOpen4 = document.getElementsByName('openModal4');
-var modal_container4 = document.getElementById('modal_container4');
-var close4 = document.getElementById('btn_cancelar4');
-
-function eventoPopUpDetalleDeConvocatorias(){
-
-    //Recorremos el arreglo de elementos con el name openModal2
-    for(var i=0; i<listOpen4.length; i++){
-        
-        listOpen4[i].addEventListener('click', (e) => {
-            e.preventDefault();
-            modal_container4.classList.add('show');
-        },false);
-    }
-    
-    close4.addEventListener('click', (e) => {
-        e.preventDefault();
-        modal_container4.classList.remove('show');
-    },false); 
-}
-
 //EVENTOS POPUP REGISTRO DE CONVOCATORIA SATISFACTORIO
 const open6 = document.getElementById('btn_guardarConvocatoria');
 const modal_container6 = document.getElementById('modal_container6');

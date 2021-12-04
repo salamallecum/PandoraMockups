@@ -1,37 +1,11 @@
-//Archivo que define las operaciones basicas de los popup en la app Pandora (Abrir y cerrar y dibujarGrafica)
-//import "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js";
-
-
-//Va para laplantilla de muestreo del eportafolio
-//FUNCION QUE DIBUJA EL GRAFICO DE PERFILAMIENTO PANDORA EN EL EPORTAFOLIO
-/*
-function dibujarGraficoPerfilamientoPandora(){
-
-    var ctx = document.getElementById("grafPerfPandora");
-    var myChart = new Chart(ctx, {
-        type: 'radar',
-        data: {
-            labels: ["Noble lider", "Virtuoso tecnológico", "Explorador", "Maestro de los procesos"],
-            datasets: [{
-                label: 'Estudiante',
-                data: [25, 80, 40, 70],
-                backgroundColor: 'rgba(87,35,100, .6)',
-                borderColor: [
-                    'rgba(87,35,100, 1)',
-                ],
-                borderWidth: 3
-            }]
-        },
-    });
-}
-*/
+//Archivo que define las operaciones basicas de los popup en la app Pandora (Abrir y cerrar)
 
 //ASIGNACION DE EVENTOS A BOTONES COMPARTIR EL EPORTAFOLIO DEL ESTUDIANTE CON EL EMPLEADOR
-function eventoPopUpCompartirEportafolio(){
+let listOpen2 = document.getElementsByName('openModal2');
+var modal_container2 = document.getElementById('modal_container2');
+var close2 = document.getElementById('btn_cancelar2');
 
-    let listOpen2 = document.getElementsByName('openModal2');
-    var modal_container2 = document.getElementById('modal_container2');
-    var close2 = document.getElementById('btn_cancelar2');
+function eventoPopUpCompartirEportafolio(){
 
     //Recorremos el arreglo de elementos con el name openModal2
     for(var i=0; i<listOpen2.length; i++){
@@ -48,9 +22,24 @@ function eventoPopUpCompartirEportafolio(){
     },false); 
 }
 
+//EVENTOS POPUP PARA COMPARTIR UN E-PORTAFOLIO
+const open3 = document.getElementById('btn_compartirEportafolio');
+const modal_container3 = document.getElementById('modal_container3');
+const close3 = document.getElementById('btn_aceptar1');
+
+open3.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal_container3.classList.add('show');
+},false); 
+
+close3.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal_container3.classList.remove('show');
+    modal_container2.classList.remove('show');
+},false);
 
 
 
 //INVOCACION DE FUNCIONES
 eventoPopUpCompartirEportafolio();
-//dibujarGraficoPerfilamientoPandora();
+
