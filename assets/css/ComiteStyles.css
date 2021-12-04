@@ -23,6 +23,20 @@
     cursor: pointer;
 }
 
+.modalSuccesful{
+    background: rgb(140, 243, 119);
+    width: 600px;
+    max-width: 100%;
+    padding: 30px 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.respuestaok{
+    display: inline-block;
+}
+
 .sidebar{
     height: 100%;
     width: 230px;
@@ -371,7 +385,6 @@ main{
     margin-right: calc(var(--bs-gutter-x)*-0.5);
     margin-left: calc(var(--bs-gutter-x)*-0.5);
 }
-
 
 /*FORMULARIO DE DATOS DEL PROFESOR*/
 .card {

@@ -9,6 +9,10 @@
         <!--Links Scripts de estilos-->
         <link rel="stylesheet" href="/assets/css/ComiteStyles.css">
         <link rel="stylesheet" href="https:/cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+
+        <!--Links scripts de eventos js-->
+        <script src="assets/js/dom/funcionesBasicasPopUpRegistroAsigMaterias_Comite.js" type="module"></script>
+        <script src="assets/js/jquery-3.6.0.js"></script>
     </head>
 
     <body>
@@ -187,6 +191,40 @@
                             </form>
                         </div>
                    </div>
+
+                   <!--POPUP DE REGISTRO DE MATERIA SATISFACTORIO-->
+                   <div id="modal_container" class="modal_container" name="modal_container">
+                        <div class="modalSuccesful">
+                            <div class="respuestaok">
+                                <img src="/assets/images/satisfactorio.png" alt="">
+                            </div>
+
+                            <div class="respuestaok">
+                                <h3 class="titulo_seccion">Materia registrada satisfactoriamente.</h3>
+                            </div>                               
+                            
+                            <br>
+                            <br>
+                            <a id="btn_aceptar" class="btn_agregarCompetencia" title="Aceptar">Aceptar</a>
+                        </div>
+                    </div>
+                    
+                   <!--POPUP DE ASIGNACION DE MATERIA SATISFACTORIO-->
+                   <div id="modal_container2" class="modal_container" name="modal_container">
+                        <div class="modalSuccesful">
+                            <div class="respuestaok">
+                                <img src="/assets/images/satisfactorio.png" alt="">
+                            </div>
+
+                            <div class="respuestaok">
+                                <h3 class="titulo_seccion">Materia asignada satisfactoriamente.</h3>
+                            </div>                               
+                            
+                            <br>
+                            <br>
+                            <a id="btn_aceptar2" class="btn_agregarCompetencia" title="Aceptar">Aceptar</a>
+                        </div>
+                    </div>
                </div>
             </main>
         </div>

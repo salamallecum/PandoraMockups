@@ -6,7 +6,6 @@ const open = document.getElementById('openModal');
 const modal_container = document.getElementById('modal_container');
 const close = document.getElementById('btn_cancelar');
 
-
 open.addEventListener('click', (e) => {
     e.preventDefault();
     modal_container.classList.add('show');
@@ -37,11 +36,11 @@ close1.addEventListener('click', (e) => {
 
 
 //ASIGNACION DE EVENTOS A BOTONES ELIMINAR PARA LA ELIMINACIÓN DE COMPETENCIAS GENERALES
-function eventoPopUpEliminacionDeCompetenciaGeneral(){
+let listOpen3 = document.getElementsByName('openModal3');
+var modal_container3 = document.getElementById('modal_container3');
+var close3 = document.getElementById('btn_cancelar3');
 
-    let listOpen3 = document.getElementsByName('openModal3');
-    var modal_container3 = document.getElementById('modal_container3');
-    var close3 = document.getElementById('btn_cancelar3');
+function eventoPopUpEliminacionDeCompetenciaGeneral(){
 
     //Recorremos el arreglo de elementos con el name openModal3
     for(var i=0; i<listOpen3.length; i++){
@@ -60,11 +59,11 @@ function eventoPopUpEliminacionDeCompetenciaGeneral(){
 
 
 //ASIGNACION DE EVENTOS A BOTONES EDITAR PARA LA ACTUALIZACIÓN DE COMPETENCIAS GENERALES
-function eventoPopUpActualizacionDeCompetenciaGeneral(){
+let listOpen5 = document.getElementsByName('openModa5');
+var modal_container5 = document.getElementById('modal_container5');
+var close5 = document.getElementById('btn_cancelar5');
 
-    let listOpen5 = document.getElementsByName('openModa5');
-    var modal_container5 = document.getElementById('modal_container5');
-    var close5 = document.getElementById('btn_cancelar5');
+function eventoPopUpActualizacionDeCompetenciaGeneral(){ 
 
     //Recorremos el arreglo de elementos con el name openModal5
     for(var i=0; i<listOpen5.length; i++){
@@ -80,15 +79,6 @@ function eventoPopUpActualizacionDeCompetenciaGeneral(){
         modal_container5.classList.remove('show');
     },false); 
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -117,12 +107,11 @@ close2.addEventListener('click', (e) => {
 
 
 //ASIGNACION DE EVENTOS A BOTONES ELIMINAR PARA LA ELIMINACIÓN DE COMPETENCIAS ESPECIFICAS-----------------------------------------------------------------------------------------------------------------------
-function eventoPopUpEliminacionDeCompetenciaEspecifica(){
+let listOpen4 = document.getElementsByName('openModal4');
+var modal_container4 = document.getElementById('modal_container4');
+var close4 = document.getElementById('btn_cancelar4');
 
-    let listOpen4 = document.getElementsByName('openModal4');
-    var modal_container4 = document.getElementById('modal_container4');
-    var close4 = document.getElementById('btn_cancelar4');
-   
+function eventoPopUpEliminacionDeCompetenciaEspecifica(){
 
     //Recorremos el arreglo de elementos con el name openModal4
     for(var i=0; i<listOpen4.length; i++){
@@ -141,11 +130,11 @@ function eventoPopUpEliminacionDeCompetenciaEspecifica(){
 
 
 //ASIGNACION DE EVENTOS A BOTONES EDITAR PARA LA ACTUALIZACIÓN DE COMPETENCIAS ESPECÍFICAS
-function eventoPopUpActualizacionDeCompetenciaEspecifica(){
+let listOpen6 = document.getElementsByName('openModal6');
+var modal_container6 = document.getElementById('modal_container6');
+var close6 = document.getElementById('btn_cancelar6');
 
-    let listOpen6 = document.getElementsByName('openModal6');
-    var modal_container6 = document.getElementById('modal_container6');
-    var close6 = document.getElementById('btn_cancelar6');
+function eventoPopUpActualizacionDeCompetenciaEspecifica(){   
 
     //Recorremos el arreglo de elementos con el name openModal6
     for(var i=0; i<listOpen6.length; i++){
@@ -164,6 +153,94 @@ function eventoPopUpActualizacionDeCompetenciaEspecifica(){
 }
 
 
+
+
+
+
+
+//ASIGNACION DE EVENTOS POPUP REGISTRO DE COMPETENCIA SATISFACTORIO
+function eventoPopUpRegistroDeCompetenciaSatisfactorio(){
+
+    let listOpen7 = document.getElementsByName('registrarCompetencia');
+    var modal_container7 = document.getElementById('modal_container7');
+    var close7 = document.getElementById('btn_aceptar1');
+
+    //Recorremos el arreglo de elementos con el name registrarCompetencia
+    for(var i=0; i<listOpen7.length; i++){
+        
+        listOpen7[i].addEventListener('click', (e) => {
+            e.preventDefault();
+            modal_container7.classList.add('show');
+
+        },false);
+    }
+    
+    close7.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal_container7.classList.remove('show');
+        modal_container.classList.remove('show');
+        modal_container1.classList.remove('show');
+        modal_container2.classList.remove('show');
+
+    },false); 
+}
+
+//ASIGNACION DE EVENTOS POPUP ACTUALIZACION DE COMPETENCIA SATISFACTORIO
+function eventoPopUpActualizacionDeCompetenciaSatisfactorio(){
+
+    let listOpen8 = document.getElementsByName('actualizarCompetencia');
+    var modal_container8 = document.getElementById('modal_container8');
+    var close8 = document.getElementById('btn_aceptar2');
+
+    //Recorremos el arreglo de elementos con el name actualizarCompetencia
+    for(var i=0; i<listOpen8.length; i++){
+        
+        listOpen8[i].addEventListener('click', (e) => {
+            e.preventDefault();
+            modal_container8.classList.add('show');
+
+        },false);
+    }
+    
+    close8.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal_container8.classList.remove('show');
+        modal_container.classList.remove('show');
+        modal_container5.classList.remove('show');
+        modal_container6.classList.remove('show');
+    },false); 
+}
+
+//ASIGNACION DE EVENTOS POPUP ELIMINACION DE COMPETENCIA SATISFACTORIO
+function eventoPopUpEliminacionDeCompetenciaSatisfactorio(){
+
+    let listOpen9 = document.getElementsByName('eliminarCompetencia');
+    var modal_container9 = document.getElementById('modal_container9');
+    var close9 = document.getElementById('btn_aceptar3');
+
+    //Recorremos el arreglo de elementos con el name eliminarCompetencia
+    for(var i=0; i<listOpen9.length; i++){
+        
+        listOpen9[i].addEventListener('click', (e) => {
+            e.preventDefault();
+            modal_container9.classList.add('show');
+
+        },false);
+    }
+    
+    close9.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal_container9.classList.remove('show');
+
+        //Recorremos el arreglo de elementos con el name modal_container
+        modal_container.classList.remove('show');
+        modal_container3.classList.remove('show');
+        modal_container4.classList.remove('show');
+
+    },false); 
+}
+
+
 //INVOCACION DE FUNCIONES COMPETENCIAS GENERALES-----------------------------------------------------------------------------------------------------------------------
 eventoPopUpEliminacionDeCompetenciaGeneral();
 eventoPopUpActualizacionDeCompetenciaGeneral()
@@ -172,3 +249,8 @@ eventoPopUpActualizacionDeCompetenciaGeneral()
 //INVOCACION DE FUNCIONES COMPETENCIAS ESPECÍFICAS-----------------------------------------------------------------------------------------------------------------------
 eventoPopUpEliminacionDeCompetenciaEspecifica();
 eventoPopUpActualizacionDeCompetenciaEspecifica();
+
+//INVOCACION DE FUNCIONES POPUPS TRANSACCIONES EXITOSAS-----------------------------------------------------------------------------------------------------------------------
+eventoPopUpRegistroDeCompetenciaSatisfactorio();
+eventoPopUpActualizacionDeCompetenciaSatisfactorio();
+eventoPopUpEliminacionDeCompetenciaSatisfactorio();

@@ -496,7 +496,7 @@
                                     </table>
                                     <br>
     
-                                    <a id="btn_guardarCompetenciaGeneral" class="btn_agregarCompetencia" title="Guardar">Guardar</a>
+                                    <a id="btn_guardarCompetenciaGeneral" name="registrarCompetencia" class="btn_agregarCompetencia" title="Guardar">Guardar</a>
                                     <a id="btn_cancelar1" class="btn_agregarCompetencia" title="Cancelar">Cancelar</a>
                                 </form>
                             </div>
@@ -511,7 +511,7 @@
                             <p>¿Está seguro de que desea eliminar?</p>
                             <br>
                             <br>
-                            <a id="btn_eliminarCompetenciaGeneral" class="btn_agregarCompetencia" title="Si">Si</a>
+                            <a id="btn_eliminarCompetenciaGeneral" name="eliminarCompetencia" class="btn_agregarCompetencia" title="Si">Si</a>
                             <a id="btn_cancelar3" class="btn_agregarCompetencia" title="No">No</a>
                         </div>
                     </div>
@@ -598,27 +598,14 @@
                                     </table>
                                     <br>
 
-                                    <a id="btn_actualizarCompetenciaGeneral" class="btn_agregarCompetencia" title="Actualizar">Actualizar</a>
+                                    <a id="btn_actualizarCompetenciaGeneral" name="actualizarCompetencia" class="btn_agregarCompetencia" title="Actualizar">Actualizar</a>
                                     <a id="btn_cancelar5" class="btn_agregarCompetencia" title="Cancelar">Cancelar</a>
                                 </form>
                             </div>
                         </div>
                     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            
+                    
 
 
 
@@ -697,7 +684,7 @@
                                     </table>
                                     <br>
     
-                                    <a id="btn_guardarCompetenciaEspecifica" class="btn_agregarCompetencia" title="Guardar">Guardar</a>
+                                    <a id="btn_guardarCompetenciaEspecifica" name="registrarCompetencia" class="btn_agregarCompetencia" title="Guardar">Guardar</a>
                                     <a id="btn_cancelar2" class="btn_agregarCompetencia" title="Cancelar">Cancelar</a>
                                 </form>
                             </div>
@@ -712,7 +699,7 @@
                             <p>¿Está seguro de que desea eliminar?</p>
                             <br>
                             <br>
-                            <a id="btn_eliminarCompetenciaEspecifica" class="btn_agregarCompetencia" title="Si">Si</a>
+                            <a id="btn_eliminarCompetenciaEspecifica" name="eliminarCompetencia" class="btn_agregarCompetencia" title="Si">Si</a>
                             <a id="btn_cancelar4" class="btn_agregarCompetencia" title="No">No</a>
                         </div>
                     </div>
@@ -799,12 +786,79 @@
                                     </table>
                                     <br>
     
-                                    <a id="btn_actualizarCompetenciaEspecifica" class="btn_agregarCompetencia" title="Actualizar">Actualizar</a>
+                                    <a id="btn_actualizarCompetenciaEspecifica" name="actualizarCompetencia" class="btn_agregarCompetencia" title="Actualizar">Actualizar</a>
                                     <a id="btn_cancelar6" class="btn_agregarCompetencia" title="Cancelar">Cancelar</a>
                                 </form>
                             </div>
                         </div>
                     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!--POPUP DE REGISTRO DE COMPETENCIA SATISFACTORIO-->
+                    <div id="modal_container7" class="modal_container">
+                        <div class="modalSuccesful">
+                            <div class="respuestaok">
+                                <img src="/assets/images/satisfactorio.png" alt="">
+                            </div>
+
+                            <div class="respuestaok">
+                                <h3 class="titulo_seccion">Competencia registrada satisfactoriamente.</h3>
+                            </div>                               
+                            
+                            <br>
+                            <br>
+                            <a id="btn_aceptar1" class="btn_agregarCompetencia" title="Aceptar">Aceptar</a>
+                        </div>
+                    </div>
+
+                     <!--POPUP DE ACTUALIZACION DE COMPETENCIA SATISFACTORIO-->
+                     <div id="modal_container8" class="modal_container">
+                        <div class="modalSuccesful">
+                            <div class="respuestaok">
+                                <img src="/assets/images/satisfactorio.png" alt="">
+                            </div>
+
+                            <div class="respuestaok">
+                                <h3 class="titulo_seccion">Competencia actualizada satisfactoriamente.</h3>
+                            </div>                               
+                            
+                            <br>
+                            <br>
+                            <a id="btn_aceptar2" class="btn_agregarCompetencia" title="Aceptar">Aceptar</a>
+                        </div>
+                    </div>
+
+                     <!--POPUP DE ELIMINACION DE COMPETENCIA SATISFACTORIO-->
+                     <div id="modal_container9" class="modal_container">
+                        <div class="modalSuccesful">
+                            <div class="respuestaok">
+                                <img src="/assets/images/satisfactorio.png" alt="">
+                            </div>
+
+                            <div class="respuestaok">
+                                <h3 class="titulo_seccion">Competencia eliminada satisfactoriamente.</h3>
+                            </div>                               
+                            
+                            <br>
+                            <br>
+                            <a id="btn_aceptar3" class="btn_agregarCompetencia" title="Aceptar">Aceptar</a>
+                        </div>
+                    </div>
+
                 </div>      
             </main>
         </div>
