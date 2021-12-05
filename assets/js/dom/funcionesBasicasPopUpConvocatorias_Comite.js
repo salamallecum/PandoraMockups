@@ -18,6 +18,7 @@ open1.addEventListener('click', (e) => {
 close1.addEventListener('click', (e) => {
     e.preventDefault();
     modal_container1.classList.remove('show');
+    limpiarFormularioRegistroDeConvocatorias();
 },false);
 
 
@@ -133,6 +134,12 @@ close9.addEventListener('click', (e) => {
     modal_container4.classList.remove('show');
 },false);
 
+//FUNCION QUE RESETEA LOS CAMPOS DEL FORMULARIO DE REGISTRO DE CONVOCATORIAS
+function limpiarFormularioRegistroDeConvocatorias(){
+    
+    const formRegistro = document.getElementById('formularioDeRegistroDeConvocatorias');
+    formRegistro.reset();
+}
 
 
 //INVOCACION DE FUNCIONES

@@ -16,6 +16,7 @@ open1.addEventListener('click', (e) => {
 close1.addEventListener('click', (e) => {
     e.preventDefault();
     modal_container1.classList.remove('show');
+    limpiarFormularioRegistroDeEventos();
 },false);
 
 
@@ -151,6 +152,13 @@ close8.addEventListener('click', (e) => {
     modal_container8.classList.remove('show');
     modal_container4.classList.remove('show');
 },false);
+
+//FUNCION QUE RESETEA LOS CAMPOS DEL FORMULARIO DE REGISTRO DE EVENTOS
+function limpiarFormularioRegistroDeEventos(){
+    
+    const formRegistro = document.getElementById('formularioDeRegistroDeEventos');
+    formRegistro.reset();
+}
 
 
 //INVOCACION DE FUNCIONES

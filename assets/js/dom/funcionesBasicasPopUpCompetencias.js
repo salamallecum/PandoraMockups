@@ -32,6 +32,7 @@ open1.addEventListener('click', (e) => {
 close1.addEventListener('click', (e) => {
     e.preventDefault();
     modal_container1.classList.remove('show');
+    limpiarFormularioRegistroDeCompetenciasGenerales();
 },false);
 
 
@@ -103,6 +104,7 @@ open2.addEventListener('click', (e) => {
 close2.addEventListener('click', (e) => {
     e.preventDefault();
     modal_container2.classList.remove('show');
+    limpiarFormularioRegistroDeCompetenciasEspecificas();
 },false);
 
 
@@ -238,6 +240,20 @@ function eventoPopUpEliminacionDeCompetenciaSatisfactorio(){
         modal_container4.classList.remove('show');
 
     },false); 
+}
+
+//FUNCION QUE RESETEA LOS CAMPOS DEL FORMULARIO DE REGISTRO DE COMPETENCIAS GENERALES
+function limpiarFormularioRegistroDeCompetenciasGenerales(){
+    
+    const formRegistro = document.getElementById('formularioDeRegistroDeCompetenciasGenerales');
+    formRegistro.reset();
+}
+
+//FUNCION QUE RESETEA LOS CAMPOS DEL FORMULARIO DE REGISTRO DE COMPETENCIAS ESPECIFICAS
+function limpiarFormularioRegistroDeCompetenciasEspecificas(){
+    
+    const formRegistro = document.getElementById('formularioDeRegistroDeCompetenciasEspecificas');
+    formRegistro.reset();
 }
 
 
