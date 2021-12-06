@@ -171,6 +171,8 @@ function limpiarFormularioRegistroDeConvocatorias(){
 }
 
 
+
+
 //INVOCACION DE FUNCIONES
 eventoPopUpEliminacionDeConvocatorias();
 eventoPopUpActualizacionDeConvocatorias();
