@@ -554,6 +554,10 @@ thead{
     cursor: pointer;
 }
 
+.subtitulosInfo{
+    font-weight: bold;
+}
+
 .btn-info.btn-fill {
     color: #fff;
     background-color: #1dc7ea;

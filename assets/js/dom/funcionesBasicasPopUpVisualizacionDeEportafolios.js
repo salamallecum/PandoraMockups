@@ -19,6 +19,7 @@ function eventoPopUpCompartirEportafolio(){
     close2.addEventListener('click', (e) => {
         e.preventDefault();
         modal_container2.classList.remove('show');
+        limpiarFormularioCompartirEportafolio();
     },false); 
 }
 
@@ -39,6 +40,12 @@ close3.addEventListener('click', (e) => {
 },false);
 
 
+//FUNCION QUE RESETEA LOS CAMPOS DEL FORMULARIO DE COMPARTIR EPORTAFOLIOS
+function limpiarFormularioCompartirEportafolio(){
+    
+    const formRegistro = document.getElementById('formularioParaCompartirEportafolio');
+    formRegistro.reset();
+}
 
 //INVOCACION DE FUNCIONES
 eventoPopUpCompartirEportafolio();

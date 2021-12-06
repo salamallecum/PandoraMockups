@@ -109,6 +109,7 @@ function eventoPopUpCompartirEportafolio(){
     close5.addEventListener('click', (e) => {
         e.preventDefault();
         modal_container5.classList.remove('show');
+        limpiarFormularioCompartirEportafolio();
     },false); 
 }
 
@@ -170,7 +171,12 @@ function limpiarFormularioRegistroDeConvocatorias(){
     formRegistro.reset();
 }
 
-
+//FUNCION QUE RESETEA LOS CAMPOS DEL FORMULARIO DE COMPARTIR EPORTAFOLIOS
+function limpiarFormularioCompartirEportafolio(){
+    
+    const formRegistro = document.getElementById('formularioParaCompartirEportafolio');
+    formRegistro.reset();
+}
 
 
 //INVOCACION DE FUNCIONES
