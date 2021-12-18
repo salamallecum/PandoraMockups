@@ -202,14 +202,17 @@
                                     <input  id="btn_imgParaElEvento" name="imgParaElEvento" accept=".jpeg, .jpg, .png" type="file" class="form-control">
                                     <br>
 
+                                    <label class="camposFormulario">Comp. generales a las cuales contribuye el evento</label>
+                                    <br>
+
                                     <table>
                                         <tr>
-                                            <td><label class="camposFormulario">Comp. generales a las cuales contribuye el evento</label><br>
-                                                <select class="form-control" id="cmb_competenciasGenerales" name="cmbCompetenciasGenerales">
+                                            <td class="columnSelectCompetencias">
+                                                <select class="form-control" id="cmb_competenciasGenerales" name="cmbCompetenciasGenerales" multiple="multiple">
                                                     <option value="" selected>Seleccione</option>
                                                 </select>
                                             </td>
-                                            <td><a name="openModal4" class="btn-fill pull-right btn btn-info" title="Analizar competencias">Analizar</a></td>
+                                            <td><a name="openModal4" id="btn_analizarComp" class="btn-fill pull-right btn btn-info" title="Analizar competencias">Analizar</a></td>
                                         </tr>
                                     </table>                                   
                                     

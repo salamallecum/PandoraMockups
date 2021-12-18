@@ -93,13 +93,14 @@ const close5 = document.getElementById('btn_aceptar1');
 
 open5.addEventListener('click', (e) => {
     e.preventDefault();
-    modal_container5.classList.add('show');
+   validarCamposFormularioRegistroEventos();
 },false); 
 
 close5.addEventListener('click', (e) => {
     e.preventDefault();
     modal_container5.classList.remove('show');
     modal_container1.classList.remove('show');
+    limpiarFormularioRegistroDeEventos();
 },false);
 
 
@@ -120,7 +121,7 @@ close6.addEventListener('click', (e) => {
 },false);
 
 
-//EVENTOS POPUP REGISTRO DE EVENTO SATISFACTORIO
+//EVENTOS POPUP    ELIMINACION DE EVENTO SATISFACTORIO
 const open7 = document.getElementById('btn_eliminarEvento');
 const modal_container7 = document.getElementById('modal_container7');
 const close7 = document.getElementById('btn_aceptar3');
@@ -160,8 +161,26 @@ function limpiarFormularioRegistroDeEventos(){
     formRegistro.reset();
 }
 
+//FUNCION QUE VALIDA Y MUESTRA LOS POPUP DE ACUERDO AL ESTADO DEL FORMULARIO DE REGISTRO DE EVENTOS
+function validarCamposFormularioRegistroEventos(){
+    
+    var nombreEvento = document.getElementById('txt_nombreEvento').value;
+    var descripcionEvento = document.getElementById('txt_descripcionEvento').value;
+    var fechainiEvento = document.getElementById('date_fechaInicioEvento').value;
+    var fechafinEvento = document.getElementById('date_fechaFinEvento').value;
+    var profeEvento = document.getElementById('cmb_profesoresResponsables').value;
+
+    if(nombreEvento.length >= 1 && descripcionEvento.length >=1){
+        modal_container5.classList.add('show');
+        limpiarFormularioRegistroDeEventos();
+    }
+
+}
+
+
 
 //INVOCACION DE FUNCIONES
 eventoPopUpActualizacionDeEventos();
-eventoPopUpEliminacionDeEventos()
+eventoPopUpEliminacionDeEventos();
+validarCamposFormularioRegistroEventos();
 
