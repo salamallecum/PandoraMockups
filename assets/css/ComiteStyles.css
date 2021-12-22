@@ -855,14 +855,18 @@ table .column-form-regMaterias select{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.columnSelectCompetencias{
-    width: 800px;
-}
-
-#cmb_competenciasGenerales{
+.compentenciasContent{
     width: 400px;
     height: 100px;
+    overflow-y: scroll; 
+    border: 1px #000;
 }
+
+.checkCompetenciaGeneral{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
 
 #btn_analizarComp{
     margin-left: 0px;
