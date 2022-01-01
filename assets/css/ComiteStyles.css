@@ -640,7 +640,6 @@ form-control[type=file]:not(:disabled):not([readonly]) {
 
 .tab2{
     width: 600px;
-    height: 400px;
 }
 
 .lbl-menu{
@@ -654,6 +653,14 @@ form-control[type=file]:not(:disabled):not([readonly]) {
 
 .lbl-menu label:hover{
     background: rgb(167, 165, 165);
+}
+
+.asigContent{
+    background-color: rgba(233, 227, 227, 0.679);
+    margin-left: 20px;
+    width: 200px;
+    height: 100px;
+    overflow-y: scroll;
 }
 
 .content{
