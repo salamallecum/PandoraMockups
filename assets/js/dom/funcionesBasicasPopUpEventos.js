@@ -86,24 +86,6 @@ close4.addEventListener('click', (e) => {
 },false);
 
 
-//EVENTOS POPUP REGISTRO DE EVENTO SATISFACTORIO
-const open5 = document.getElementById('btn_guardarEvento');
-const modal_container5 = document.getElementById('modal_container5');
-const close5 = document.getElementById('btn_aceptar1');
-
-open5.addEventListener('click', (e) => {
-    e.preventDefault();
-   validarCamposFormularioRegistroEventos();
-},false); 
-
-close5.addEventListener('click', (e) => {
-    e.preventDefault();
-    modal_container5.classList.remove('show');
-    modal_container1.classList.remove('show');
-    limpiarFormularioRegistroDeEventos();
-},false);
-
-
 //EVENTOS POPUP ACTUALIZACION DE EVENTO SATISFACTORIO
 const open6 = document.getElementById('btn_actualizarEvento');
 const modal_container6 = document.getElementById('modal_container6');

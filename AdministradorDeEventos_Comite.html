@@ -241,10 +241,7 @@
                                             </td>
                                             <td><a name="openModal4" id="btn_analizarComp" class="btn-fill pull-right btn btn-info" title="Analizar competencias">Analizar</a></td>
                                         </tr>
-                                    </table> 
-
-                                   
-
+                                    </table>                                   
                                     
                                     <br>
                                     <br>    
@@ -300,16 +297,48 @@
                                     <input  id="btn_imgParaElEvento" name="imgParaElEvento" accept=".jpeg, .jpg, .png" type="file" class="form-control">
                                     <br>
 
+                                    <label class="camposFormulario">Comp. generales a las cuales contribuye el evento</label>
+                                    <br>
+                                    <br>
+
                                     <table>
                                         <tr>
-                                            <td><label class="camposFormulario">Comp. generales a las cuales contribuye el evento</label><br>
-                                                <select class="form-control" id="cmb_competenciasGenerales" name="cmbCompetenciasGeneraless">
-                                                    <option value="" selected>Seleccione</option>
-                                                </select>
+                                            <td class="columnSelectCompetencias">
+                                                <!--AQUI DEFINIMOS EL PANEL QUE CONTIENE LAS COMPETENCIAS ESPECÍFICAS-->
+                                                <div class="compentenciasContent">
+
+                                                    <input class="checkCompetenciaGeneral" type="checkbox" value="" title="prueba"> Competencia general 1 
+                                                    <br>
+                                                    <input class="checkCompetenciaGeneral" type="checkbox" value="" title="prueba"> Competencia general 1
+                                                    <br>
+                                                    <input class="checkCompetenciaGeneral" type="checkbox" value="" title="prueba"> Competencia general 1
+                                                    <br>
+                                                    <input class="checkCompetenciaGeneral" type="checkbox" value="" title="prueba"> Competencia general 1
+                                                    <br>
+                                                    <input class="checkCompetenciaGeneral" type="checkbox" value="" title="prueba"> Competencia general 1
+                                                    <br>
+                                                    <input class="checkCompetenciaGeneral" type="checkbox" value="" title="prueba"> Competencia general 1
+                                                    <br>
+                                                    <input class="checkCompetenciaGeneral" type="checkbox" value="" title="prueba"> Competencia general 1
+                                                    <br>
+                                                    <input class="checkCompetenciaGeneral" type="checkbox" value="" title="prueba"> Competencia general 1
+                                                    <br>
+                                                    <input class="checkCompetenciaGeneral" type="checkbox" value="" title="prueba"> Competencia general 1
+                                                    <br>
+                                                    <input class="checkCompetenciaGeneral" type="checkbox" value="" title="prueba"> Competencia general 1
+                                                    <br>
+                                                    <input class="checkCompetenciaGeneral" type="checkbox" value="" title="prueba"> Competencia general 1
+                                                    <br>
+                                                    <input class="checkCompetenciaGeneral" type="checkbox" value="" title="prueba"> Competencia general 1
+                                                    <br>
+
+                                                </div>
                                             </td>
-                                            <td><a name="openModal4" class="btn-fill pull-right btn btn-info" title="Analizar competencias">Analizar</a></td>
+                                            <td><a name="openModal4" id="btn_analizarComp" class="btn-fill pull-right btn btn-info" title="Analizar competencias">Analizar</a></td>
                                         </tr>
-                                    </table>         
+                                    </table> 
+
+                                         
                                                               
                                     <br>
                                     <br>   
@@ -404,24 +433,7 @@
                     </div>
 
 
-                    <!--POPUP DE REGISTRO DE EVENTO SATISFACTORIO-->
-                    <div id="modal_container5" class="modal_container">
-                        <div class="modalSuccesful">
-                            <div class="respuestaok">
-                                <img src="/assets/images/satisfactorio.png" alt="">
-                            </div>
-
-                            <div class="respuestaok">
-                                <h3 class="titulo_seccion">Evento registrado satisfactoriamente.</h3>
-                            </div>                               
-                            
-                            <br>
-                            <br>
-                            <a id="btn_aceptar1" class="btn_agregarCompetencia" title="Aceptar">Aceptar</a>
-                        </div>
-                    </div>
-
-                     <!--POPUP DE ACTUALIZACION DE EVENTO SATISFACTORIO-->
+                    <!--POPUP DE ACTUALIZACION DE EVENTO SATISFACTORIO-->
                      <div id="modal_container6" class="modal_container">
                         <div class="modalSuccesful">
                             <div class="respuestaok">
@@ -471,9 +483,7 @@
                             <a id="btn_aceptar4" class="btn_agregarCompetencia" title="Aceptar">Aceptar</a>
                         </div>
                     </div>
-
-
-
+                    
                 </div>
             </main>
         </div>
