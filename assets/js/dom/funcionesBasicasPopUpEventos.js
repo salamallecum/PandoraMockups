@@ -44,8 +44,8 @@ function eventoPopUpActualizacionDeEventos(){
 }
 
 
-//ASIGNACION DE EVENTO A BOTON "ANALIZAR" PARA LA EVALUACION DE LAS COMPETENCIAS ESPECÍFICAS
-const listOpen4 = document.getElementsByName('btn_analizar');
+//ASIGNACION DE EVENTO A BOTON "ASIGNAR COMPETENCIAS"
+const listOpen4 = document.getElementsByName('btn_asignarCompetencias');
 const modal_container4 = document.getElementById('modal_container4');
 const close4 = document.getElementById('btn_cancelar4');
 
@@ -62,6 +62,25 @@ close4.addEventListener('click', (e) => {
     e.preventDefault();
     modal_container4.classList.remove('show');
 },false);
+
+
+//ASIGNACION DE EVENTO A BOTON  PARA EVALUACION DE COMPETENCIAS
+const open5 = document.getElementById('btn_evaluarCompetencias');
+const modal_container5 = document.getElementById('modal_container5');
+const close5 = document.getElementById('btn_cancelar5');
+
+
+open5.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal_container5.classList.add('show');
+},false);
+
+
+close5.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal_container5.classList.remove('show');
+},false);
+
 
 //FUNCION QUE RESETEA LOS CAMPOS DEL FORMULARIO DE REGISTRO DE EVENTOS
 function limpiarFormularioRegistroDeEventos(){
