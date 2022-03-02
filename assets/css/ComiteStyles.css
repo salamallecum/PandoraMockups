@@ -858,6 +858,11 @@ thead{
     padding-left: 20px;
 }
 
+.contenedorCompeEspeciasAEvaluar{
+    overflow-y: scroll;
+    height: 200px;
+}
+
 
 /*--------------------------ADMINISTRADOR DE CONVOCATORIAS EXTERNAS*--------------------------*/
 .btn_agregarConvocatoria{
